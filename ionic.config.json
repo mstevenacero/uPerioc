@@ -1,0 +1,7 @@
+{
+  "name": "PeriOpera",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
