@@ -1,0 +1,88 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <!-- <ion-title>signup</ion-title> -->
+    <ion-buttons slot="start">
+      <ion-back-button defaulthref="signup" text=""></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="bg-color">
+  <ion-card class="ion-no-margin">
+    <ion-card-header>
+        <ion-card-title>
+          Regístrate
+        </ion-card-title>
+        <ion-card-subtitle>
+          Crea tu cuenta completando el siguiente formulario
+          </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+          <ion-input name="names" type="text" placeholder="Nombre completo" [(ngModle)]="names" required>
+            <ion-icon name="person-outline"></ion-icon>
+          </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input name="id" type="text" placeholder="No de identificación" [(ngModle)]="id" required>
+          <ion-icon name="finger-print-outline" ></ion-icon>
+        </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Tipo de identificación</ion-label>
+      <ion-select interface="popover">
+        <ion-select-option value="Tipo id">Seleccione un tipo </ion-select-option>
+        <ion-select-option value="C.C">C.C</ion-select-option>
+      </ion-select>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>EPS</ion-label>
+      <ion-select interface="popover">
+        <ion-select-option value="nes">Famisanar</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+        <ion-input name="email" type="text" placeholder="Correo electrónico" [(ngModle)]="email" required>
+          <ion-icon name="mail-outline" ></ion-icon>
+        </ion-input>
+    </ion-item>
+    
+    <ion-item>
+        <ion-input name="password" type="password" placeholder="Contraseña" [(ngModle)]="password" required>
+          <ion-icon name="lock-closed-outline" ></ion-icon>
+        </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input name="password" type="password" placeholder="Confirmar contraseña" [(ngModle)]="password" required>
+        <ion-icon name="lock-closed-outline" ></ion-icon>
+      </ion-input>
+  </ion-item>
+
+<ion-item>
+  <ion-input name="residencia" type="text" placeholder="Lugar de residencia" [(ngModle)]="residencia" required>
+    <ion-icon name="home-outline" ></ion-icon>
+  </ion-input>
+</ion-item>
+
+    <div class="sign-btn-wrap">
+      <ion-button  shape="round" type="submit"  fill="solid" class="sign-btn">Registrarse</ion-button>
+     </div>
+     <div class="text-tag">
+      <span>O regístrate con</span>
+      </div>
+      <div class="social-btns">
+          <ion-button fill="clear"  class="facebookbtn ion-no-padding">
+        <ion-img src="assets/imagenes/facebook.png"></ion-img>
+          </ion-button>
+          <ion-button fill="clear"  class="googlebtn ion-no-padding">
+        <ion-img src="assets/imagenes/google.png"></ion-img>
+          </ion-button>
+          <ion-button fill="clear"  class="applebtn ion-no-padding">
+        <ion-img src="assets/imagenes/apple.png"></ion-img>
+          </ion-button>
+        </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
