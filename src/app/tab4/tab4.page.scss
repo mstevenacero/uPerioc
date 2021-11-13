@@ -1,6 +1,10 @@
 ion-content {
     --background:#F5F5F8;
 }
+ion-icon {
+    color: black;
+    font-size: 13px;
+  }
 ion-title{
     width: 277px;
     height: 32px;
@@ -32,11 +36,9 @@ ion-title{
     }
 
     ion-grid{
-        height: 28vh;
+        height: 30vh;
         width: 120%;
         background: white;
-        box-shadow: 0 1px 4px ;
-        border-radius: 0 0 50% 50%;
         margin-left: -4.5vh;
         margin-top: -5px;
         --background:#F5F5F8;
@@ -51,3 +53,16 @@ ion-title{
                 border: 7px solid #EDECF4;
         }
     }
+ion-label{
+    position: static;
+    width: 275px;
+    height: 26px;
+    left: 36px;
+    top: 0px;
+    font-style: normal;
+    font-weight: 530;
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: -0.5px;
+    color:black;
+}
