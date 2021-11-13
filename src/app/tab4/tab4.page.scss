@@ -1,6 +1,17 @@
 ion-content {
     --background:#F5F5F8;
 }
+#imageSub{
+    width: 20px;
+    height: auto;
+    z-index: 2;
+    display: flex;
+    margin-left: 6rem;
+    margin-top: -1rem;
+    border: radius 15px;
+    background-color: #c3bfbf;
+    padding:3px;
+}
 ion-icon {
     color: black;
     font-size: 13px;
