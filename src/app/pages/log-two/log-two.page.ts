@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl ,FormGroup} from '@angular/forms';
+import { Register } from 'src/app/modules/register';
+import {RestService} from '../../services/rest.service'
 
 @Component({
   selector: 'app-log-two',
@@ -6,10 +9,32 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./log-two.page.scss'],
 })
 export class LogTwoPage implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  registro:Register ={
+    name:"",
+    email:"",
+    eps:"",
+    residencia:"",
+    num_document:null,
+    password:"",
   }
+ 
+  constructor( private _httpService:RestService) { }
+  ngOnInit():void {
+  }
+  addUser(){
+    this.registro
+    console.log("registro",this.registro);
+    
+    this._httpService.post('users',this.registro).subscribe(
+      response => {
+        if (!response) {
+          console.error('Error: de crear usuario');
+        } else {
+          console.log('se  agrego el usuario');
 
+        }
+      }
+    );
+  }
+  
 }

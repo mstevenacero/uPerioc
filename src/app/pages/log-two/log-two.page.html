@@ -1,34 +1,34 @@
 <ion-content id="content">
   <div id ="forms">
     <ion-item class="items">
-      <ion-label class="label" position="floating">Correo electronico</ion-label>
-      <ion-input ></ion-input>
+      <ion-label placeholder="email" class="label" position="floating">Correo electronico</ion-label>
+      <ion-input [(ngModel)]="registro.email"></ion-input>
     </ion-item>
     <ion-item class="items">
-      <ion-label class="label"  position="floating">Contraseña</ion-label>
-      <ion-input ></ion-input>
+      <ion-label class="label" position="floating">Nombre</ion-label>
+      <ion-input [(ngModel)]="registro.name"></ion-input>
     </ion-item>
     <ion-item class="items">
       <ion-label class="label" position="floating">Eps</ion-label>
-      <ion-select>
-        <ion-select-option value="brown">Nueva Eps</ion-select-option>
-        <ion-select-option value="blonde">Salub Total</ion-select-option>
-        <ion-select-option value="black">Cruz blanca</ion-select-option>
+      <ion-select [(ngModel)]="registro.eps">
+        <ion-select-option value="Nueva Eps">Nueva Eps</ion-select-option>
+        <ion-select-option value="Salub Total">Salub Total</ion-select-option>
+        <ion-select-option value="Cruz blanca">Cruz blanca</ion-select-option>
       </ion-select>
     </ion-item>
     <ion-item class="items">
       <ion-label class="label" position="floating">Lugar de residencia</ion-label>
-      <ion-input ></ion-input>
+      <ion-input [(ngModel)]="registro.residencia" ></ion-input>
+    </ion-item>
+    <ion-item class="items">
+      <ion-label class="label"  position="floating">Numero de documento</ion-label>
+      <ion-input [(ngModel)]="registro.num_document"></ion-input>
     </ion-item>
     <ion-item class="items">
       <ion-label class="label" position="floating">Contraseña</ion-label>
-      <ion-input ></ion-input>
-    </ion-item>
-    <ion-item class="items">
-      <ion-label class="label"  position="floating">Validar Contraseña</ion-label>
-      <ion-input ></ion-input>
+      <ion-input name="password" type="password"[(ngModel)]="registro.password" ></ion-input>
     </ion-item>
   </div>
-  <ion-button id="buttonI">Registrarse</ion-button>
+  <ion-button  (click)="addUser()" id="buttonI">Registrarse</ion-button>
 </ion-content>
 
