@@ -1,43 +1,16 @@
-<ion-header  class="ion-no-border">
-  <ion-toolbar>
-    <!-- <ion-title>login</ion-title> -->
-  </ion-toolbar>
-</ion-header>
+<img  id="img" src="../../../assets/img/logo1.png" alt="">
+
 <ion-content>
-  
-<ion-card class="ion-no-margin">
-  <ion-img src="assets/img/logo1.png"></ion-img>
-  <ion-card-header>
-  <ion-card-title>
-     Bienvenidos a PeriOpera
-  </ion-card-title>
-  <ion-card-subtitle class="ion-text-lowercase">
-    ¡Inicia sesión para ver tu información o regístrate para que comiences a gestionar tus procesos!
-  </ion-card-subtitle>
-  </ion-card-header>
-  <ion-card-content>
-    <div class="signin-btns">
-        <ion-button  size="small" fill="solid" shape="round" class="loginbtn">
-         Iniciar Sesión 
-        </ion-button>
-        <ion-button  size="small" fill="outline" shape="round" color="light">
-          Regístrate
-        </ion-button>
-      </div>
-      <div class="text-tag">
-      <span>O inicia con tus redes sociales</span>
-      </div>
-      <div class="social-btns">
-          <ion-button fill="clear"  class="facebookbtn ion-no-padding">
-        <ion-img src="assets/imagenes/facebook.png"></ion-img>
-          </ion-button>
-          <ion-button fill="clear"  class="googlebtn ion-no-padding">
-        <ion-img src="assets/imagenes/google.png"></ion-img>
-          </ion-button>
-          <ion-button fill="clear"  class="applebtn ion-no-padding">
-        <ion-img src="assets/imagenes/apple.png"></ion-img>
-          </ion-button>
-        </div>
-  </ion-card-content>
-</ion-card>
+  <div>
+    <ion-tabs id="tabs">
+      <ion-tab-bar slot="top" >
+        <ion-tab-button class="tabs-one" tab="log-one">
+          <p>Inicio</p>
+        </ion-tab-button>
+        <ion-tab-button  class="tabs-one"tab="log-two">
+         <p>Registro</p>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+    </div>
 </ion-content>
