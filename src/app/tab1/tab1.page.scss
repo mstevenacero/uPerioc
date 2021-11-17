@@ -1,9 +1,6 @@
 ion-content {
     --background:#F5F5F8;
 }
-ion-icon {
-    font-size: 5em;
-}
 #titulo{
     position: static;
     width: 277px;
@@ -24,35 +21,40 @@ ion-item {
     --color:white;
 }
 ion-card{
+    position: static;
     border: 0 !important;
     box-shadow: none !important;
     border: none !important;
     border-style: none !important;
     --background-color: white;
+    background: #FFFFFF;
+    left: 46px;
+    top: 319px;
+    box-shadow: 0px 10px 40px;
+    border-radius: 20px;
     h5 {
-        font-weight: 750;
-        font-size: 16px;
-        color: black;
         position: static;
-        width: 209px;
+        width: 275px;
         height: 26px;
+        left: 36px;
+        top: 0px;
+        font-style: normal;
+        font-weight: 550;
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: -0.5px;
+        color:black;
         left: calc(50% - 209px/2 - 51px);
         top: calc(50% - 26px/2);
-        font-style: normal;
-        font-weight: bold;
-        font-size: 20px;
-        line-height: 26px;
         display: flex;
         align-items: center;
-        letter-spacing: -0.5px;
         flex: none;
         order: 0;
         flex-grow: 1;
         margin: 0px 10px;
     }
 }
-
-ion-card:hover, ion-item:hover   {
+ion-card:hover, ion-item:hover  {
     background-color: white !important;
     transform: scale(0.9);
  }

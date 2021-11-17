@@ -1,13 +1,40 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
   </ion-header>
+
   <ion-item lines="none" style="--background:#f1f5f8; text-align: center;">
     <ion-title>
       <label id="titulo">Reporte de Síntomas</label>
     </ion-title>
   </ion-item>
 
+<ion-grid id="espacio">
+</ion-grid>
 
+  <ion-grid>
+    <ion-card button="true">
+      <ion-item lines="none" style="padding:0px !important;">
+          <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        <label>Lista de síntomas</label>
+      </ion-item>
+    </ion-card>
+    <ion-card button="true">
+      <ion-item lines="none" style="padding:0px !important;">
+          <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        <label>Otros síntomas</label>
+      </ion-item>
+    </ion-card>
+  </ion-grid>
 
-
+  <ion-grid>
+    <ion-card>
+      <ion-card-content>
+        ¿No puedes encontrar tu síntoma? 
+        <p>¡Usa tu micrófono y nosotros lo encontraremos por tí!</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-grid>
+  <ion-button id="mic">
+    <img src="assets/imagenes/mic.png" alt="">
+  </ion-button> 
 </ion-content>
