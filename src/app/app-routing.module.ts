@@ -11,7 +11,8 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
-  },  {
+  },
+  {
     path: 'loginscreen',
     loadChildren: () => import('./pages/loginscreen/loginscreen.module').then( m => m.LoginscreenPageModule)
   },
@@ -22,11 +23,15 @@ const routes: Routes = [
   {
     path: 'forgotpassword',
     loadChildren: () => import('./pages/forgotpassword/forgotpassword.module').then( m => m.ForgotpasswordPageModule)
+  },  {
+    path: 'tipousuario',
+    loadChildren: () => import('./pages/tipousuario/tipousuario.module').then( m => m.TipousuarioPageModule)
   },
   {
-    path: 'tipousuario',
-    loadChildren: () => import('./tipousuario/tipousuario.module').then( m => m.TipousuarioPageModule)
+    path: 'listasintomas',
+    loadChildren: () => import('./pages/listasintomas/listasintomas.module').then( m => m.ListasintomasPageModule)
   }
+
 
 ];
 @NgModule({
