@@ -1,11 +1,8 @@
 ion-content {
     --background:white;
 }
-#espacio{
-height: 20vh;
-width: 120%;
-margin-left: -5.0vh;
-margin-top: -5px;
+ion-toolbar{
+    --background:White;
 }
 #borde {
     --background: #F5F5F8;
@@ -50,7 +47,7 @@ ion-card-content{
     background:white;
 }
 ion-grid{
-    height: 900px;
+ 
     left: 0px;
     right: 0px;
     top: 244px;
