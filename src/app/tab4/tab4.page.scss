@@ -1,56 +1,54 @@
 ion-content {
     --background:#F5F5F8;
 }
+#titulo{
+    position: static;
+    width: 277px;
+    height: 32px;
+    left: 0px;
+    top: 9px;
+    font-weight: 700;
+    font-size: 20px;
+    color: black;
+    line-height: 32px;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: -0.5px;
+}
+#nombreperfil{
+    position: static;
+    width: 277px;
+    height: 32px;
+    left: 0px;
+    top: 9px;
+  font-weight: 700;
+  font-size: 20px;
+  color: black;
+  line-height: 32px;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+}
 #imageSub{
     width: 20px;
     height: auto;
     z-index: 2;
     display: flex;
-    margin-left: 6rem;
+    margin-left: 4rem;
     margin-top: -1rem;
     border: radius 15px;
     background-color: #c3bfbf;
     padding:3px;
+    position: absolute;
 }
 ion-icon {
     color: black;
     font-size: 13px;
   }
-ion-title{
-    width: 277px;
-    height: 32px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 32px;
-    letter-spacing: -0.5px;
-    color: #000000;
-    }
-    ion-item {
-        --background: white;
-        --background-color: white;
-        --color:white;
-        h4 {
-            position: static;
-            width: 277px;
-            height: 32px;
-            left: 0px;
-            top: 9px;
-          font-weight: 700;
-          font-size: 20px;
-          color: black;
-          line-height: 32px;
-          font-style: normal;
-          font-weight: bold;
-          letter-spacing: -0.5px;
-        }
-    }
-
     ion-grid{
-        height: 30vh;
+        height: 18vh;
         width: 120%;
-        background: white;
-        margin-left: -4.5vh;
+        margin-left: -5.0vh;
         margin-top: -5px;
         --background:#F5F5F8;
     }
@@ -59,6 +57,8 @@ ion-title{
             ion-avatar {
                 width: 15vh;
                 height: 15vh;
+                z-index: 1;
+                position: static;
                 background: var(--ion-color-white);
                 margin-bottom: 5px;
                 border: 7px solid #EDECF4;

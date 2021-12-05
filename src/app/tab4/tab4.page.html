@@ -1,19 +1,28 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
   </ion-header>
-  <ion-item lines="none" style="--background:#f1f5f8;" style="background: white;">
-    <ion-title style="width: 277px; height: 32px;">
-      <h4>Configuración</h4>
+
+  <ion-item lines="none" style="--background:#f1f5f8; text-align: center;">
+    <ion-title>
+      <label id="titulo">Configuración</label>
     </ion-title>
   </ion-item>
-  <ion-grid style="--background:white;">
+  
+  <ion-grid>
     <div>
       <ion-avatar style="margin: auto;">
         <img src="assets/imagenes/doctor.jpg"/>
-        <img id="imageSub" src="http://icons555.com/images/icons-black/image_icon_crayon_pic_512x512.png" alt="">
+        <img id="imageSub" src="http://icons555.com/images/icons-black/image_icon_crayon_pic_512x512.png" alt="" ng-click="nextpage()">
       </ion-avatar>
     </div>
   </ion-grid>
+
+  <ion-item lines="none" style="--background:#f1f5f8; text-align: center;">
+    <ion-title>
+      <label id="nombreperfil">Jhonatan</label>
+    </ion-title>
+  </ion-item>
+
   <ion-list style="--background:#f1f5f8; background: #f1f5f8;">
     <ion-item lines="none" style="--background:#f1f5f8; background: #f1f5f8;" button="true" detail="false">
       <ion-icon slot="start" src="assets/imagenes/Vector.svg" style="font-size: 13.33px; position:absolute"></ion-icon>

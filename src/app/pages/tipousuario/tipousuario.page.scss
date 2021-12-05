@@ -15,7 +15,6 @@ ion-content {
     font-weight: bold;
     letter-spacing: -0.5px;
 }
-
 #espacio{
     height: 18vh;
     width: 120%;
@@ -92,15 +91,3 @@ ion-card:hover, #uno:hover, #dos:hover  {
        color: #000000;
     }
  }
- #mic{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
- }
-
- ion-button {
-    --border-radius:50px;
-    height: 96px;
-    width: 96px;
-    --background: white;
-}

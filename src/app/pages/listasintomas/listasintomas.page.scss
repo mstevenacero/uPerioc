@@ -1,0 +1,101 @@
+ion-content {
+    --background:white;
+}
+ion-toolbar{
+    --background:White;
+}
+#borde {
+    --background: #F5F5F8;
+    --background-color: white;
+    --color:white;
+}
+#carta{
+    position: static;
+    border: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-style: none !important;
+    --background-color: white;
+    background: #FFFFFF;
+    left: 46px;
+    top: 319px;
+    box-shadow: 0px 10px 40px;
+    border-radius: 20px;
+    h5 {
+        position: static;
+        width: 275px;
+        height: 26px;
+        left: 36px;
+        top: 0px;
+        font-style: normal;
+        font-weight: 550;
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: -0.5px;
+        color:black;
+        left: calc(50% - 209px/2 - 51px);
+        top: calc(50% - 26px/2);
+        display: flex;
+        align-items: center;
+        flex: none;
+        order: 0;
+        flex-grow: 1;
+        margin: 0px 10px;
+    }
+}
+ion-card-content{
+    background:white;
+}
+ion-grid{
+ 
+    left: 0px;
+    right: 0px;
+    top: 244px;
+    background: #EDECF4;
+    border-radius: 16px;
+}
+ion-icon {
+    color: black;
+  }
+  ion-card{
+    border: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-style: none !important;
+    --background-color: white;
+    background: #FFFFFF;
+    position: static;
+    left: 16px;
+    top: 16px;
+    box-shadow: 0px 10px 40px;
+    border-radius: 12px;
+  }
+  ion-card-content{
+    background-color:white;
+}
+ion-item {
+    --background: white;
+    --background-color: white;
+    --color:white;
+}
+label{
+    position: static;
+    width: 275px;
+    height: 26px;
+    left: 36px;
+    top: 0px;
+    font-style: normal;
+    font-weight: 550;
+    font-size: 15px;
+    line-height: 21px;
+    letter-spacing: -0.5px;
+    color:black;
+    left: calc(50% - 209px/2 - 51px);
+    top: calc(50% - 26px/2);
+    display: flex;
+    align-items: center;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    margin: 0px 10px;
+}
