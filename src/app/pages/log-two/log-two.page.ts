@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl ,FormGroup} from '@angular/forms';
+import { Router } from '@angular/router';
 import { Register } from 'src/app/modules/register';
 import {RestService} from '../../services/rest.service'
 
@@ -18,7 +19,7 @@ export class LogTwoPage implements OnInit {
     password:"",
   }
  
-  constructor( private _httpService:RestService) { }
+  constructor( private _httpService:RestService,private router:Router) { }
   ngOnInit():void {
   }
   addUser(){
@@ -30,6 +31,7 @@ export class LogTwoPage implements OnInit {
         if (!response) {
           console.error('Error: de crear usuario');
         } else {
+          this.router.navigateByUrl('login/log-one');
           console.log('se  agrego el usuario');
 
         }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataObservableService } from '../services/data-observable.service';
 
 @Component({
   selector: 'app-tab4',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tab4.page.scss'],
 })
 export class Tab4Page implements OnInit {
+  dataUser:any
+  constructor(private _dataObservable:DataObservableService) { }
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  ngOnInit(){
+    this._dataObservable.$dataObjectSource.subscribe(data => this.dataUser = data
+     )
+     console.log("llego la data: ",this.dataUser);
+     
+ 
+   }
 
 }
