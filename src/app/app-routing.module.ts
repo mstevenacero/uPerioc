@@ -31,6 +31,10 @@ const routes: Routes = [
   {
     path: 'listasintomas',
     loadChildren: () => import('./pages/listasintomas/listasintomas.module').then( m => m.ListasintomasPageModule)
+  },
+  {
+    path: 'draw-anatomye',
+    loadChildren: () => import('./pages/draw-anatomye/draw-anatomye.module').then( m => m.DrawAnatomyePageModule)
   }
 
 

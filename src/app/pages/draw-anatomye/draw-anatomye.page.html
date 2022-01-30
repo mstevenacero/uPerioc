@@ -1,0 +1,87 @@
+<ion-content>
+  <h2 class="title" *ngIf="disable">Selecciona el area que te duele</h2>
+  <h2 class="title" *ngIf="change">Esta es tu area afectada?</h2>
+  <ion-card *ngIf="changeAnatomy" id="imgAnatomia">
+    <img src="../../../assets/imagenes/Anatomico.jpg" alt="">
+  </ion-card>
+  <ion-card *ngIf="position === 'cabeza' && change " id="imgAnatomia">
+    <img src="../../../assets/imagenes/cabeza.jpg" alt="">
+  </ion-card>
+  <ion-card *ngIf="position === 'rostro' && change " id="imgAnatomia">
+    <img src="../../../assets/imagenes/cabeza.jpg" alt="">
+  </ion-card>
+  <ion-card *ngIf="position === 'cuello' && change " id="imgAnatomia">
+    <img src="../../../assets/imagenes/cabeza.jpg" alt="">
+  </ion-card>
+  <ion-card *ngIf="position === 'toraxDere' && change " id="imgAnatomia">
+    <img src="../../../assets/imagenes/cabeza.jpg" alt="">
+  </ion-card>
+  <ion-card *ngIf="position === 'toraxIzqui' && change " id="imgAnatomia">
+    <img src="../../../assets/imagenes/cabeza.jpg" alt="">
+  </ion-card>
+  <ion-card *ngIf="position === 'brazoDere' && change " id="imgAnatomia">
+    <img src="../../../assets/imagenes/cabeza.jpg" alt="">
+  </ion-card>
+  <ion-card *ngIf="position === 'brazoIzq' && change " id="imgAnatomia">
+    <img src="../../../assets/imagenes/cabeza.jpg" alt="">
+  </ion-card>
+  <ion-card *ngIf="position === 'cuadSupeIz' && change " id="imgAnatomia">
+    <img src="../../../assets/imagenes/cabeza.jpg" alt="">
+  </ion-card>
+  <ion-card *ngIf="position === 'cuadSupeDer' && change " id="imgAnatomia">
+    <img src="../../../assets/imagenes/cabeza.jpg" alt="">
+  </ion-card>
+  <ion-card *ngIf="position === 'cuadInfeIz' && change " id="imgAnatomia">
+    <img src="../../../assets/imagenes/cabeza.jpg" alt="">
+  </ion-card>
+  <ion-card *ngIf="position === 'cuadInfeDer' && change " id="imgAnatomia">
+    <img src="../../../assets/imagenes/cabeza.jpg" alt="">
+  </ion-card>
+  <ion-card *ngIf="position === 'cadera' && change " id="imgAnatomia">
+    <img src="../../../assets/imagenes/cabeza.jpg" alt="">
+  </ion-card>
+  <ion-card *ngIf="position === 'genitales' && change " id="imgAnatomia">
+    <img src="../../../assets/imagenes/cabeza.jpg" alt="">
+  </ion-card>
+  <ion-card *ngIf="position === 'muslo' && change " id="imgAnatomia">
+    <img src="../../../assets/imagenes/cabeza.jpg" alt="">
+  </ion-card>
+  <ion-card *ngIf="position === 'rodilla' && change " id="imgAnatomia">
+    <img src="../../../assets/imagenes/cabeza.jpg" alt="">
+  </ion-card>
+  <ion-card *ngIf="position === 'piernaIfe' && change " id="imgAnatomia">
+    <img src="../../../assets/imagenes/cabeza.jpg" alt="">
+  </ion-card>
+  <ion-card *ngIf="position === 'pies' && change " id="imgAnatomia">
+    <img src="../../../assets/imagenes/cabeza.jpg" alt="">
+  </ion-card>
+  <div *ngIf="disable">
+    <ion-item class="items">
+      <ion-label class="label" position="floating">Area afectada</ion-label>
+      <ion-select [(ngModel)]="position">
+        <ion-select-option value="cabeza">Cabeza</ion-select-option>
+        <ion-select-option value="rostro">Rostro</ion-select-option>
+        <ion-select-option value="cuello">Cuello</ion-select-option>
+        <ion-select-option value="toraxDere">Torax derecho</ion-select-option>
+        <ion-select-option value="toraxIzqui">Totax izquierdo</ion-select-option>
+        <ion-select-option value="brazoIzq">Brazo izquierdo</ion-select-option>
+        <ion-select-option value="brazoDere">Brazo Derecho</ion-select-option>
+        <ion-select-option value="cuadSupeIz">Cuadrante sup izq</ion-select-option>
+        <ion-select-option value="cuadSupeDer">Cuadrante sup dere</ion-select-option>
+        <ion-select-option value="cuadInfeIz">Cuadrante inf izq</ion-select-option>
+        <ion-select-option value="cuadInfeDer">Cuadrante inf dere</ion-select-option>
+        <ion-select-option value="cadera">Cadera</ion-select-option>
+        <ion-select-option value="genitales">Genitales</ion-select-option>
+        <ion-select-option value="muslo">muslo</ion-select-option>
+        <ion-select-option value="rodilla">rodilla</ion-select-option>
+        <ion-select-option value="piernaIfe">Pierna inferior</ion-select-option>
+        <ion-select-option value="pies">pies</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-button (click)="getClick()" id="buttonI">Escoger</ion-button>
+  </div>
+  <div *ngIf="change" name="card">
+    <ion-button (click)="nextPage()" id="buttonI">Siguiente</ion-button>
+    <ion-button (click)="backClick()" id="buttonI">Atras</ion-button>
+  </div>
+</ion-content>
