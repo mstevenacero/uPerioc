@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SenTobackService } from 'src/app/services/sen-toback.service';
 
 @Component({
   selector: 'app-draw-anatomye',
@@ -7,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./draw-anatomye.page.scss'],
 })
 export class DrawAnatomyePage implements OnInit {
+  changeInitPost = ''
   WIDTH = 623;
   HEITH = 939;
   point = 0;
@@ -14,21 +16,21 @@ export class DrawAnatomyePage implements OnInit {
   disable: boolean = true
   change: boolean = false
   changeAnatomy: boolean = true
-  constructor(private router:Router) { }
+  constructor(private router: Router,
+    private _changeInit: SenTobackService) {
+
+    this._changeInit.currentInit.subscribe(item => {
+      this.changeInitPost = item
+    });
+  }
 
   ngOnInit() {
   }
-
-  clickAnatomy(point, x, y) {
-
-
-  }
-
   getClick() {
     this.change = true
     this.changeAnatomy = false
     this.disable = false
-    console.log("cabeza", this.position);
+   
 
   }
   backClick() {
@@ -37,21 +39,14 @@ export class DrawAnatomyePage implements OnInit {
     this.disable = true
 
   }
-  nextPage(){
+  nextPage() {
+    console.log("cabeza", this.position);
+    this.changeInitPost = this.position
+    const newInitTmp = this.changeInitPost;
+    this._changeInit.changeInit(newInitTmp);
     this.router.navigateByUrl('listasintomas');
+    //behaivor subjcet 
 
   }
-  /*<h6 (click)="getClick('cabeza')" value="Cabeza" class="select">1</h6>
-    <h6  (click)="getClick('rostro')" class="select">2</h6>
-    <h6  (click)="getClick('cuello')" class="select">3</h6>
-    <h6  (click)="getClick('brazoIz')" class="select">4</h6>
-    <h6  (click)="getClick('brazoDere')" class="select">5</h6>
-    <h6  (click)="getClick('toraxIz')" class="select">6</h6>
-    <h6  (click)="getClick('toraxDere')" class="select">7</h6>
-    <h6  (click)="getClick('toraxDere')" class="select">8</h6>
-    <h6  (click)="getClick('cuadreSupeDerec')" class="select">8</h6>
-    <h6  (click)="getClick('cuadreIzqDerec')" class="select">9</h6>
-    <h6  (click)="getClick('cuadreinfeDerec')" class="select">10</h6>
-    <ion-item class="items">*/
 
 }

@@ -1,4 +1,4 @@
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" *ngIf="dataReturn !== ''">
   <ion-header>
   </ion-header>
 
@@ -7,7 +7,6 @@
       <ion-back-button defaultHref='/tab2' style="color:black"></ion-back-button>
    </ion-buttons>
   </ion-toolbar>
-  
     <ion-card id="carta">
       <ion-item lines="none" style="padding:0px !important;" id="borde" >
         <ion-thumbnail slot="end" style=" width: 69px;height: 108px;left: 24px; top: 4px;">
@@ -17,36 +16,9 @@
       </ion-item>
     </ion-card>
     <ion-grid>
-      <ion-card style="height: 103px;">
-        <ion-item lines="none" style="padding:0px !important;"> 
-          <label></label>
-        </ion-item>
-      </ion-card>
-      <ion-card style="height: 103px;">
-        <ion-item lines="none" style="padding:0px !important;"> 
-          <label></label>
-        </ion-item>
-      </ion-card>
-      <ion-card style="height: 103px;">
-        <ion-item lines="none" style="padding:0px !important;"> 
-          <label></label>
-        </ion-item>
-      </ion-card>
-      <ion-card style="height: 103px;">
-        <ion-item lines="none" style="padding:0px !important;"> 
-          <label></label>
-        </ion-item>
-      </ion-card>
-      <ion-card style="height: 103px;">
-        <ion-item lines="none" style="padding:0px !important;"> 
-          <label></label>
-        </ion-item>
-      </ion-card>
-      <ion-card style="height: 103px;">
-        <ion-item lines="none" style="padding:0px !important;"> 
-          <label></label>
-        </ion-item>
-      </ion-card>
+      <div *ngFor="let dataReturn of item;index as i">
+        <h1>{{item.nombre}}</h1>
+        <label>{{item.description}}</label>
+      </div>
     </ion-grid>
-
 </ion-content>
