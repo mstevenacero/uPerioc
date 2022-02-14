@@ -10,47 +10,13 @@
       <h5>Alertas</h5>
     </ion-item>
   </ion-card>
-<ion-grid>
+<h3  id="alertsFalse" *ngIf="noAlerts">En este momento no tienes alertas !</h3>
+<ion-grid *ngIf="getChange">
   <ion-row>
-    <ion-col size="6">
-      <ion-card style="height: 124px;">
-        <ion-item lines="none" style="padding:0px !important;"> 
-          <label></label>
-        </ion-item>
-      </ion-card>
-    </ion-col>
-    <ion-col size="6">
-      <ion-card style="height: 124px;">
-        <ion-item lines="none" style="padding:0px !important;"> 
-          <label></label>
-        </ion-item>
-      </ion-card>
-    </ion-col>
-    <ion-col size="6">
-      <ion-card style="height: 124px;">
-        <ion-item lines="none" style="padding:0px !important;"> 
-          <label></label>
-        </ion-item>
-      </ion-card>
-    </ion-col>
-    <ion-col size="6">
-      <ion-card style="height: 124px;">
-        <ion-item lines="none" style="padding:0px !important;"> 
-          <label></label>
-        </ion-item>
-      </ion-card>
-    </ion-col>
-    <ion-col size="6">
-      <ion-card style="height: 124px;">
-        <ion-item lines="none" style="padding:0px !important;"> 
-          <label></label>
-        </ion-item>
-      </ion-card>
-    </ion-col>
-    <ion-col size="6">
-      <ion-card style="height: 124px;">
-        <ion-item lines="none" style="padding:0px !important;"> 
-          <label></label>
+    <ion-col size="6" >
+      <ion-card *ngIf="getChange" style="height: 124px;">
+        <ion-item  lines="none" style="padding:0px !important;"> 
+          <label>{{getAlert}}</label>
         </ion-item>
       </ion-card>
     </ion-col>

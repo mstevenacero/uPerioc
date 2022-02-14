@@ -28,6 +28,48 @@
       <ion-label class="label" position="floating">Contraseña</ion-label>
       <ion-input name="password" type="password"[(ngModel)]="registro.password" ></ion-input>
     </ion-item>
+    <ion-item class="items">
+      <ion-label class="label" position="floating">Telefono fijo</ion-label>
+      <ion-input name="Celular" [(ngModel)]="registro.phone" ></ion-input>
+    </ion-item>
+    <ion-item class="items">
+      <ion-label class="label" position="floating">Celular</ion-label>
+      <ion-input name="movil"[(ngModel)]="registro.movil" ></ion-input>
+    </ion-item>
+    <ion-item class="items">
+      <ion-label class="label" position="floating"> Genero</ion-label>
+      <ion-input name="genero" [(ngModel)]="registro.gener" ></ion-input>
+    </ion-item>
+    <ion-item class="items">
+      <ion-label class="label" position="floating">Fecha de nacimiento</ion-label>
+      <ion-input name="date_of_birth" [(ngModel)]="registro.date_of_birth" ></ion-input>
+    </ion-item>
+    <ion-item class="items">
+      <ion-label class="label" position="floating">Nivel de escolaridad</ion-label>
+      <ion-input name="level_school" [(ngModel)]="registro.level_school" ></ion-input>
+    </ion-item>
+    <ion-item class="items">
+      <ion-label class="label" position="floating">¿Vive solo?</ion-label>
+      <ion-select [(ngModel)]="registro.life_alone">
+        <ion-select-option value="Si">Si</ion-select-option>
+        <ion-select-option value="No">No</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item class="items">
+      <ion-label class="label" position="floating">grupo etnico</ion-label>
+      <ion-input name="grup_etni" [(ngModel)]="registro.grup_etni" ></ion-input>
+    </ion-item>
+    <ion-item class="items">
+      <ion-label class="label" position="floating">persona vunerable</ion-label>
+      <ion-input name="vunerable_person" [(ngModel)]="registro.vunerable_person" ></ion-input>
+    </ion-item>
+    <ion-item class="items">
+      <ion-label class="label" position="floating">¿Vincular familiar?</ion-label>
+      <ion-select [(ngModel)]="registro.family_conection">
+        <ion-select-option value="Si">Si</ion-select-option>
+        <ion-select-option value="No">No</ion-select-option>
+      </ion-select>
+    </ion-item>
   </div>
   <ion-button  (click)="addUser()" id="buttonI">Registrarse</ion-button>
 </ion-content>

@@ -26,6 +26,14 @@
         <h5>Mis procesos</h5>
       </ion-item>
     </ion-card>
+    <ion-card button="true">
+      <ion-item lines="none" style="padding:0px !important;" id="dos">
+        <ion-thumbnail slot="end" style=" width: 69px;height: 108px;left: 24px; top: 4px;">
+          <img src="assets/imagenes/electro.png">
+        </ion-thumbnail>
+        <h5>Mis sintomas</h5>
+      </ion-item>
+    </ion-card>
     <ion-card button="true" (click)="nextPage()">
       <ion-item lines="none" style="padding:0px !important;" id="tres">
         <ion-thumbnail slot="end" style=" width: 69px;height: 108px;left: 24px; top: 4px;">
@@ -35,7 +43,8 @@
       </ion-item>
     </ion-card>
     <ion-card button="true">
-      <ion-item lines="none" style="padding:0px !important;" id="cuatro">
+      <ion-icon  *ngIf="alertEneable" style="margin-left:80%;margin-top: 7px;background-color: rgb(255, 0, 76);border-radius:100% ;" name="sad-outline"></ion-icon>
+      <ion-item lines="none" style="padding:0px !important;" id="cuatro" (click)=" nextPageAlerts()">
         <ion-thumbnail slot="end" style=" width: 69px;height: 108px;left: 24px; top: 4px;">
           <img src="assets/imagenes/doctor.jpg">
         </ion-thumbnail>

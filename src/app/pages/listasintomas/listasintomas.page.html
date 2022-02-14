@@ -9,16 +9,23 @@
   </ion-toolbar>
     <ion-card id="carta">
       <ion-item lines="none" style="padding:0px !important;" id="borde" >
-        <ion-thumbnail slot="end" style=" width: 69px;height: 108px;left: 24px; top: 4px;">
+        <ion-thumbnail slot="end" style=" width: 69px;height: 108px;left: 24px; top: 4px;">s
           <img src="assets/imagenes/electro.png">
         </ion-thumbnail>
-        <h5>¿Cómo me siento?</h5>
+        <h5>Selecciona tus sintomas</h5>
       </ion-item>
     </ion-card>
     <ion-grid>
-      <div *ngFor="let dataReturn of item;index as i">
-        <h1>{{item.nombre}}</h1>
-        <label>{{item.description}}</label>
-      </div>
+      <ion-card *ngFor="let item of dataReturn;index as i">
+        <div (click)="symptomsUser(item.nombre)">
+          <h1>{{item.nombre}}</h1>
+          <label>{{item.description}}</label>
+        </div>
+      </ion-card>
     </ion-grid>
+    <ion-fab horizontal="end" vertical="bottom" slot="fixed" (click)="addSymptonsUser()">
+      <ion-fab-button style="color: #56CCF2">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
 </ion-content>

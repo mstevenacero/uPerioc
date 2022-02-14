@@ -1,11 +1,19 @@
+<ion-header *ngIf="disable">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
 <ion-content>
-  <h2 class="title" *ngIf="disable">Selecciona el area que te duele</h2>
-  <h2 class="title" *ngIf="change">Esta es tu area afectada?</h2>
+  <ion-grid>
+    <h2 class="title" *ngIf="disable">Selecciona el area que te duele</h2>
+  <h2 class="title" *ngIf="change">¿Esta es tu area afectada?</h2>
   <ion-card *ngIf="changeAnatomy" id="imgAnatomia">
     <img src="../../../assets/imagenes/Dibujo anatómico.png" alt="">
   </ion-card>
   <ion-card *ngIf="position === 'cabeza' && change " id="imgAnatomia">
-    <img src="../../../assets/imagenes/cabeza.jpg "alt="">
+    <img src="../../../assets/imagenes/cabeza.png "alt="">
   </ion-card>
   <ion-card *ngIf="position === 'rostro' && change " id="imgAnatomia">
     <img src="../../../assets/imagenes/rostro.png "alt="">
@@ -79,9 +87,11 @@
       </ion-select>
     </ion-item>
     <ion-button (click)="getClick()" id="buttonI">Escoger</ion-button>
+    <ion-button (click)="getClick()" id="buttonI">No Aplica</ion-button>
   </div>
   <div *ngIf="change" name="card">
     <ion-button (click)="nextPage()" id="buttonI">Siguiente</ion-button>
     <ion-button (click)="backClick()" id="buttonI">Atras</ion-button>
   </div>
+  </ion-grid>
 </ion-content>

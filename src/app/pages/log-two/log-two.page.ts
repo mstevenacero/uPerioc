@@ -17,7 +17,18 @@ export class LogTwoPage implements OnInit {
     residencia:"",
     num_document:null,
     password:"",
+    phone:null,
+    movil:null,
+    gener:"",
+    date_of_birth:null,
+    level_school:"",
+    life_alone:"",
+    grup_etni:"",
+    vunerable_person:"",
+    family_conection:null,
+
   }
+  
  
   constructor( private _httpService:RestService,private router:Router) { }
   ngOnInit():void {
