@@ -10,7 +10,7 @@ export interface Register {
     phone:number,
     movil:number,
     gener:string,
-    date_of_birth:string,
+    date_of_birth:number,
     level_school:string,
     life_alone:string,
     grup_etni:string,
