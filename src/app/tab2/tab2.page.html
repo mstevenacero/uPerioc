@@ -32,7 +32,12 @@
       </ion-card-content>
     </ion-card>
   </ion-grid>
-  <ion-button id="mic">
+  <ion-button (click)="startListening()" id="mic">
     <img src="assets/imagenes/mic.png" alt="">
   </ion-button> 
+    <ion-card>
+      <ion-card-content>
+        {{ match }}
+      </ion-card-content>
+    </ion-card>
 </ion-content>
