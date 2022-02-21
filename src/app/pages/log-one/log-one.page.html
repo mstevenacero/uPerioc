@@ -1,13 +1,21 @@
-<ion-content id="content">
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+  </ion-header>
   <div id ="forms">
     <ion-item class="items">
-      <ion-label  placeholder="email" class="label" position="floating">Correo electronico</ion-label>
+      <ion-label  placeholder="email" class="label" position="stacked">Correo electrónico o número de identificación</ion-label>
       <ion-input  [(ngModel)]="registro.email"></ion-input>
     </ion-item>
     <ion-item class="items">
-      <ion-label class="label" position="floating">Contraseña</ion-label>
+      <ion-label class="label" position="stacked">Contraseña</ion-label>
       <ion-input name="password" type="password"[(ngModel)]="registro.password"></ion-input>
     </ion-item>
+    <div class="password_forgot">
+      <ion-button fill="clear" class="ion-no-padding">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;¿Olvidaste tu contraseña?</ion-button>
+    </div>
   </div>
-  <ion-button (click)=" LoginUp()" id="buttonI">Iniciar</ion-button>
+  <ion-grid style="margin-top: 42px;">
+  <ion-button (click)=" LoginUp()" id="buttonI">Iniciar Sesión</ion-button>
+  </ion-grid>
 </ion-content>
+

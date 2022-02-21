@@ -3,7 +3,7 @@
   </ion-header>
   <ion-item lines="none" style="--background:#f1f5f8; text-align: center;">
     <ion-avatar slot="end">
-      <img src="assets/imagenes/doctor.jpg">
+      <img src="assets/imagenes/paciente.png">
     </ion-avatar>
     <ion-title id="titulo">
       <ion-label>{{dataUser.data.name}}</ion-label>
@@ -12,51 +12,43 @@
   <ion-grid>
     <ion-card button="true">
       <ion-item lines="none" style="padding:0px !important;" id="uno">
-        <ion-thumbnail slot="end" style=" border: none !important;width: 69px;height: 69px;left: 24px; top: 4px;">
-          <img src="assets/imagenes/image 5.png">
+        <ion-thumbnail slot="end">
+          <img src="assets/imagenes/Puzzle.png">
         </ion-thumbnail>
         <h5>Iniciar nuevo proceso</h5>
       </ion-item>
     </ion-card>
     <ion-card button="true">
       <ion-item lines="none" style="padding:0px !important;" id="dos">
-        <ion-thumbnail slot="end" style=" width: 69px;height: 108px;left: 24px; top: 4px;">
-          <img src="assets/imagenes/electro.png">
+        <ion-thumbnail slot="end">
+          <img src="assets/imagenes/Process.png">
         </ion-thumbnail>
         <h5>Mis procesos</h5>
       </ion-item>
     </ion-card>
-    <ion-card button="true">
-      <ion-item lines="none" style="padding:0px !important;" id="dos">
-        <ion-thumbnail slot="end" style=" width: 69px;height: 108px;left: 24px; top: 4px;">
-          <img src="assets/imagenes/electro.png">
-        </ion-thumbnail>
-        <h5>Mis sintomas</h5>
-      </ion-item>
-    </ion-card>
     <ion-card button="true" (click)="nextPage()">
       <ion-item lines="none" style="padding:0px !important;" id="tres">
-        <ion-thumbnail slot="end" style=" width: 69px;height: 108px;left: 24px; top: 4px;">
-          <img src="assets/imagenes/suero.jpg">
+        <ion-thumbnail slot="end">
+          <img src="assets/imagenes/Headache.png">
         </ion-thumbnail>
-        <h5>Reporte de <br />síntomas</h5>
+        <h5>Reporte de síntomas</h5>
       </ion-item>
     </ion-card>
     <ion-card button="true">
       <ion-icon  *ngIf="alertEneable" style="margin-left:80%;margin-top: 7px;background-color: rgb(255, 0, 76);border-radius:100% ;" name="sad-outline"></ion-icon>
       <ion-item lines="none" style="padding:0px !important;" id="cuatro" (click)=" nextPageAlerts()">
-        <ion-thumbnail slot="end" style=" width: 69px;height: 108px;left: 24px; top: 4px;">
-          <img src="assets/imagenes/doctor.jpg">
+        <ion-thumbnail slot="end">
+          <img src="assets/imagenes/Google Alerts.png">
         </ion-thumbnail>
         <h5>Mis alertas</h5>
       </ion-item>
     </ion-card>
     <ion-card button="true">
       <ion-item lines="none" style="padding:0px !important;" id="cinco">
-        <ion-thumbnail slot="end" style=" width: 69px;height: 108px;left: 24px; top: 4px;">
-          <img src="assets/imagenes/esteto.jpg">
+        <ion-thumbnail slot="end">
+          <img src="assets/imagenes/Downloads Folder.png">
         </ion-thumbnail>
-        <h5>Descarga de <br /> procesos</h5>
+        <h5>Descarga de procesos</h5>
       </ion-item>
     </ion-card>
   </ion-grid>

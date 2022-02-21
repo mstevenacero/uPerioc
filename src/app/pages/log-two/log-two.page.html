@@ -1,52 +1,69 @@
-<ion-content id="content">
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+  </ion-header>
   <div id ="forms">
     <ion-item class="items">
-      <ion-label placeholder="email" class="label" position="floating">Correo electronico</ion-label>
-      <ion-input [(ngModel)]="registro.email"></ion-input>
-    </ion-item>
-    <ion-item class="items">
-      <ion-label class="label" position="floating">Nombre</ion-label>
+      <ion-label class="label" position="stacked">Nombre completo</ion-label>
       <ion-input [(ngModel)]="registro.name"></ion-input>
     </ion-item>
     <ion-item class="items">
-      <ion-label class="label" position="floating">Eps</ion-label>
+      <ion-label class="label"  position="stacked">Número de documento</ion-label>
+      <ion-input [(ngModel)]="registro.num_document"></ion-input>
+    </ion-item>
+    <ion-item class="items">
+      <ion-label placeholder="email" class="label" position="stacked">Correo electrónico</ion-label>
+      <ion-input [(ngModel)]="registro.email"></ion-input>
+    </ion-item>
+
+     <!--¿Éstos son las únicas opciones?-->
+    <ion-item class="items">
+      <ion-label class="label" position="floating">EPS</ion-label>
       <ion-select [(ngModel)]="registro.eps">
         <ion-select-option value="Nueva Eps">Nueva Eps</ion-select-option>
         <ion-select-option value="Salub Total">Salub Total</ion-select-option>
         <ion-select-option value="Cruz blanca">Cruz blanca</ion-select-option>
       </ion-select>
     </ion-item>
+     <!-- El lugar de residencia debe ser un desplegable para elegir la vereda o zona-->
     <ion-item class="items">
       <ion-label class="label" position="floating">Lugar de residencia</ion-label>
       <ion-input [(ngModel)]="registro.residencia" ></ion-input>
     </ion-item>
     <ion-item class="items">
-      <ion-label class="label"  position="floating">Numero de documento</ion-label>
-      <ion-input [(ngModel)]="registro.num_document"></ion-input>
-    </ion-item>
-    <ion-item class="items">
-      <ion-label class="label" position="floating">Contraseña</ion-label>
+      <ion-label class="label" position="stacked">Contraseña</ion-label>
       <ion-input name="password" type="password"[(ngModel)]="registro.password" ></ion-input>
     </ion-item>
+     <!-- Hace falta confirmar contraseña-->
     <ion-item class="items">
-      <ion-label class="label" position="floating">Telefono fijo</ion-label>
+      <ion-label class="label" position="stacked">Télefono</ion-label>
       <ion-input name="Celular" [(ngModel)]="registro.phone" ></ion-input>
     </ion-item>
     <ion-item class="items">
-      <ion-label class="label" position="floating">Celular</ion-label>
+      <ion-label class="label" position="stacked">Celular</ion-label>
       <ion-input name="movil"[(ngModel)]="registro.movil" ></ion-input>
     </ion-item>
+    <!-- El género debe ser un desplegable, opciones: "Masculino-Femenino-Otro"-->
     <ion-item class="items">
-      <ion-label class="label" position="floating"> Genero</ion-label>
+      <ion-label class="label" position="floating"> Género</ion-label>
       <ion-input name="genero" [(ngModel)]="registro.gener" ></ion-input>
     </ion-item>
+     <!-- La fecha de nacimiento debe ser un datatime picker-->
     <ion-item class="items">
       <ion-label class="label" position="floating">Fecha de nacimiento</ion-label>
       <ion-input name="date_of_birth" [(ngModel)]="registro.date_of_birth" ></ion-input>
     </ion-item>
+    <!-- hagamos un desplegable con algunos studios-->
     <ion-item class="items">
-      <ion-label class="label" position="floating">Nivel de escolaridad</ion-label>
+      <ion-label class="label" position="stacked">Nivel de estudios</ion-label>
       <ion-input name="level_school" [(ngModel)]="registro.level_school" ></ion-input>
+    </ion-item>
+    <ion-item class="items">
+      <ion-label class="label" position="stacked">Grupo étnico</ion-label>
+      <ion-input name="grup_etni" [(ngModel)]="registro.grup_etni" ></ion-input>
+    </ion-item>
+    <ion-item class="items">
+      <ion-label class="label" position="stacked">Grupo vunerable</ion-label>
+      <ion-input name="vunerable_person" [(ngModel)]="registro.vunerable_person" ></ion-input>
     </ion-item>
     <ion-item class="items">
       <ion-label class="label" position="floating">¿Vive solo?</ion-label>
@@ -55,14 +72,8 @@
         <ion-select-option value="No">No</ion-select-option>
       </ion-select>
     </ion-item>
-    <ion-item class="items">
-      <ion-label class="label" position="floating">grupo etnico</ion-label>
-      <ion-input name="grup_etni" [(ngModel)]="registro.grup_etni" ></ion-input>
-    </ion-item>
-    <ion-item class="items">
-      <ion-label class="label" position="floating">persona vunerable</ion-label>
-      <ion-input name="vunerable_person" [(ngModel)]="registro.vunerable_person" ></ion-input>
-    </ion-item>
+    <!-- Hace falta Antecedentes, checkbox múltiple-->
+    <!--  Cambiar por checkbox-->
     <ion-item class="items">
       <ion-label class="label" position="floating">¿Vincular familiar?</ion-label>
       <ion-select [(ngModel)]="registro.family_conection">
@@ -71,6 +82,9 @@
       </ion-select>
     </ion-item>
   </div>
-  <ion-button  (click)="addUser()" id="buttonI">Registrarse</ion-button>
+  <ion-grid style="margin-top: -40px;">
+  <ion-button (click)="addUser()" id="buttonI">Registrarse</ion-button>
+</ion-grid>
 </ion-content>
+ 
 
