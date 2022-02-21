@@ -2,7 +2,6 @@ ion-content {
     --background:#F5F5F8;
 }
 #titulo{
-    position: static;
     width: 277px;
     height: 32px;
     left: 0px;
@@ -14,9 +13,10 @@ ion-content {
     font-style: normal;
     font-weight: bold;
     letter-spacing: -0.5px;
+    position: static;
 }
 #espacio{
-    height: 11vh;
+    height: 8vh;
     width: 100%;
     margin-left: -5.0vh;
     margin-top: -5px;
@@ -26,17 +26,15 @@ ion-icon {
     color: black;
   }
   ion-card{
-    border: 0 !important;
-    box-shadow: none !important;
-    border: none !important;
-    border-style: none !important;
+    border-radius: 20px;
     --background-color: white;
     background: #FFFFFF;
     position: static;
     left: 46px;
     top: 319px;
-    box-shadow: 0px 10px 40px;
+    box-shadow: 1px 3px 0px;
     border-radius: 20px;
+    
   }
   ion-card-content{
     background-color:white;
@@ -45,11 +43,13 @@ ion-item {
     --background: white;
     --background-color: white;
     --color:white;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.03);
+    border-radius: 20px;
 }
 label{
     position: static;
-    width: 275px;
-    height: 26px;
+    width: 315px;
+    height: 60px;
     left: 36px;
     top: 0px;
     font-style: normal;
@@ -92,9 +92,11 @@ ion-card:hover, #uno:hover, #dos:hover  {
     }
  }
     ion-avatar {
-            width: 20vh;
-            height: 20vh;
+            width: 25vh;
+            height: 25vh;
             position: static;
             background: #FFFFFF;
             box-shadow: 10px 9px 47.1374px rgba(0, 0, 0, 0.15);
+            margin-bottom: 5px;
+            border: 20px solid #FFFFFF;
     }
