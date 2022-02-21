@@ -16,8 +16,8 @@ ion-content {
     letter-spacing: -0.5px;
 }
 #espacio{
-    height: 18vh;
-    width: 120%;
+    height: 11vh;
+    width: 100%;
     margin-left: -5.0vh;
     margin-top: -5px;
     --background:#F5F5F8;
@@ -91,3 +91,10 @@ ion-card:hover, #uno:hover, #dos:hover  {
        color: #000000;
     }
  }
+    ion-avatar {
+            width: 20vh;
+            height: 20vh;
+            position: static;
+            background: #FFFFFF;
+            box-shadow: 10px 9px 47.1374px rgba(0, 0, 0, 0.15);
+    }
