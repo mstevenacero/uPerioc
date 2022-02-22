@@ -1,21 +1,17 @@
 <ion-content [fullscreen]="true" *ngIf="dataReturn !== ''">
-  <ion-header>
+  <ion-header collapse="condense">
   </ion-header>
-
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref='/tab2' style="color:black"></ion-back-button>
+      <ion-back-button defaultHref='/tab2' style="color:black" text=""></ion-back-button>
    </ion-buttons>
   </ion-toolbar>
-    <ion-card id="carta">
-      <ion-item lines="none" style="padding:0px !important;" id="borde" >
-        <ion-thumbnail slot="end" style=" width: 69px;height: 108px;left: 24px; top: 4px;">s
-          <img src="assets/imagenes/electro.png">
-        </ion-thumbnail>
-        <h5>Selecciona tus sintomas</h5>
-      </ion-item>
-    </ion-card>
-    <ion-grid>
+  <ion-grid  id="inicio" style="width: 100%; height:20vh">
+    <ion-item id= "titulo" lines="none" style="--background:white; text-align: center;">
+    <ion-label>Lista de síntomas</ion-label>
+    </ion-item>
+  </ion-grid>
+    <ion-grid id="sintomas">
       <ion-card *ngFor="let item of dataReturn;index as i">
         <div (click)="symptomsUser(item.nombre)">
           <h1>{{item.nombre}}</h1>

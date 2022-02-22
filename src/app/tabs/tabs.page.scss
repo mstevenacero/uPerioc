@@ -1,5 +1,5 @@
 ion-content {
-    --background:#F5F5F8;
+    --background:transparent;
 }
 
 ion-tab-bar {
@@ -9,6 +9,7 @@ ion-tab-bar {
     width: 92%;
     margin: 0 auto;
     box-shadow: 1px -1px 0px rgba(0, 0, 0, 0.08);
+    margin-top: 20px;
   }
   ion-tab-button {
     --color: var(--ion-color-medium);

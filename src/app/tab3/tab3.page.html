@@ -1,17 +1,18 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
   </ion-header>
-
-  <ion-card id="carta">
-    <ion-item lines="none" style="padding:0px !important;" id="borde" >
-      <ion-thumbnail slot="end" style=" width: 69px;height: 108px;left: 24px; top: 4px;">
-        <img src="assets/imagenes/doctor.jpg">
-      </ion-thumbnail>
-      <h5>Alertas</h5>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref='/tab1' style="color:black" text=""></ion-back-button>
+   </ion-buttons>
+  </ion-toolbar>
+  <ion-grid  id="inicio" style="width: 100%; height:20vh">
+    <ion-item id= "titulo" lines="none" style="--background:white; text-align: center;">
+    <ion-label>Alertas</ion-label>
     </ion-item>
-  </ion-card>
-<h3  id="alertsFalse" *ngIf="noAlerts">En este momento no tienes alertas !</h3>
-<ion-grid *ngIf="getChange">
+  </ion-grid>
+<h3  id="alertsFalse" *ngIf="noAlerts" style="text-align: center; margin-top: 20%;">¡En este momento no tienes alertas!</h3>
+<ion-grid id="alertas" *ngIf="getChange">
   <ion-row>
     <ion-col size="6" >
       <ion-card *ngIf="getChange" style="height: 124px;">

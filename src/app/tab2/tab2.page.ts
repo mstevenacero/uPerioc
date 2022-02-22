@@ -10,18 +10,18 @@ import { SpeechRecognition } from '@ionic-native/speech-recognition/ngx';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-  matches: String[];
+  info: String[];
   isRecording = false;
   constructor(private router: Router, public navCtrl: NavController,
   private speechRecognition: SpeechRecognition,
-  private plt: Platform, private cd: ChangeDetectorRef){}
+  private plt: Platform, private _changeCd: ChangeDetectorRef){}
   startListening() {
     let options = {
       language: 'es-ES'
     }
     this.speechRecognition.startListening().subscribe(matches => {
-      this.matches = matches;
-      this.cd.detectChanges();
+      this.info = matches;
+      this._changeCd.detectChanges();
     });
     this.isRecording = true;
   }

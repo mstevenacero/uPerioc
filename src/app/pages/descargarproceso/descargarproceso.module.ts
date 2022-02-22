@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { LoginscreenPageRoutingModule } from './loginscreen-routing.module';
+import { DescargarprocesoPageRoutingModule } from './descargarproceso-routing.module';
 
-import { LoginscreenPage } from './loginscreen.page';
+import { DescargarprocesoPage } from './descargarproceso.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    LoginscreenPageRoutingModule
+    DescargarprocesoPageRoutingModule
   ],
-  declarations: [LoginscreenPage]
+  declarations: [DescargarprocesoPage]
 })
-export class LoginscreenPageModule {}
+export class DescargarprocesoPageModule {}
