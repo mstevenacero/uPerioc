@@ -1,0 +1,116 @@
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref='/tab1' style="color:black" text=""></ion-back-button>
+ </ion-buttons>
+ <ion-button shape= "round" slot="end" color="medium">Guardar</ion-button>
+</ion-toolbar>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense" style="--background-color: white;">
+  </ion-header> 
+  <div style="width: 100%; height:25vh; background-color: white;background-color: white;">
+    <ion-grid style="width: 100%; height:20vh;">
+      <div>
+        <ion-avatar  style="margin: auto;">
+          <img src="assets/imagenes/paciente.png"/>
+        </ion-avatar>
+      </div>
+      <ion-item style="--background:white; text-align: center;border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px; box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.06); margin-top: 10px;" >
+        <ion-label id="nombreperfil" class="label" position="stacked">Nombre completo:</ion-label>
+        <ion-input [(ngModel)]="registro.name"></ion-input>
+        <ion-icon name="pencil" slot="end"></ion-icon>
+      </ion-item>
+    </ion-grid>
+  </div>
+  
+  <ion-grid id ="forms">
+    <ion-item class="items">
+      <ion-label class="label"  position="stacked">Número de documento:</ion-label>
+      <ion-input disabled [(ngModel)]="registro.num_document"></ion-input>
+      <ion-icon name="lock-closed" slot="end"></ion-icon>
+    </ion-item>
+    <ion-item class="items">
+      <ion-label placeholder="email" class="label" position="stacked">Correo electrónico:</ion-label>
+      <ion-input disabled [(ngModel)]="registro.email"></ion-input>
+      <ion-icon name="lock-closed" slot="end"></ion-icon>
+    </ion-item>
+     <!--¿Éstos son las únicas opciones?-->
+    <ion-item class="items">
+      <ion-label class="label" position="stacked">EPS:</ion-label>
+      <ion-select [(ngModel)]="registro.eps">
+        <ion-select-option value="Nueva Eps">Nueva Eps</ion-select-option>
+        <ion-select-option value="Salub Total">Salub Total</ion-select-option>
+        <ion-select-option value="Cruz blanca">Cruz blanca</ion-select-option>
+      </ion-select>
+      <ion-icon name="pencil" slot="end"></ion-icon>
+    </ion-item>
+     <!-- El lugar de residencia debe ser un desplegable para elegir la vereda o zona-->
+    <ion-item class="items">
+      <ion-label class="label" position="stacked">Lugar de residencia:</ion-label>
+      <ion-input [(ngModel)]="registro.residencia" ></ion-input>
+      <ion-icon name="pencil" slot="end"></ion-icon>
+    </ion-item>
+    <ion-item class="items">
+      <ion-label class="label" position="stacked">Contraseña:</ion-label>
+      <ion-input name="password" type="password"[(ngModel)]="registro.password" ></ion-input>
+      <ion-icon name="pencil" slot="end"></ion-icon>
+    </ion-item>
+     <!-- Hace falta confirmar contraseña-->
+    <ion-item class="items">
+      <ion-label class="label" position="stacked">Télefono:</ion-label>
+      <ion-input name="Celular" [(ngModel)]="registro.phone" ></ion-input>
+      <ion-icon name="pencil" slot="end"></ion-icon>
+    </ion-item>
+    <ion-item class="items">
+      <ion-label class="label" position="stacked">Celular:</ion-label>
+      <ion-input name="movil"[(ngModel)]="registro.movil" ></ion-input>
+      <ion-icon name="pencil" slot="end"></ion-icon>
+    </ion-item>
+    <!-- El género debe ser un desplegable, opciones: "Masculino-Femenino-Otro"-->
+    <ion-item class="items">
+      <ion-label class="label" position="stacked"> Género:</ion-label>
+      <ion-input name="genero" [(ngModel)]="registro.gener" ></ion-input>
+      <ion-icon name="pencil" slot="end"></ion-icon>
+    </ion-item>
+     <!-- La fecha de nacimiento debe ser un datatime picker-->
+    <ion-item class="items">
+      <ion-label class="label" position="stacked">Fecha de nacimiento:</ion-label>
+      <ion-input disabled name="date_of_birth" [(ngModel)]="registro.date_of_birth" ></ion-input>
+      <ion-icon name="lock-closed" slot="end"></ion-icon>
+    </ion-item>
+    <!-- hagamos un desplegable con algunos estudios-->
+    <ion-item class="items">
+      <ion-label class="label" position="stacked">Nivel de estudios:</ion-label>
+      <ion-input name="level_school" [(ngModel)]="registro.level_school" ></ion-input>
+      <ion-icon name="pencil" slot="end"></ion-icon>
+    </ion-item>
+    <ion-item class="items">
+      <ion-label class="label" position="stacked">Grupo étnico:</ion-label>
+      <ion-input disabled name="grup_etni" [(ngModel)]="registro.grup_etni" ></ion-input>
+      <ion-icon name="lock-closed" slot="end"></ion-icon>
+    </ion-item>
+    <ion-item class="items">
+      <ion-label class="label" position="stacked">Grupo vunerable:</ion-label>
+      <ion-input name="vunerable_person" [(ngModel)]="registro.vunerable_person" ></ion-input>
+      <ion-icon name="pencil" slot="end"></ion-icon>
+    </ion-item>
+    <ion-item class="items">
+      <ion-label class="label" position="stacked">¿Vive solo?:</ion-label>
+      <ion-select [(ngModel)]="registro.life_alone">
+        <ion-select-option value="Si">Si</ion-select-option>
+        <ion-select-option value="No">No</ion-select-option>
+      </ion-select>
+      <ion-icon name="pencil" slot="end"></ion-icon>
+    </ion-item>
+    <!-- Hace falta Antecedentes, checkbox múltiple-->
+    <!--  Cambiar por checkbox-->
+    <ion-item class="items">
+      <ion-label class="label" position="stacked">¿Desvincular familiar?:</ion-label>
+      <ion-select [(ngModel)]="registro.family_conection">
+        <ion-select-option value="Si">Si</ion-select-option>
+        <ion-select-option value="No">No</ion-select-option>
+      </ion-select>
+      <ion-icon name="pencil" slot="end"></ion-icon>
+    </ion-item>
+  </ion-grid>
+</ion-content>

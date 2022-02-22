@@ -32,12 +32,13 @@
       </ion-card-content>
     </ion-card>
   </ion-grid>
-  <ion-button (click)="startListening()" id="mic">
+  <ion-button (click)="startService()" id="mic">
     <img src="assets/imagenes/mic.png" alt="">
   </ion-button> 
+  <button style="margin: 10px;" (click)="stopService()">Stop</button>
     <ion-card>
       <ion-card-content>
-        {{ match }}
+        {{ service.text }}
       </ion-card-content>
     </ion-card>
 </ion-content>

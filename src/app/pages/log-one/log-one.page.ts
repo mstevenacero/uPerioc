@@ -1,7 +1,8 @@
-import { Component, OnInit ,Output,EventEmitter} from '@angular/core';
+import { Component, OnInit ,Output,EventEmitter,ContentChild} from '@angular/core';
 import { RestService } from 'src/app/services/rest.service';
 import { Router } from '@angular/router';
 import { DataObservableService } from 'src/app/services/data-observable.service';
+import { IonInput } from '@ionic/angular';
 
 @Component({
   selector: 'app-log-one',
@@ -14,9 +15,15 @@ export class LogOnePage implements OnInit {
     email:"",
     password:"",
   }
-
+  showPassword = false;
+  @ContentChild(IonInput) input: IonInput;
   constructor(private _httpService:RestService,private router:Router,private _dataObservable:DataObservableService) { }
-
+  toggleShow() {
+    this.showPassword = !this.showPassword;
+    this.input.type = this.showPassword ? 'text' : 'password';
+    
+  }
+  
   ngOnInit() {
   }
   LoginUp(){

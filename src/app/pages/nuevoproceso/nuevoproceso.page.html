@@ -1,0 +1,78 @@
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref='/tab1' style="color:black" text=""></ion-back-button>
+ </ion-buttons>
+</ion-toolbar>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense" style="--background-color: white;">
+  </ion-header> 
+  <div>
+    <ion-grid id="inicio" style="width: 100%; height:10vh;">
+      <ion-item lines="none" style="--background:white; text-align: center;">
+        <ion-title id="titulo">
+          <ion-label>Iniciar nuevo proceso</ion-label>
+        </ion-title>
+      </ion-item>
+    </ion-grid>
+  </div>
+
+  <ion-grid id="botones">
+    <ion-card button="true">
+      <ion-item id="item" lines="none" style="padding:0px !important;" id="uno"> 
+          <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        <label>Me siento mal / enfermo y no cuento con cita médica</label>
+      </ion-item>
+    </ion-card>
+    <ion-card button="true">
+      <ion-item  id="item" lines="none" style="padding:0px !important;"  id="dos">
+          <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        <label>Tengo un problema de salud y ya cuento con cita médica general</label>
+      </ion-item>
+    </ion-card>
+    <ion-card button="true">
+      <ion-item id="item" lines="none" style="padding:0px !important;" id="uno"> 
+          <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        <label>Tuve cita con especialista</label>
+      </ion-item>
+    </ion-card>
+    <ion-card button="true">
+      <ion-item id="item" lines="none" style="padding:0px !important;" id="uno"> 
+          <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        <label>Ya cuento con autorización para procedimiento quirúrgico</label>
+      </ion-item>
+    </ion-card>
+    <ion-card button="true">
+      <ion-item id="item" lines="none" style="padding:0px !important;" id="uno"> 
+          <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        <label>Ya me realizaron exámenes ordenados por especialista</label>
+      </ion-item>
+    </ion-card>
+    <ion-card button="true">
+      <ion-item id="item" lines="none" style="padding:0px !important;" id="uno"> 
+          <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        <label>Ya firmé el consentimiento informado</label>
+      </ion-item>
+    </ion-card>
+    <ion-card button="true">
+      <ion-item id="item" lines="none" style="padding:0px !important;" id="uno"> 
+          <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        <label>Ya tuve cita con el anestesiólogo </label>
+      </ion-item>
+    </ion-card>
+    <ion-card button="true">
+      <ion-item id="item" lines="none" style="padding:0px !important;" id="uno"> 
+          <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        <label>Ya recibí el procedimiento / La cirugia</label>
+      </ion-item>
+    </ion-card>
+    <ion-card button="true">
+      <ion-item id="item" lines="none" style="padding:0px !important;" id="uno"> 
+          <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        <label>Ya tuve consulta de control después de mi cirugía</label>
+      </ion-item>
+    </ion-card>
+  </ion-grid>
+
+
+
+</ion-content>

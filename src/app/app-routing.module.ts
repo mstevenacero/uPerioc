@@ -31,7 +31,24 @@ const routes: Routes = [
   {
     path: 'descargarproceso',
     loadChildren: () => import('./pages/descargarproceso/descargarproceso.module').then( m => m.DescargarprocesoPageModule)
+  },
+  {
+    path: 'editarperfil',
+    loadChildren: () => import('./pages/editarperfil/editarperfil.module').then( m => m.EditarperfilPageModule)
+  },
+  {
+    path: 'nuevoproceso',
+    loadChildren: () => import('./pages/nuevoproceso/nuevoproceso.module').then( m => m.NuevoprocesoPageModule)
+  },
+  {
+    path: 'misprocesos',
+    loadChildren: () => import('./pages/misprocesos/misprocesos.module').then( m => m.MisprocesosPageModule)
+  },
+  {
+    path: 'lineatemporal',
+    loadChildren: () => import('./pages/lineatemporal/lineatemporal.module').then( m => m.LineatemporalPageModule)
   }
+
 
 
 

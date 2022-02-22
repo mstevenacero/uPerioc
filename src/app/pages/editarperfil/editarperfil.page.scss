@@ -1,0 +1,51 @@
+ion-content {
+    --background:#F5F5F8;
+}
+ion-button{
+width: 96px;
+height: 38px;
+--color:black;
+--border-radius: 550px;
+}
+#nombreperfil{
+position: static;
+width: 277px;
+
+  font-weight: 700;
+  font-size: 20px;
+  color: black;
+  line-height: 32px;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+ion-icon {
+    color: black;
+    align-self: center;
+    font-size: 20px;
+  }
+  ion-avatar {
+    width: 20vh;
+    height: 20vh;
+    position: static;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.15);
+    margin-bottom: 5px;
+    border: 20px solid #FFFFFF;
+}
+#forms{
+    padding:30px;
+    margin-top: 20px;
+    position: static;
+}
+.items{
+    margin-top: 5%;
+    --background:#F5F5F8;
+    border-radius: 30px;
+}
+
+.label{
+    font-size: 12px;
+    color: gray;
+}

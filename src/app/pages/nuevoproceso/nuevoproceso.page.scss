@@ -1,0 +1,66 @@
+ion-content {
+    --background:#F5F5F8;
+}
+ion-icon {
+    color: black;
+    font-size: 13px;
+  }
+
+#inicio{
+    background-color: white;
+    box-shadow: 0px 4px 20px 4px rgba(0, 0, 0, 0.25);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+#titulo{
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 28px;
+line-height: 40px;
+}
+
+ion-card{
+    --background-color: white;
+    background: #FFFFFF;
+    position: static;
+    left: 46px;
+    top: 319px;
+    --box-shadow: 0px 10px 40px;
+    border-radius: 20px;
+  }
+  ion-card-content{
+    background-color:white;
+}
+#item {
+    --background: white;
+    --background-color: white;
+    --color:white;
+}
+label{
+    position: static;
+    width: 275px;
+    height: 26px;
+    left: 36px;
+    top: 0px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+    letter-spacing: -0.5px;
+    color:black;
+    display: flex;
+    align-items: center;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    margin: 0px 10px;
+    text-align: left;
+}
+
+#botones{
+ion-card:hover, #uno:hover, #dos:hover  {
+    background-color: white !important;
+    transform: scale(0.9);
+ }
+}
