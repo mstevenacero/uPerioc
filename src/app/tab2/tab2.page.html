@@ -1,29 +1,33 @@
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+  <ion-header collapse="condense" style="--background-color: white;">
   </ion-header>
-  <ion-item lines="none" style="--background:#f1f5f8; text-align: center;">
-    <ion-title id="titulo">
-      <ion-label>Reporte de Síntomas</ion-label>
-    </ion-title>
-  </ion-item>
-<ion-grid id="espacio">
-</ion-grid>
+  <div>
+    <ion-grid id="inicio" style="width: 100%; height:10vh;">
+      <ion-item lines="none" style="--background:white; text-align: center;">
+        <ion-title id="titulo">
+          <ion-label>Reporte de síntomas</ion-label>
+        </ion-title>
+      </ion-item>
+    </ion-grid>
+  </div>
 
-  <ion-grid id="botones">
+  <ion-grid id="botones" style="margin-top: 30px;">
     <ion-card button="true" (click)="lista()">
       <ion-item lines="none" style="padding:0px !important;" id="uno"> 
           <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
         <label>¿Cómo me siento?</label>
       </ion-item>
     </ion-card>
+
     <ion-card button="true">
       <ion-item lines="none" style="padding:0px !important;"  id="dos">
           <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
-        <label>Otros síntomas</label>
+        <label>Tengo otros síntomas</label>
       </ion-item>
     </ion-card>
   </ion-grid>
 
+  <!--
   <ion-grid>
     <ion-card>
       <ion-card-content>
@@ -42,3 +46,4 @@
       </ion-card-content>
     </ion-card>
 </ion-content>
+-->

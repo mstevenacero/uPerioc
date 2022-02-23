@@ -1,9 +1,55 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>misprocesos</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref='/tab1' style="color:black" text=""></ion-back-button>
+ </ion-buttons>
+</ion-toolbar>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+  </ion-header>  
+    <div>
+    <ion-grid id="inicio" style="width: 100%; height:25vh">
+    <ion-item lines="none" style="--background:white; text-align: center;">
+    <ion-title id="titulo">
+    <ion-label>Mis Procesos</ion-label>
+    </ion-title>
+    </ion-item>
+    <ion-item lines="none" style="--background:white; text-align: center; margin-top: 40px;">
+      <p>En PeriOpera tenemos una serie de recomendaciones de cuidado durante todo tu proceso, ¡sigue estos consejos!</p>
+    </ion-item>
+    </ion-grid>
+    </div>
 
-<ion-content>
+    <ion-grid id="botones">
+      <ion-card button="true">
+        <ion-item id="item" lines="none" style="padding:0px !important;" id="uno"> 
+            <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+          <label>Antes de la operación</label>
+        </ion-item>
+      </ion-card>
+      <ion-card button="true">
+        <ion-item  id="item" lines="none" style="padding:0px !important;"  id="dos">
+            <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+          <label>Durante la operación</label>
+        </ion-item>
+      </ion-card>
+      <ion-card button="true">
+        <ion-item id="item" lines="none" style="padding:0px !important;" id="uno"> 
+            <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+          <label>Después de la operación</label>
+        </ion-item>
+      </ion-card>
+      <ion-card button="true">
+        <ion-item id="item" lines="none" style="padding:0px !important;" id="uno"> 
+            <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+          <label>Ver mi proceso completo</label>
+        </ion-item>
+      </ion-card>
+      <ion-card button="true">
+        <ion-item id="item" lines="none" style="padding:0px !important;" id="uno"> 
+            <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+          <label>Mis planes de cuidado</label>
+        </ion-item>
+      </ion-card>
+    </ion-grid>
 
 </ion-content>
