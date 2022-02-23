@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl ,FormGroup} from '@angular/forms';
 import { Router } from '@angular/router';
+import { DocumentViewer, DocumentViewerOptions } from '@ionic-native/document-viewer/ngx';
+import { FileTransfer } from '@ionic-native/file-transfer/ngx';
+import { File } from '@ionic-native/file/ngx';
+import { Platform } from '@ionic/angular';
 import { Register } from 'src/app/modules/register';
 import {RestService} from '../../services/rest.service'
 
@@ -30,7 +34,16 @@ export class LogTwoPage implements OnInit {
   }
   
  
-  constructor( private _httpService:RestService,private router:Router) { }
+  constructor( private _httpService:RestService,private router:Router, private document: DocumentViewer,
+    private file: File, private transfer: FileTransfer, private platform: Platform) { }
+
+openLocalPdf(){
+const options: DocumentViewerOptions = {
+  title: 'politica'
+}
+this.document.viewDocument('assets/logos/Documento Anteproyecto.pdf', 'application/pdf', options);
+}
+
   ngOnInit():void {
   }
   addUser(){
