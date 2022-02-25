@@ -42,7 +42,6 @@ ion-icon {
         top: 0px;
         font-style: normal;
         font-weight: 400;
-        font-size: 12px;
         line-height: 21px;
         letter-spacing: -0.5px;
         color:black;
@@ -61,16 +60,3 @@ ion-icon {
         transform: scale(0.9);
      }
     }
-
- #mic{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
- }
-
- ion-button {
-    --border-radius:50px;
-    height: 96px;
-    width: 96px;
-    --background: white;
-}

@@ -113,9 +113,8 @@ export class ListasintomasPage implements OnInit {
     this.routerClick('tabs')
 
   }
-
   routerClick(link:string){
     this.router.navigateByUrl(link);
-
   }
+
 }

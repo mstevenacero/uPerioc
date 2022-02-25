@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-descargarproceso',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DescargarprocesoPage implements OnInit {
 
-  constructor() { }
-
+  constructor(private router: Router) { }
+  volver(){
+    this.router.navigate(['/tab2']);
+  }
   ngOnInit() {
   }
+
+ 
 
 }

@@ -33,9 +33,14 @@ export class LogTwoPage implements OnInit {
 
   }
   
+  public isToggled: boolean = false;
  
   constructor( private _httpService:RestService,private router:Router, private document: DocumentViewer,
     private file: File, private transfer: FileTransfer, private platform: Platform) { }
+
+    notify() {
+      this.isToggled = !this.isToggled;
+    }  
 
 openLocalPdf(){
 const options: DocumentViewerOptions = {

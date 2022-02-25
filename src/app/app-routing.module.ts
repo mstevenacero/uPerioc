@@ -47,7 +47,11 @@ const routes: Routes = [
   {
     path: 'lineatemporal',
     loadChildren: () => import('./pages/lineatemporal/lineatemporal.module').then( m => m.LineatemporalPageModule)
+  },  {
+    path: 'escribirsintomas',
+    loadChildren: () => import('./pages/escribirsintomas/escribirsintomas.module').then( m => m.EscribirsintomasPageModule)
   }
+
 
 
 

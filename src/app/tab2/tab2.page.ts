@@ -16,14 +16,6 @@ export class Tab2Page {
 
  ngOnInit(): void {
  }
-
- startService(){
-   this.service.start()
- }
-
- stopService(){
-   this.service.stop()
- }
   
   lista(){
     this.router.navigate(['/listasintomas']);
