@@ -1,8 +1,18 @@
-
+ion-content {
+    --background:#F5F5F8;
+}
 #imgAnatomia{
     margin-top:15px;
     z-index: -3;
 }
+
+h2{
+    line-height: 26px;
+    letter-spacing: -0.5px;
+    color: #82799D;
+    text-align: center;
+    }
+
 .select{
     height:30px;
     width:80px;

@@ -52,11 +52,6 @@ label{
     height: 60px;
     left: 36px;
     top: 0px;
-    font-style: normal;
-    font-weight: 550;
-    font-size: 15px;
-    line-height: 21px;
-    letter-spacing: -0.5px;
     color:black;
     left: calc(50% - 209px/2 - 51px);
     top: calc(50% - 26px/2);
@@ -78,16 +73,9 @@ ion-card:hover, #uno:hover, #dos:hover  {
      
      text-align: center;
      font-style: normal;
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 21px;
     color: #000000;
     p{
         text-align: center;
-        font-style: normal;
-       font-weight: 300;
-       font-size: 15px;
-       line-height: 21px;
        color: #000000;
     }
  }
