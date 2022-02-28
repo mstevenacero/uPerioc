@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl ,FormGroup} from '@angular/forms';
 import { Router } from '@angular/router';
 import { Register } from 'src/app/modules/register';
+import { SenTobackService } from 'src/app/services/sen-toback.service';
 import {RestService} from '../../services/rest.service'
 
 @Component({
@@ -30,7 +31,10 @@ export class LogTwoPage implements OnInit {
   }
   
  
-  constructor( private _httpService:RestService,private router:Router) { }
+  constructor( 
+    private _httpService:RestService,
+    private router:Router,
+    private _changeInit:SenTobackService) { }
   ngOnInit():void {
   }
   addUser(){
@@ -42,7 +46,12 @@ export class LogTwoPage implements OnInit {
         if (!response) {
           console.error('Error: de crear usuario');
         } else {
-          this.router.navigateByUrl('login/log-one');
+          const descripcionAlert = response['userAlertForm'].description_alerts;
+          this._changeInit.changeAlert(descripcionAlert)
+          const treuKeyAlert = response['alertSymptom']
+          if(treuKeyAlert==true){
+            this._changeInit.changeAlert(descripcionAlert)
+          }
           console.log('se  agrego el usuario');
 
         }

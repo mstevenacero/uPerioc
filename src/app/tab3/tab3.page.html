@@ -1,30 +1,34 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
   </ion-header>
-
   <ion-card id="carta">
-    <ion-item lines="none" style="padding:0px !important;" id="borde" >
+    <ion-item lines="none" style="padding:0px !important;" id="borde">
       <ion-thumbnail slot="end" style=" width: 69px;height: 108px;left: 24px; top: 4px;">
         <img src="assets/imagenes/doctor.jpg">
       </ion-thumbnail>
       <h5>Alertas</h5>
     </ion-item>
   </ion-card>
-<h3  id="alertsFalse" *ngIf="noAlerts">En este momento no tienes alertas !</h3>
-<ion-grid *ngIf="getChange">
-  <ion-row>
-    <ion-col size="6" >
-      <ion-card *ngIf="getChange" style="height: 124px;">
-        <ion-item  lines="none" style="padding:0px !important;"> 
-          <label>{{getAlert}}</label>
-        </ion-item>
-      </ion-card>
-    </ion-col>
-  </ion-row>
-</ion-grid>
-<ion-fab horizontal="end" vertical="bottom" slot="fixed">
-  <ion-fab-button style="color: #56CCF2">
-    <ion-icon name="add"></ion-icon>
-  </ion-fab-button>
-</ion-fab>
+  <h3 id="alertsFalse" *ngIf="noAlerts">En este momento no tienes alertas !</h3>
+  <ion-grid *ngIf="getChange">
+    <ion-row>
+      <ion-col size="6">
+        <ion-card *ngIf="getChange" style="height: 124px;">
+          <ion-item lines="none" style="padding:0px !important;">
+            <label>{{getAlert}}</label>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-card *ngFor="let item of dataFor;index as i">
+      <div (click)="symptomsUser(item.nombre)">
+        <h1>{{item.description_alerts}}</h1>
+      </div>
+    </ion-card>
+  </ion-grid>
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button style="color: #56CCF2">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

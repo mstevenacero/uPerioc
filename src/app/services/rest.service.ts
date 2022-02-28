@@ -18,5 +18,8 @@ export class RestService {
   get(endpoint: string) {
     return this.http.get(`${this.url}${endpoint}`);
   }
+  getOne(endpoint: string,parameters:string) {
+    return this.http.get(`${this.url}${endpoint}/${parameters}`);
+  }
 
 }
