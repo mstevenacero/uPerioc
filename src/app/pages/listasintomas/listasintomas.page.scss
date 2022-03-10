@@ -1,26 +1,21 @@
 ion-content {
-    --background:white;
+    --background:#F5F5F8;
 }
-ion-toolbar{
-    --background:White;
-}
-#borde {
-    --background: #F5F5F8;
-    --background-color: white;
-    --color:white;
-}
-#carta{
-    position: static;
-    border: 0 !important;
-    box-shadow: none !important;
-    border: none !important;
-    border-style: none !important;
-    --background-color: white;
-    background: #FFFFFF;
-    left: 46px;
-    top: 319px;
-    box-shadow: 0px 10px 40px;
-    border-radius: 20px;
+#titulo{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 40px;
+    color: #000000;
+    margin-top: 18px;
+    }
+    #inicio{
+        background-color: white;
+        box-shadow: 0px 4px 20px 4px rgba(0, 0, 0, 0.25);
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        }
     h5 {
         position: static;
         width: 275px;
@@ -42,12 +37,10 @@ ion-toolbar{
         flex-grow: 1;
         margin: 0px 10px;
     }
-}
 ion-card-content{
     background:white;
 }
-ion-grid{
- 
+#sintomas{
     left: 0px;
     right: 0px;
     top: 244px;
@@ -98,4 +91,18 @@ label{
     order: 0;
     flex-grow: 1;
     margin: 0px 10px;
+}
+#header{
+    font-size:14px;
+    color: #000000;
+    margin-left: 2%;
+}
+#labelHeader{
+    font-size: 10px;
+    color: #000000;
+    padding: 2px;
+    margin-bottom: 4px;
+}
+#fab{
+    margin-bottom: 20%;
 }

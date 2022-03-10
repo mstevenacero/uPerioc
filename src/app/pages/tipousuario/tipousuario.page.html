@@ -2,20 +2,34 @@
   <ion-header collapse="condense">
   </ion-header>
   <ion-item lines="none" style="--background:#f1f5f8; text-align: center;">
-    <ion-title>
-      <h5 id="titulo">Tipo de Usuario</h5>
+    <ion-title id="titulo">
+      <ion-label >¿Cómo quieres entrar?</ion-label>
     </ion-title>
   </ion-item>
 <ion-grid id="espacio">
 </ion-grid>
 
   <ion-grid id="botones">
+    <ion-grid>
+      <div>
+        <ion-avatar style="margin: auto;">
+          <img src="assets/imagenes/medico.png" style="background-color:white;"/>
+        </ion-avatar>
+      </div>
+    </ion-grid>
     <ion-card button="true">
       <ion-item lines="none" style="padding:0px !important;" id="uno"> 
           <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
         <label>Profesional de la Salud</label>
       </ion-item>
     </ion-card>
+    <ion-grid>
+      <div>
+        <ion-avatar style="margin: auto;">
+          <img src="assets/imagenes/paciente.png" style="background-color:white;"/>
+        </ion-avatar>
+      </div>
+    </ion-grid>
     <ion-card button="true">
       <ion-item lines="none" style="padding:0px !important;"  id="dos">
           <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>

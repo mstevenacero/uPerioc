@@ -1,13 +1,14 @@
-<ion-header *ngIf="disable">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="/reportes" style="color:black" text=""></ion-back-button>
+ </ion-buttons>
+</ion-toolbar>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+  </ion-header> 
 <ion-content>
   <ion-grid>
-    <h2 class="title" *ngIf="disable">Selecciona el area que te duele</h2>
+    <h1 class="title" *ngIf="disable">Selecciona el area que te duele</h1>
   <h2 class="title" *ngIf="change">¿Esta es tu area afectada?</h2>
   <ion-card *ngIf="changeAnatomy" id="imgAnatomia">
     <img src="../../../assets/imagenes/Dibujo anatómico.png" alt="">
@@ -86,12 +87,32 @@
         <ion-select-option value="pies">pies</ion-select-option>
       </ion-select>
     </ion-item>
-    <ion-button (click)="getClick()" id="buttonI">Escoger</ion-button>
-    <ion-button (click)="getClick()" id="buttonI">No Aplica</ion-button>
+    <ion-card  (click)="getClick()" button="true">
+      <ion-item lines="none" style="padding:0px !important;"  id="dos">
+          <ion-icon slot="end" name="hand-left-outline"></ion-icon>
+        <label>Escoger</label>
+      </ion-item>
+    </ion-card>
+    <ion-card  (click)="pageNext()" button="true">
+      <ion-item lines="none" style="padding:0px !important;"  id="dos">
+          <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        <label>No Aplica</label>
+      </ion-item>
+    </ion-card>
   </div>
   <div *ngIf="change" name="card">
-    <ion-button (click)="nextPage()" id="buttonI">Siguiente</ion-button>
-    <ion-button (click)="backClick()" id="buttonI">Atras</ion-button>
+    <ion-card  (click)="nextPage()" button="true">
+      <ion-item lines="none" style="padding:0px !important;"  id="dos">
+          <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        <label>Siguiente</label>
+      </ion-item>
+    </ion-card>
+    <ion-card  (click)="backClick()" button="true">
+      <ion-item lines="none" style="padding:0px !important;"  id="dos">
+          <ion-icon slot="end" name="chevron-back-outline"></ion-icon>
+        <label>Atras</label>
+      </ion-item>
+    </ion-card>
   </div>
-  </ion-grid>
+</ion-grid>
 </ion-content>

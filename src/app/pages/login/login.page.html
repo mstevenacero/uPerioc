@@ -1,7 +1,17 @@
-<img  id="img" src="../../../assets/img/logo1.png" alt="">
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref='/tipousuario' style="color:black" text=""></ion-back-button>
+ </ion-buttons>
+</ion-toolbar>
+  <div style="width: 100%; height:26vh">
+    <p></p>
+    <ion-avatar style="margin: auto;">
+      <img src="assets/imagenes/paciente.png"/>
+    </ion-avatar>
+  </div>
 <ion-content>
   <div>
-    <ion-tabs id="tabs">
+    <ion-tabs id="tabs" no-lines>
       <ion-tab-bar slot="top" >
         <ion-tab-button class="tabs-one" tab="log-one">
           <p>Inicio</p>
@@ -12,4 +22,4 @@
       </ion-tab-bar>
     </ion-tabs>
     </div>
-</ion-content>
+</ion-content>  

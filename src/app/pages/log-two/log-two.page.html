@@ -1,52 +1,86 @@
-<ion-content id="content">
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+  </ion-header>
   <div id ="forms">
     <ion-item class="items">
-      <ion-label placeholder="email" class="label" position="floating">Correo electronico</ion-label>
-      <ion-input [(ngModel)]="registro.email"></ion-input>
-    </ion-item>
-    <ion-item class="items">
-      <ion-label class="label" position="floating">Nombre</ion-label>
+      <ion-label class="label" position="stacked">Nombre completo</ion-label>
       <ion-input [(ngModel)]="registro.name"></ion-input>
     </ion-item>
     <ion-item class="items">
-      <ion-label class="label" position="floating">Eps</ion-label>
+      <ion-label class="label"  position="stacked">Número de documento</ion-label>
+      <ion-input [(ngModel)]="registro.num_document"></ion-input>
+    </ion-item>
+    <ion-item class="items">
+      <ion-label placeholder="email" class="label" position="stacked">Correo electrónico</ion-label>
+      <ion-input [(ngModel)]="registro.email"></ion-input>
+    </ion-item>
+
+     <!--¿Éstos son las únicas opciones?-->
+    <ion-item class="items">
+      <ion-label class="label" position="floating">EPS</ion-label>
       <ion-select [(ngModel)]="registro.eps">
+        <!--aQUI PUEDE AGREGAR LAS EPS QUE FALTAN--> 
+             <!--EJEMPLO--> 
+         <!-- <ion-select-option value="Nueva Eps">Nueva Eps</ion-select-option>--> 
         <ion-select-option value="Nueva Eps">Nueva Eps</ion-select-option>
         <ion-select-option value="Salub Total">Salub Total</ion-select-option>
         <ion-select-option value="Cruz blanca">Cruz blanca</ion-select-option>
       </ion-select>
     </ion-item>
+     <!-- El lugar de residencia debe ser un desplegable para elegir la vereda o zona-->
     <ion-item class="items">
       <ion-label class="label" position="floating">Lugar de residencia</ion-label>
       <ion-input [(ngModel)]="registro.residencia" ></ion-input>
     </ion-item>
     <ion-item class="items">
-      <ion-label class="label"  position="floating">Numero de documento</ion-label>
-      <ion-input [(ngModel)]="registro.num_document"></ion-input>
-    </ion-item>
-    <ion-item class="items">
-      <ion-label class="label" position="floating">Contraseña</ion-label>
+      <ion-label class="label" position="stacked">Contraseña</ion-label>
       <ion-input name="password" type="password"[(ngModel)]="registro.password" ></ion-input>
     </ion-item>
+     <!-- Hace falta confirmar contraseña-->
     <ion-item class="items">
-      <ion-label class="label" position="floating">Telefono fijo</ion-label>
+      <ion-label class="label" position="stacked">Télefono</ion-label>
       <ion-input name="Celular" [(ngModel)]="registro.phone" ></ion-input>
     </ion-item>
     <ion-item class="items">
-      <ion-label class="label" position="floating">Celular</ion-label>
+      <ion-label class="label" position="stacked">Celular</ion-label>
       <ion-input name="movil"[(ngModel)]="registro.movil" ></ion-input>
     </ion-item>
+    <!-- El género debe ser un desplegable, opciones: "Masculino-Femenino-Otro"-->
     <ion-item class="items">
-      <ion-label class="label" position="floating"> Genero</ion-label>
-      <ion-input name="genero" [(ngModel)]="registro.gener" ></ion-input>
+      <ion-label class="label" position="floating">Genero</ion-label>
+      <ion-select [(ngModel)]="registro.gener">
+        <ion-select-option value="Masculino">Masculino</ion-select-option>
+        <ion-select-option value="Femenino">Femenino</ion-select-option>
+        <ion-select-option value="Otro">Otro</ion-select-option>
+      </ion-select>
     </ion-item>
+     <!-- La fecha de nacimiento debe ser un datatime picker-->
     <ion-item class="items">
       <ion-label class="label" position="floating">Fecha de nacimiento</ion-label>
-      <ion-input name="date_of_birth" [(ngModel)]="registro.date_of_birth" ></ion-input>
+      <ion-datetime  [(ngModel)]="registro.date_of_birth" displayFormat="DD-MMM-YYYY"></ion-datetime>
+    </ion-item>
+    <!-- hagamos un desplegable con algunos estudios-->
+    <ion-item class="items">
+      <ion-label class="label" position="floating">Nivel de estudios</ion-label>
+      <ion-select [(ngModel)]="registro.level_school">
+        <ion-select-option value="Primaria">Primaria</ion-select-option>
+        <ion-select-option value="Bachiller">Bachiller</ion-select-option>
+        <ion-select-option value="Tecnico">Tecnico</ion-select-option>
+        <ion-select-option value="Profesional">Profesional</ion-select-option>
+      </ion-select>
     </ion-item>
     <ion-item class="items">
-      <ion-label class="label" position="floating">Nivel de escolaridad</ion-label>
-      <ion-input name="level_school" [(ngModel)]="registro.level_school" ></ion-input>
+      <ion-label class="label" position="stacked">Grupo étnico</ion-label>
+      <ion-input name="grup_etni" [(ngModel)]="registro.grup_etni" ></ion-input>
+    </ion-item>
+    <ion-item class="items">
+      <ion-label class="label" position="floating">Grupo vunerable</ion-label>
+      <ion-select [(ngModel)]="registro.vunerable_person">
+        <ion-select-option value="Primaria">Lbgti</ion-select-option>
+        <ion-select-option value="Bachiller">Victima de conflicto</ion-select-option>
+        <ion-select-option value="Tecnico">Migrante</ion-select-option>
+        <ion-select-option value="Profesional">Otro</ion-select-option>
+      </ion-select>
     </ion-item>
     <ion-item class="items">
       <ion-label class="label" position="floating">¿Vive solo?</ion-label>
@@ -55,22 +89,47 @@
         <ion-select-option value="No">No</ion-select-option>
       </ion-select>
     </ion-item>
-    <ion-item class="items">
-      <ion-label class="label" position="floating">grupo etnico</ion-label>
-      <ion-input name="grup_etni" [(ngModel)]="registro.grup_etni" ></ion-input>
-    </ion-item>
-    <ion-item class="items">
-      <ion-label class="label" position="floating">persona vunerable</ion-label>
-      <ion-input name="vunerable_person" [(ngModel)]="registro.vunerable_person" ></ion-input>
-    </ion-item>
+    <!-- Hace falta Antecedentes, checkbox múltiple-->
+    <!--  Cambiar por checkbox-->
     <ion-item class="items">
       <ion-label class="label" position="floating">¿Vincular familiar?</ion-label>
       <ion-select [(ngModel)]="registro.family_conection">
-        <ion-select-option value="Si">Si</ion-select-option>
-        <ion-select-option value="No">No</ion-select-option>
+        <ion-select-option value="true">Si</ion-select-option>
+        <ion-select-option value="false">No</ion-select-option>
       </ion-select>
     </ion-item>
+    
+  <!--
+  <ion-item class="items" lines="none">
+    <ion-label style="color: black; font-size: 12px; text-align:justify;">Autorizo a mi familiar para consultar y/o registrar información, así como permitir el ingreso y uso de la aplicación.</ion-label>
+    <ion-checkbox mode="md">
+    </ion-checkbox>
+  </ion-item>
+  -->
+  <ion-item class="items" lines="none">
+    <ion-label style="color: black; font-size: 12px; text-align:justify;">Un familiar te ayudo a inscribirte?</ion-label>
+    <ion-checkbox mode="md" [checked]="isToggled" >
+    </ion-checkbox>
+  </ion-item>
+
+    
+    <!--
+    <ion-item class="items" lines="none">
+      <ion-label style="color: black; font-size: 12px; text-align:justify;">Autorizo a mi familiar para consultar y/o registrar información, así como permitir el ingreso y uso de la aplicación.</ion-label>
+      <ion-checkbox mode="md">
+      </ion-checkbox>
+    </ion-item>
+    -->
+    <ion-item class="items" lines="none">
+      <ion-label style="color: black; font-size: 12px; text-align:justify;">Acepto las <a href='https://drive.google.com/file/d/1zWNyWbUF2gu01BXIXvmvWiizhc4y9rmX/view?usp=sharing'>Políticas de privacidad y<br>Tratamiento de datos</a></ion-label>
+      <ion-checkbox mode="md" [checked]="isToggled" (ionChange)="notify()">
+      </ion-checkbox>
+    </ion-item>
   </div>
-  <ion-button  (click)="addUser()" id="buttonI">Registrarse</ion-button>
+
+  <ion-grid style="margin-top: -40px;">
+  <ion-button (click)="addUser()" id="buttonI" [disabled]="!isToggled">Registrarse</ion-button>
+</ion-grid>
 </ion-content>
+ 
 

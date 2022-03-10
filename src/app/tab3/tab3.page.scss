@@ -1,23 +1,15 @@
 ion-content {
-    --background:white;
+    --background:#F5F5F8;
 }
-    #borde {
-        --background: #F5F5F8;
-        --background-color: white;
-        --color:white;
+#titulo{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 40px;
+    color: #000000;
+    margin-top: 18px;
     }
-    #carta{
-        position: static;
-        border: 0 !important;
-        box-shadow: none !important;
-        border: none !important;
-        border-style: none !important;
-        --background-color: white;
-        background: #FFFFFF;
-        left: 46px;
-        top: 319px;
-        box-shadow: 0px 10px 40px;
-        border-radius: 20px;
         h5 {
             position: static;
             width: 275px;
@@ -39,11 +31,16 @@ ion-content {
             flex-grow: 1;
             margin: 0px 10px;
         }
-    }
     ion-card-content{
         background:white;
     }
-    ion-grid{
+    #inicio{
+        background-color: white;
+        box-shadow: 0px 4px 20px 4px rgba(0, 0, 0, 0.25);
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        }
+    #alertas{
         left: 0px;
         right: 0px;
         top: 244px;
@@ -101,4 +98,24 @@ ion-content {
     width: 50%;
     font-size:17px;
     color: gray;
+}  
+#symptoms{
+
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 50%;
+    font-size:17px;
+    color:#000000;
+} 
+#fechaCreacion{
+    font-size:10px;
+    margin-left:auto;
+    z-index: 2;
+    color: #000000;
 }    
+
+#alertsTrue{
+    font-size:15px;
+    color: #000000;
+}

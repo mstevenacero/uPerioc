@@ -1,6 +1,12 @@
 ion-content {
     --background:#F5F5F8;
 }
+ion-thumbnail{
+    width: 69px;
+    height: 69px;
+    left: 24px; 
+    top: 4px;
+}
 #titulo{
     position: static;
     width: 277px;
@@ -38,11 +44,6 @@ ion-card{
         height: 26px;
         left: 36px;
         top: 0px;
-        font-style: normal;
-        font-weight: 550;
-        font-size: 18px;
-        line-height: 26px;
-        letter-spacing: -0.5px;
         color:black;
         left: calc(50% - 209px/2 - 51px);
         top: calc(50% - 26px/2);
@@ -60,4 +61,8 @@ ion-card:hover, #uno:hover, #dos:hover, #tres:hover, #cuatro:hover, #cinco:hover
  }
 ion-card-content{
     background:white;
+}
+ion-grid{
+    margin-top: -15px;
+    margin-bottom: -10px;
 }

@@ -14,7 +14,11 @@ export class Tab3Page implements OnInit {
   getChange: boolean = false
   noAlerts: boolean = true
   dataUser: any
-  dataFor: any
+  dataFor:any[] = []
+  user:any
+  userJson:any
+  dataAlerts:any
+  userFor:any
   constructor(
     private _getAlert: SenTobackService,
     private _httpService: RestService,
@@ -33,20 +37,29 @@ export class Tab3Page implements OnInit {
     }
   }
   ngOnInit() {
-    this._dataObservable.$dataObjectSource.subscribe(data => this.dataUser = data
-    )
-    console.log("llego la data: ", this.dataUser);
+    this._dataObservable.dataObjectSource.subscribe(data => this.dataUser = data
+      )
+    console.log("llego la data alsets: ", this.dataUser);
     this.dataUser.data = this.dataFor
-    this.getSymptoms(this.dataUser.data.id)
+    this.user = localStorage.getItem('user')
+
+    console.log('user',this.user);
+    this.userJson = JSON.parse(this.user)
+    this.getAlerts(this.userJson.id)
   }
-  getSymptoms(item) {
+  getAlerts(item) {
     let id = item
     this._httpService.getOne('alerts_users/alert', id).subscribe(
       response => {
         if (!response) {
-          console.error('Error: de crear usuario');
+          console.error('Error: de traer los sintomas de usuario');
         } else {
-          console.log("response", response);
+          console.log("response de alerta", response);
+          this.dataAlerts = response
+          console.log(this.dataAlerts.data);
+          this.userFor =this.dataAlerts.data
+          
+
         }
         console.log('se  agrego el usuario');
       }

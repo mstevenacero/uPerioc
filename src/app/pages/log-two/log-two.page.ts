@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl ,FormGroup} from '@angular/forms';
 import { Router } from '@angular/router';
+import { DocumentViewer, DocumentViewerOptions } from '@ionic-native/document-viewer/ngx';
+import { FileTransfer } from '@ionic-native/file-transfer/ngx';
+import { File } from '@ionic-native/file/ngx';
+import { Platform } from '@ionic/angular';
 import { Register } from 'src/app/modules/register';
 import { SenTobackService } from 'src/app/services/sen-toback.service';
 import {RestService} from '../../services/rest.service'
@@ -30,11 +34,22 @@ export class LogTwoPage implements OnInit {
 
   }
   
+  public isToggled: boolean = false;
  
-  constructor( 
-    private _httpService:RestService,
-    private router:Router,
-    private _changeInit:SenTobackService) { }
+  constructor( private _httpService:RestService,private router:Router, private document: DocumentViewer,
+    private file: File, private transfer: FileTransfer, private platform: Platform, private _changeInit:SenTobackService) { }
+
+    notify() {
+      this.isToggled = !this.isToggled;
+    }  
+
+openLocalPdf(){
+const options: DocumentViewerOptions = {
+  title: 'politica'
+}
+this.document.viewDocument('assets/logos/Documento Anteproyecto.pdf', 'application/pdf', options);
+}
+
   ngOnInit():void {
   }
   addUser(){

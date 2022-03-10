@@ -2,57 +2,53 @@
   <ion-header collapse="condense">
   </ion-header>
 
-  <ion-item lines="none" style="--background:#f1f5f8; text-align: center;">
-    <ion-title>
-      <label id="titulo">Configuración</label>
+  <ion-item lines="none" style="--background:white; text-align: center;">
+    <ion-title id="titulo">
+      <ion-label >Configuración</ion-label>
     </ion-title>
   </ion-item>
   
-  <ion-grid>
-    <div>
-      <ion-avatar style="margin: auto;">
-        <img src="assets/imagenes/doctor.jpg"/>
-        <img id="imageSub" src="http://icons555.com/images/icons-black/image_icon_crayon_pic_512x512.png" alt="" ng-click="nextpage()">
+  <div style="width: 100%; height:25vh; background-color: white;">
+  <ion-grid style="width: 100%; height:20vh">
+    <div >
+      <ion-avatar  style="margin: auto;">
+        <img src="assets/imagenes/paciente.png"/>
       </ion-avatar>
     </div>
   </ion-grid>
-
-  <ion-item lines="none" style="--background:#f1f5f8; text-align: center;">
+</div>
+  <ion-item lines="none" style="--background:white; text-align: center;border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px; box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.06);" >
     <ion-title>
       <label id="nombreperfil">{{dataUser.data.name}}</label>
     </ion-title>
   </ion-item>
-
-  <ion-list style="--background:#f1f5f8; background: #f1f5f8;">
-    <ion-item lines="none" style="--background:#f1f5f8; background: #f1f5f8;" button="true" detail="false">
-      <ion-icon slot="start" src="assets/imagenes/Vector.svg" style="font-size: 13.33px; position:absolute"></ion-icon>
-      <ion-label style="color:black; position:absolute">Cuenta</ion-label>
-      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
-    </ion-item>
-    <ion-item lines="none" style="--background:#f1f5f8; background: #f1f5f8;" button="true" detail="false">
-      <ion-icon slot="start" src="assets/imagenes/1.svg" style="font-size: 13.33px; position:absolute"></ion-icon>
-      <ion-label style="color:black; position:absolute">Notificaciones</ion-label>
-      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
-    </ion-item>
-    <ion-item lines="none" style="--background:#f1f5f8; background: #f1f5f8;" detail="false" button="true">
-      <ion-icon slot="start" src="assets/imagenes/6.svg" style="font-size: 13.33px; position:absolute"></ion-icon>
-      <ion-label style="color:black; position:absolute">Apariencia</ion-label>
-      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
-    </ion-item>
-    <ion-item lines="none" style="--background:#f1f5f8; background: #f1f5f8;" detail="false" button="true">
-      <ion-icon slot="start" src="assets/imagenes/2.svg" style="font-size: 13.33px;position:absolute"></ion-icon>
-      <ion-label style="color:black;position:absolute">Políticas & Seguridad</ion-label>
-      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
-    </ion-item>
-    <ion-item lines="none" style="--background:#f1f5f8; background: #f1f5f8;" detail="false" button="true">
-      <ion-icon slot="start" src="assets/imagenes/3.svg" style="font-size: 13.33px;position:absolute"></ion-icon>
-      <ion-label style="color:black;position:absolute">Sonido</ion-label>
-      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
-    </ion-item>
-    <ion-item lines="none" style="--background:#f1f5f8; background: #f1f5f8;" detail="false" button="true">
-      <ion-icon slot="start" src="assets/imagenes/5.svg" style="font-size: 13.33px;position:absolute"></ion-icon>
-      <ion-label style="color:black;position:absolute">Idioma</ion-label>
-      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
-    </ion-item>
-  </ion-list>
+<ion-grid id="botones" style ="margin-top: 20px;">
+  <ion-row>
+    <ion-col>
+        <ion-button id="perfil">
+          <img src="assets/imagenes/paciente.png"/>
+        </ion-button>
+        <ion-item  lines="none" style="text-align:center;--background: #f1f5f8;">
+        <ion-label style="font-size: 12px;">Editar perfil</ion-label>
+        </ion-item>
+    </ion-col>
+    <ion-col>
+        <ion-button id="perfil" href='https://drive.google.com/file/d/1zWNyWbUF2gu01BXIXvmvWiizhc4y9rmX/view?usp=sharing'>
+          <img src="assets/imagenes/Politica.png"/>
+        </ion-button>
+        <ion-item  lines="none" style="text-align:center;--background: #f1f5f8;">
+        <ion-label style="font-size: 12px;">Políticas de privacidad</ion-label>
+        </ion-item>
+    </ion-col>
+    <ion-col>
+        <ion-button>
+          <img src="assets/imagenes/Online Support.png" alt=""/>
+        </ion-button>
+        <ion-item  lines="none" style="text-align:center;--background: #f1f5f8;">
+        <ion-label style="font-size: 12px;">Soporte</ion-label>
+        </ion-item>
+    </ion-col>
+  </ion-row>
+</ion-grid>
 </ion-content>

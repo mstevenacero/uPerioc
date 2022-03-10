@@ -1,8 +1,18 @@
-
+ion-content {
+    --background:#F5F5F8;
+}
 #imgAnatomia{
     margin-top:15px;
     z-index: -3;
 }
+
+h2{
+    line-height: 26px;
+    letter-spacing: -0.5px;
+    color: #82799D;
+    text-align: center;
+    }
+
 .select{
     height:30px;
     width:80px;
@@ -55,3 +65,38 @@
     color: gray;
     
 }
+
+ion-card{
+    --background-color: white;
+    background: #FFFFFF;
+    position: static;
+    left: 46px;
+    top: 319px;
+    --box-shadow: 0px 10px 40px;
+    border-radius: 20px;
+  }
+#item {
+    --background: white;
+    --background-color: white;
+    --color:white;
+}
+label{
+    position: static;
+    width: 275px;
+    height: 26px;
+    left: 36px;
+    top: 0px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: -0.5px;
+    color:black;
+    display: flex;
+    align-items: center;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    margin: 0px 10px;
+    text-align: left;
+}
+

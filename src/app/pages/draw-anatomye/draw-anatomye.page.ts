@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SenTobackService } from 'src/app/services/sen-toback.service';
+import { DataObservableService } from 'src/app/services/data-observable.service';
 
 @Component({
   selector: 'app-draw-anatomye',
@@ -17,7 +18,9 @@ export class DrawAnatomyePage implements OnInit {
   change: boolean = false
   changeAnatomy: boolean = true
   constructor(private router: Router,
-    private _changeInit: SenTobackService) {
+    private _changeInit: SenTobackService,
+    private _booleanService:DataObservableService        
+    ) {
 
     this._changeInit.currentInit.subscribe(item => {
       this.changeInitPost = item
@@ -30,8 +33,7 @@ export class DrawAnatomyePage implements OnInit {
     this.change = true
     this.changeAnatomy = false
     this.disable = false
-   
-
+    this._booleanService.sendBoolean(true)
   }
   backClick() {
     this.change = false
@@ -47,6 +49,9 @@ export class DrawAnatomyePage implements OnInit {
     this.router.navigateByUrl('listasintomas');
     //behaivor subjcet 
 
+  }
+  pageNext(){
+    this.router.navigateByUrl('listasintomas');
   }
 
 }

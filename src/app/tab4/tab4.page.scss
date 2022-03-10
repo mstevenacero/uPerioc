@@ -29,51 +29,34 @@ ion-content {
   font-weight: bold;
   letter-spacing: -0.5px;
 }
-#imageSub{
-    width: 20px;
-    height: auto;
-    z-index: 2;
-    display: flex;
-    margin-left: 4rem;
-    margin-top: -1rem;
-    border: radius 15px;
-    background-color: #c3bfbf;
-    padding:3px;
-    position: absolute;
-}
 ion-icon {
     color: black;
     font-size: 13px;
   }
-    ion-grid{
-        height: 18vh;
-        width: 120%;
-        margin-left: -5.0vh;
-        margin-top: -5px;
-        --background:#F5F5F8;
-    }
-        div {
-            transform: translateY(2vh);
-            ion-avatar {
-                width: 15vh;
-                height: 15vh;
-                z-index: 1;
-                position: static;
-                background: var(--ion-color-white);
-                margin-bottom: 5px;
-                border: 7px solid #EDECF4;
-        }
-    }
-ion-label{
+ion-avatar {
+    width: 20vh;
+    height: 20vh;
     position: static;
-    width: 275px;
-    height: 26px;
-    left: 36px;
-    top: 0px;
-    font-style: normal;
-    font-weight: 530;
-    font-size: 15px;
-    line-height: 26px;
-    letter-spacing: -0.5px;
-    color:black;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.15);
+    margin-bottom: 5px;
+    border: 20px solid #FFFFFF;
+}
+
+ ion-button {
+    --border-radius:50px;
+    border-radius: 50px;
+    height: 96px;
+    width: 96px;
+    --background: white;
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.15);
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+#botones{
+    ion-button:hover,perfil:hover{
+        background-color: white !important;
+        transform: scale(0.9);
+    }
 }

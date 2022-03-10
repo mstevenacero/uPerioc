@@ -9,6 +9,8 @@ import { SenTobackService } from '../services/sen-toback.service';
 })
 export class Tab1Page implements OnInit {
  dataUser:any
+ user:any
+ dataFor:any[] = []
  userAlertPing:any;
  alertEneable:boolean=false
   constructor(private _dataObservable:DataObservableService,private router:Router,
@@ -20,20 +22,21 @@ export class Tab1Page implements OnInit {
        })
     }
   ngOnInit(){
-   this._dataObservable.$dataObjectSource.subscribe(data => this.dataUser = data
+   this._dataObservable.dataObjectSource.subscribe(data => this.dataUser = data
     )
     console.log("llego la data: ",this.dataUser);
+    localStorage.setItem('user', JSON.stringify(this.dataUser.data))  
+    this.user = localStorage.getItem('user')
+    this.dataFor = JSON.parse(this.user)
+    console.log( this.dataFor);
     
   }
   dataChageAlert(item){
     this.alertEneable =true
     this.userAlertPing = item
   }
-  nextPage(){
-    this.router.navigateByUrl('draw-anatomye');
-  }
-  nextPageAlerts(){
-    this.router.navigateByUrl('tabs/notifications')
+  routerClick(link: string) {
+    this.router.navigateByUrl(link);
   }
  
 }

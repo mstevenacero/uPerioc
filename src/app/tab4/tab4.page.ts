@@ -11,10 +11,9 @@ export class Tab4Page implements OnInit {
   constructor(private _dataObservable:DataObservableService) { }
 
   ngOnInit(){
-    this._dataObservable.$dataObjectSource.subscribe(data => this.dataUser = data
-     )
-     console.log("llego la data: ",this.dataUser);
-     
+    this._dataObservable.dataObjectSource.subscribe(data => this.dataUser = data
+      )
+      console.log("llego la data uno: ",this.dataUser);
  
    }
 

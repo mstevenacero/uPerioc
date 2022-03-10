@@ -1,0 +1,48 @@
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="/reportes" style="color:black" text=""></ion-back-button>
+ </ion-buttons>
+</ion-toolbar>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+  </ion-header>  
+    <div>
+    <ion-grid id="texto" style="height:10vh">
+    <ion-item lines="none" style="--background:white; text-align: center;border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;height:10vh; margin-top: -20px;">
+      <ion-label id="p">¿No puedes encontrar tus síntomas? <br>¡Descríbenos cómo te sientes!</ion-label>
+    </ion-item>
+    </ion-grid>
+    </div>
+    <ion-card>
+      <ion-item lines="none" style="height:60vh"> 
+        <ion-label fixed></ion-label>
+        <ion-textarea placeholder="Ingresar Texto" auto-grow="true" value="{{ service.text }}"></ion-textarea>
+    </ion-item>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-grid id="footer">
+    <ion-row>
+      <ion-col>
+        <ion-button (click) ="deleteText()" id="borrar">
+        <ion-icon name="trash-sharp"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="startService(); showToggleFun()" *ngIf="showToggle" id="mic">
+          <ion-icon name="mic-outline"></ion-icon>
+        </ion-button> 
+        <ion-button (click)="stopService(); showToggleFun()" *ngIf="!showToggle" id="mic">
+          <ion-icon name="stop-sharp"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="sendToSymptoms(service.text)"id="ready">
+          <ion-icon name="checkmark-sharp"></ion-icon>
+        </ion-button>
+      </ion-col>
+  </ion-row>
+  </ion-grid>
+</ion-footer>
+

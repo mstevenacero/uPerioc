@@ -6,11 +6,18 @@ import {BehaviorSubject} from 'rxjs'
 })
 export class DataObservableService {
  private objectSource = new BehaviorSubject<{}>({})
- $dataObjectSource = this.objectSource.asObservable();
+ private symtompsFisi = new BehaviorSubject(false)
+ dataObjectSource = this.objectSource.asObservable();
+ dataSymptoms = this.symtompsFisi.asObservable();
   constructor() { }
 
   sendData(data:any){
     this.objectSource.next(data);
 
   }
+
+  sendBoolean(data:boolean){
+    this.symtompsFisi.next(data)
+  }
+
 }
