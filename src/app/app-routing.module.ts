@@ -50,6 +50,18 @@ const routes: Routes = [
   },  {
     path: 'escribirsintomas',
     loadChildren: () => import('./pages/escribirsintomas/escribirsintomas.module').then( m => m.EscribirsintomasPageModule)
+  },
+  {
+    path: 'mapaconectividad',
+    loadChildren: () => import('./pages/mapaconectividad/mapaconectividad.module').then( m => m.MapaconectividadPageModule)
+  },
+  {
+    path: 'carga',
+    loadChildren: () => import('./pages/carga/carga.module').then( m => m.CargaPageModule)
+  },
+  {
+    path: 'tutorial',
+    loadChildren: () => import('./pages/tutorial/tutorial.module').then( m => m.TutorialPageModule)
   }
 
 
