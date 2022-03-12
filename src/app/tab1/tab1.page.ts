@@ -36,6 +36,7 @@ export class Tab1Page implements OnInit {
     this.userAlertPing = item
   }
   routerClick(link: string) {
+    this.alertEneable=false
     this.router.navigateByUrl(link);
   }
  
