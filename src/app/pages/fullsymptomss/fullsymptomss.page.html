@@ -1,9 +1,23 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>fullsymptomss</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
+  <ion-header collapse="condense">
+  </ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref='/tabs' style="color:black" text=""> </ion-back-button>
+      <h3>Linea sintomatologica</h3>
+   </ion-buttons>
+  </ion-toolbar>
+  <ion-grid>
+    <div>
+      <ion-item *ngFor="let item of dataSymptons;let i = index"  lines="full"(click)="clickToChange()">
+        
+        <p id ="alertsTrue">{{item.data.slice(0,-14)}}</p>
+        <div *ngIf="change">
+          <ion-item *ngFor="let data of item.symptons;let k = index" lines="">
+            <p id ="alertsTrue">{{data.simptons}}</p>
+          </ion-item>
+        </div>
+      </ion-item>
+    </div>
+  </ion-grid>
 </ion-content>

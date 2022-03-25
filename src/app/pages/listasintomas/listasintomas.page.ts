@@ -42,7 +42,7 @@ export class ListasintomasPage implements OnInit {
   }
   ///this.symptonsData.data[0].data_symptoms_poll['symptons'][0].nombre
   ///this.symptonsData.data[0].data_symptoms_poll['symptons'][0].description
-  ngOnInit() {
+  ionViewWillEnter(){
     this._dataObservable.dataSymptoms.subscribe(data => this.listBoolen = data)
     if (this.listBoolen == false) {
       this.getSymptoms()
@@ -57,6 +57,10 @@ export class ListasintomasPage implements OnInit {
     this.user = localStorage.getItem('user')
     this.dataFor = JSON.parse(this.user)
     console.log("data for", this.dataFor['id']);
+
+  }
+  ngOnInit() {
+    
     
   }
   getSymptoms() {

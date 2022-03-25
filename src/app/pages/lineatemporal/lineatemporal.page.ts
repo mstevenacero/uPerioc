@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-lineatemporal',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lineatemporal.page.scss'],
 })
 export class LineatemporalPage implements OnInit {
+ 
 
-  constructor() { }
+  constructor(private router:Router) { }
+
 
   ngOnInit() {
+  }
+  routerClick(link: string) {
+
+    this.router.navigateByUrl(link);
   }
 
 }

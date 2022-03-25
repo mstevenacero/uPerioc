@@ -1,0 +1,33 @@
+<ion-content>
+  <ion-header collapse="condense">
+  </ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref='/estadistic' style="color:black" text=""> </ion-back-button>
+   </ion-buttons>
+  </ion-toolbar>
+  <div class="row">
+    <h1 >Alertas de usuario</h1>
+    <img id="image"src="../../../assets/imagenes/reportesAlerts.png" alt="">
+  </div>
+  <div class="row">
+    <table id="table" class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Alerta</th>
+          <th scope="col">Sintomas</th>
+          <th scope="col">Fecha</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor=" let item of dataAlerts;let i= index">
+          <th scope="row">1</th>
+          <td>{{item.data}}</td>
+          <td><p *ngFor="let alerts of item.symptons; let k = index">{{alerts.simptons}}</p></td>
+          <td>{{item.create.slice(0,-14)}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ion-content>

@@ -21,14 +21,17 @@ export class Tab1Page implements OnInit {
       }
        })
     }
+    ionViewWillEnter(){
+      
+    }
   ngOnInit(){
-   this._dataObservable.dataObjectSource.subscribe(data => this.dataUser = data
-    )
-    console.log("llego la data: ",this.dataUser);
-    localStorage.setItem('user', JSON.stringify(this.dataUser.data))  
-    this.user = localStorage.getItem('user')
-    this.dataFor = JSON.parse(this.user)
-    console.log( this.dataFor);
+    this._dataObservable.dataObjectSource.subscribe(data => this.dataUser = data
+      )
+      console.log("llego la data: ",this.dataUser);
+      localStorage.setItem('user', JSON.stringify(this.dataUser.data))  
+      this.user = localStorage.getItem('user')
+      this.dataFor = JSON.parse(this.user)
+      console.log( this.dataFor);
     
   }
   dataChageAlert(item){
