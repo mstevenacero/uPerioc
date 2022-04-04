@@ -1,0 +1,11 @@
+
+<ion-content>
+
+<form class="form">
+  <h2>Iniciar</h2>
+  <p type="Name:"><input  [(ngModel)]="login.name" name="login.name" placeholder="Escribe tu nombre"></p>
+  <p type="password:"><input type="password" [(ngModel)]="login.password" name="login.password" placeholder="Escribe tu contraseña"></p>
+  <button (click)="singIn()">Entrar</button>
+</form>
+
+</ion-content>

@@ -18,20 +18,20 @@
       </div>
     </ion-grid>
     <ion-card button="true">
-      <ion-item lines="none" style="padding:0px !important;" id="uno"> 
+      <ion-item (click)= "routerClick('/login-admin')"lines="none" style="padding:0px !important;" id="uno"> 
           <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
         <label>Profesional de la Salud</label>
       </ion-item>
     </ion-card>
     <ion-grid>
-      <div>
+      <div >
         <ion-avatar style="margin: auto;">
           <img src="assets/imagenes/paciente.png" style="background-color:white;"/>
         </ion-avatar>
       </div>
     </ion-grid>
     <ion-card button="true">
-      <ion-item lines="none" style="padding:0px !important;"  id="dos">
+      <ion-item  (click)= "routerClick('/login/log-one')" lines="none" style="padding:0px !important;"  id="dos">
           <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
         <label>Paciente</label>
       </ion-item>

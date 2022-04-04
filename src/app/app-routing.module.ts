@@ -9,7 +9,7 @@ import { AlertUsersComponent } from './componets/alert-users/alert-users.compone
 
 const routes: Routes = [
 
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '', redirectTo: 'carga', pathMatch: 'full' },
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
@@ -79,6 +79,11 @@ const routes: Routes = [
   { path: 'diagram', component: DiagramComponent },
   { path: 'polar', component: PolarComponent },
   { path: 'alerts', component:  AlertUsersComponent },
+  {
+    path: 'login-admin',
+    loadChildren: () => import('./pages/login-admin/login-admin.module').then( m => m.LoginAdminPageModule)
+  },
+
 ];
 @NgModule({
   imports: [

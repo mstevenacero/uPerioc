@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tipousuario',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TipousuarioPage implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
+  }
+
+  routerClick(link: string) {
+    this.router.navigateByUrl(link);
   }
 
 }
