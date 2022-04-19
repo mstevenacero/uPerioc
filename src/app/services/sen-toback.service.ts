@@ -9,7 +9,10 @@ export class SenTobackService {
   private variableAlert = new BehaviorSubject('')
   currentInit = this.variableInit.asObservable();
   currentAlert = this.variableAlert.asObservable();
+
+
   constructor() { }
+  
 
   changeInit(value){
     this.variableInit.next(value)
@@ -19,5 +22,6 @@ export class SenTobackService {
     this.variableAlert.next(value)
   }
 
+  
 
 }

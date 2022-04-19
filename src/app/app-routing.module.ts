@@ -83,6 +83,15 @@ const routes: Routes = [
     path: 'login-admin',
     loadChildren: () => import('./pages/login-admin/login-admin.module').then( m => m.LoginAdminPageModule)
   },
+  {
+    path: 'reporte-fechas',
+    loadChildren: () => import('./pages/reporte-fechas/reporte-fechas.module').then( m => m.ReporteFechasPageModule)
+  },  {
+    path: 'proceso-completo',
+    loadChildren: () => import('./pages/proceso-completo/proceso-completo.module').then( m => m.ProcesoCompletoPageModule)
+  },
+
+
 
 ];
 @NgModule({

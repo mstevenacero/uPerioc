@@ -7,8 +7,10 @@ import {BehaviorSubject} from 'rxjs'
 export class DataObservableService {
  private objectSource = new BehaviorSubject<{}>({})
  private symtompsFisi = new BehaviorSubject(false)
+ private varialDescription = new BehaviorSubject<{}>({});
  dataObjectSource = this.objectSource.asObservable();
  dataSymptoms = this.symtompsFisi.asObservable();
+ currentDescription = this.varialDescription.asObservable();
   constructor() { }
 
   sendData(data:any){
@@ -18,6 +20,10 @@ export class DataObservableService {
 
   sendBoolean(data:boolean){
     this.symtompsFisi.next(data)
+  }
+
+  sendDescription(data:any){
+    this.varialDescription.next(data);
   }
 
 }

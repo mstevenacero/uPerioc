@@ -1,0 +1,21 @@
+
+<ion-content>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-back-button defaultHref='/nuevoproceso' style="color:black" text=""></ion-back-button>
+       </ion-buttons>
+      </ion-toolbar>
+      <h2 id ="titulo2">Reporte su fecha de proceso</h2>
+    <ion-grid>
+        <h1 id="title1" >{{title}}</h1>
+        <ion-row>
+          
+                <ion-item class="items">
+                    <ion-label class="label" position="floating">Fecha </ion-label>
+                    <ion-datetime  [(ngModel)]="date" displayFormat="DD-MMM-YYYY"></ion-datetime>
+                  </ion-item>
+          
+        </ion-row>
+        <ion-button (click)="addDate()" id="buttonI" >Registrar fecha</ion-button>
+    </ion-grid>
+</ion-content>
