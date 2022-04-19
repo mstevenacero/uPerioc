@@ -3,15 +3,15 @@
   </ion-header>
   <div id ="forms">
     <ion-item class="items">
-      <ion-label class="label" position="stacked">Nombre completo</ion-label>
+      <ion-label class="label" position="floating">Nombre completo</ion-label>
       <ion-input [(ngModel)]="registro.name"></ion-input>
     </ion-item>
     <ion-item class="items">
-      <ion-label class="label"  position="stacked">Número de documento</ion-label>
+      <ion-label class="label"  position="floating">Número de documento</ion-label>
       <ion-input [(ngModel)]="registro.num_document"></ion-input>
     </ion-item>
     <ion-item class="items">
-      <ion-label placeholder="email" class="label" position="stacked">Correo electrónico</ion-label>
+      <ion-label placeholder="email" class="label" position="floating">Correo electrónico</ion-label>
       <ion-input [(ngModel)]="registro.email"></ion-input>
     </ion-item>
 
@@ -23,31 +23,280 @@
              <!--EJEMPLO--> 
          <!-- <ion-select-option value="Nueva Eps">Nueva Eps</ion-select-option>--> 
         <ion-select-option value="Nueva Eps">Nueva Eps</ion-select-option>
-        <ion-select-option value="Salub Total">Salub Total</ion-select-option>
+        <ion-select-option value="Salub Total">Salud Total</ion-select-option>
         <ion-select-option value="Cruz blanca">Cruz blanca</ion-select-option>
       </ion-select>
     </ion-item>
-     <!-- El lugar de residencia debe ser un desplegable para elegir la vereda o zona-->
+
     <ion-item class="items">
       <ion-label class="label" position="floating">Lugar de residencia</ion-label>
-      <ion-input [(ngModel)]="registro.residencia" ></ion-input>
+      <ion-select [(ngModel)]="registro.residencia">
+        <!--COMUNA 1-->
+        <ion-select-option value="CASA BONITA">CASA BONITA</ion-select-option>
+        <ion-select-option value="CIUDAD DE QUITO">CIUDAD DE QUITO</ion-select-option>
+        <ion-select-option value="CIUDAD LATINA">CIUDAD LATINA</ion-select-option>
+        <ion-select-option value="CIUDAD LATINA II SECTOR">CIUDAD LATINA II SECTOR</ion-select-option>
+        <ion-select-option value="CIUDAD LATINA III SECTOR">CIUDAD LATINA III SECTOR</ion-select-option>
+        <ion-select-option value="CIUDADELA PASEO REAL">CIUDADELA PASEO REAL</ion-select-option>
+        <ion-select-option value="CIUDADELA VILLA DE LA ESPERANZA">CIUDADELA VILLA DE LA ESPERANZA</ion-select-option>
+        <ion-select-option value="COMPARTIR">COMPARTIR</ion-select-option>
+        <ion-select-option value="COMPARTIR SECTOR LA ISLA">COMPARTIR SECTOR LA ISLA</ion-select-option>
+        <ion-select-option value="CONVIBA">CONVIBA</ion-select-option>
+        <ion-select-option value="EL SALITRE">EL SALITRE</ion-select-option>
+        <ion-select-option value="LA FONTANA">LA FONTANA</ion-select-option>
+        <ion-select-option value="LLANOS DE SOACHA">LLANOS DE SOACHA</ion-select-option>
+        <ion-select-option value="LOS DUCALES">LOS DUCALES</ion-select-option>
+        <ion-select-option value="LOS DUCALES PRIMER SECTOR">LOS DUCALES PRIMER SECTOR</ion-select-option>
+        <ion-select-option value="LOS OCOBOS">LOS OCOBOS</ion-select-option>
+        <ion-select-option value="MARANATHA II">MARANATHA II</ion-select-option>
+        <ion-select-option value="QUINTAS DE SANTA ANA">QUINTAS DE SANTA ANA</ion-select-option>
+        <ion-select-option value="QUINTAS DE SANTA ANA DEL SECTOR ETAPA IB SEGUNDA ZONA">QUINTAS DE SANTA ANA DEL SECTOR ETAPA IB SEGUNDA ZONA</ion-select-option>
+        <ion-select-option value="QUINTAS DE SANTA ANA, DEL SECTOR ETAPA IB TERCERA ZONA">QUINTAS DE SANTA ANA, DEL SECTOR ETAPA IB TERCERA ZONA</ion-select-option>
+        <ion-select-option value="SAN NICOLAS SEGUNDO SECTOR MANZANA F">SAN NICOLAS SEGUNDO SECTOR MANZANA F</ion-select-option>
+        <ion-select-option value="SANTA ANA">SANTA ANA</ion-select-option>
+        <ion-select-option value="SANTA ANA CENTRAL">SANTA ANA CENTRAL</ion-select-option>
+        <ion-select-option value="SANTA ANA PRIMER SECTOR">SANTA ANA PRIMER SECTOR</ion-select-option>
+        <ion-select-option value="SANTA ANA- SAN CARLOS">SANTA ANA- SAN CARLOS</ion-select-option>
+        <ion-select-option value="SANTA ANA SECTOR ARIZONA">SANTA ANA SECTOR ARIZONA</ion-select-option>
+        <ion-select-option value="SANTA ANA SECTOR LOS GIRASOLES">SANTA ANA SECTOR LOS GIRASOLES</ion-select-option>
+        <ion-select-option value="SANTA ANA SECTOR EL VIVERO">SANTA ANA SECTOR EL VIVERO</ion-select-option>
+        <ion-select-option value="SANTA ANA SECTOR LA LAGUNA">SANTA ANA SECTOR LA LAGUNA</ion-select-option>
+        <ion-select-option value="SANTA ANA SECTOR PINTO">SANTA ANA SECTOR PINTO</ion-select-option>
+        <ion-select-option value="SANTA ANA SECTOR SAN FERNANDO">SANTA ANA SECTOR SAN FERNANDO</ion-select-option>
+        <ion-select-option value="SANTA ANA SECTOR VILLA FLOR">SANTA ANA SECTOR VILLA FLOR</ion-select-option>
+        <ion-select-option value="SECTOR A.B.C.BARRIO SANTA ANA">SECTOR A.B.C.BARRIO SANTA ANA</ion-select-option>
+        <ion-select-option value="SECTOR NUEVO COMPARTIR">SECTOR NUEVO COMPARTIR</ion-select-option>
+        <ion-select-option value="SECTOR SAN NICOLAS">SECTOR SAN NICOLAS</ion-select-option>
+        <ion-select-option value="SECTOR VILLA CAROLA DEL BARRIO DUCALES II SECTOR">SECTOR VILLA CAROLA DEL BARRIO DUCALES II SECTOR</ion-select-option>
+        <ion-select-option value="TIERRA BLANCA">TIERRA BLANCA</ion-select-option>
+        <ion-select-option value="URBANIZACION NEMESIS">URBANIZACION NEMESIS</ion-select-option>
+        <ion-select-option value="URBANIZACION QUINTAS DE SANTA ANA II">URBANIZACION QUINTAS DE SANTA ANA II</ion-select-option>
+        <ion-select-option value="URBANIZACION VILLA ITALIA">URBANIZACION VILLA ITALIA</ion-select-option>
+        <ion-select-option value="URBANIZACION VILLA JULIANA">URBANIZACION VILLA JULIANA</ion-select-option>
+        <ion-select-option value="VALLES DE SANTA ANA">VALLES DE SANTA ANA</ion-select-option>
+        <ion-select-option value="VILLA ALEJANDRA">VILLA ALEJANDRA</ion-select-option>
+        <ion-select-option value="VILLA LUZ">VILLA LUZ</ion-select-option>
+        <ion-select-option value="VILLA SOFIA I SECTOR">VILLA SOFIA I SECTOR</ion-select-option>
+        <ion-select-option value="VILLA SOFIA II SECTOR">VILLA SOFIA II SECTOR</ion-select-option>
+        <!--COMUNA 2-->
+        <ion-select-option value="CAMILO TORRES">CAMILO TORRES</ion-select-option>
+        <ion-select-option value="CIUDAD SATELITE">CIUDAD SATELITE</ion-select-option>
+        <ion-select-option value="DANUBIO III">DANUBIO III</ion-select-option>
+        <ion-select-option value="EL BOCHICA">EL BOCHICA</ion-select-option>
+        <ion-select-option value="EL CARMEN">EL CARMEN</ion-select-option>
+        <ion-select-option value="EL MIRADOR">EL MIRADOR</ion-select-option>
+        <ion-select-option value="EL NOGAL">EL NOGAL</ion-select-option>
+        <ion-select-option value="EL PRADO DE LAS VEGAS">EL PRADO DE LAS VEGAS</ion-select-option>
+        <ion-select-option value="EL ROSAL">EL ROSAL</ion-select-option>
+        <ion-select-option value="EL TABACAL">EL TABACAL</ion-select-option>
+        <ion-select-option value="EUGENIO DIAZ">EUGENIO DIAZ</ion-select-option>
+        <ion-select-option value="LA AMISTAD">LA AMISTAD</ion-select-option>
+        <ion-select-option value="LA CAÑADA">LA CAÑADA</ion-select-option>
+        <ion-select-option value="LA FRAGUA">LA FRAGUA</ion-select-option>
+        <ion-select-option value="LA UNION">LA UNION</ion-select-option>
+        <ion-select-option value="LA VEREDITA">LA VEREDITA</ion-select-option>
+        <ion-select-option value="LAGOS DE MALIBU">LAGOS DE MALIBU</ion-select-option>
+        <ion-select-option value="LAS FERIAS">LAS FERIAS</ion-select-option>
+        <ion-select-option value="LAS VEGAS">LAS VEGAS</ion-select-option>
+        <ion-select-option value="LINCOLN">LINCOLN</ion-select-option>
+        <ion-select-option value="MARANATHA I">MARANATHA I</ion-select-option>
+        <ion-select-option value="MINNESOTA">MINNESOTA</ion-select-option>
+        <ion-select-option value="NUEVA PORTALEGRE">NUEVA PORTALEGRE</ion-select-option>
+        <ion-select-option value="PRIMAVERA">PRIMAVERA</ion-select-option>
+        <ion-select-option value="QUINTAS DE LA LAGUNA">QUINTAS DE LA LAGUNA</ion-select-option>
+        <ion-select-option value="QUINTAS DE LA LAGUNA II SECTOR">QUINTAS DE LA LAGUNA II SECTOR</ion-select-option>
+        <ion-select-option value="SAN ISIDRO">SAN ISIDRO</ion-select-option>
+        <ion-select-option value="SAN LUIS">SAN LUIS</ion-select-option>
+        <ion-select-option value="SANTA HELENA">SANTA HELENA</ion-select-option>
+        <ion-select-option value="SECTOR COBEC DEL BARRIO LA FRAGUA">SECTOR COBEC DEL BARRIO LA FRAGUA</ion-select-option>
+        <ion-select-option value="SECTOR SAN ANDRES">SECTOR SAN ANDRES</ion-select-option>
+        <ion-select-option value="TEQUENDAMA">TEQUENDAMA</ion-select-option>
+        <ion-select-option value="URBANIZACION PORTALEGRE">URBANIZACION PORTALEGRE</ion-select-option>
+        <ion-select-option value="URBANIZACION PORTALEGRE REAL">URBANIZACION PORTALEGRE REAL</ion-select-option>
+        <ion-select-option value="URBANIZACION SOL DE PORTALEGRE">URBANIZACION SOL DE PORTALEGRE</ion-select-option>
+        <ion-select-option value="VEREDA EL DANUBIO">VEREDA EL DANUBIO</ion-select-option>
+        <ion-select-option value="VILLA CLARA">VILLA CLARA</ion-select-option>
+        <ion-select-option value="VILLA ROSITA">VILLA ROSITA</ion-select-option>
+        <ion-select-option value="VILLAS DE SANTA ROSA">VILLAS DE SANTA ROSA</ion-select-option>
+        <!--COMUNA 3-->
+        <ion-select-option value="JARDIN DE LOS ROSALES">JARDIN DE LOS ROSALES</ion-select-option>
+        <ion-select-option value="JUAN PABLO I">JUAN PABLO I</ion-select-option>
+        <ion-select-option value="LA DESPENSA">LA DESPENSA</ion-select-option>
+        <ion-select-option value="LA MARIA">LA MARIA</ion-select-option>
+        <ion-select-option value="LEON XIII">LEON XIII</ion-select-option>
+        <ion-select-option value="LEON XIII SEGUNDO SECTOR">LEON XIII SEGUNDO SECTOR</ion-select-option>
+        <ion-select-option value="LEON XIII TERCER SECTOR">LEON XIII TERCER SECTOR</ion-select-option>
+        <ion-select-option value="LOS OCALES">LOS OCALES</ion-select-option>
+        <ion-select-option value="LOS OLIVARES">LOS OLIVARES</ion-select-option>
+        <ion-select-option value="LOS OLIVOS CUARTO SECTOR">LOS OLIVOS CUARTO SECTOR</ion-select-option>
+        <ion-select-option value="LOS OLIVOS II SECTOR">LOS OLIVOS II SECTOR</ion-select-option>
+        <ion-select-option value="LOS OLIVOS III SECTOR">LOS OLIVOS III SECTOR</ion-select-option>
+        <ion-select-option value="LOS OLIVOS PRIMER SECTOR">LOS OLIVOS PRIMER SECTOR</ion-select-option>
+        <ion-select-option value="PABLO VI">PABLO VI</ion-select-option>
+        <ion-select-option value="URBANIZACION EL HOGAR DEL SOL">URBANIZACION EL HOGAR DEL SOL</ion-select-option>
+        <ion-select-option value="URBANIZACION EL RINCON DE SANTA FE I ETAPA">URBANIZACION EL RINCON DE SANTA FE I ETAPA</ion-select-option>
+        <ion-select-option value="URBANIZACION EL TREBOL">URBANIZACION EL TREBOL</ion-select-option>
+        <ion-select-option value="URBANIZACION PRADO DE LOS ROSALES">URBANIZACION PRADO DE LOS ROSALES</ion-select-option>
+        <!--COMUNA 4-->
+        <ion-select-option value="ASENTAMIENTO SUBNORMAL CORINTO III ALTOS DEL PINO">ASENTAMIENTO SUBNORMAL CORINTO III ALTOS DEL PINO</ion-select-option>
+        <ion-select-option value="ASENTAMIENTO SUBNORMAL CORINTO III EL PROGRESO">ASENTAMIENTO SUBNORMAL CORINTO III EL PROGRESO</ion-select-option>
+        <ion-select-option value="ASENTAMIENTO SUBNORMAL LA ESPERANZA DE CAZUCA">ASENTAMIENTO SUBNORMAL LA ESPERANZA DE CAZUCA</ion-select-option>
+        <ion-select-option value="ASENTAMIENTO SUBNORMAL LUIS CARLOS GALAN 3ER SECTOR">ASENTAMIENTO SUBNORMAL LUIS CARLOS GALAN 3ER SECTOR</ion-select-option>
+        <ion-select-option value="CARLOS PIZARRO">CARLOS PIZARRO</ion-select-option>
+        <ion-select-option value="CASA LOMA">CASA LOMA</ion-select-option>
+        <ion-select-option value="CASA LOMA II SECTOR">CASA LOMA II SECTOR</ion-select-option>
+        <ion-select-option value="CIUDADELA SUCRE SECTOR RINCON DEL LAGO">CIUDADELA SUCRE SECTOR RINCON DEL LAGO</ion-select-option>
+        <ion-select-option value="CIUDADELA SUCRE I SECTOR BELLAVISTA">CIUDADELA SUCRE I SECTOR BELLAVISTA</ion-select-option>
+        <ion-select-option value="CIUDADELA SUCRE I SECTOR BELLAVISTA PARTE ALTA">CIUDADELA SUCRE I SECTOR BELLAVISTA PARTE ALTA</ion-select-option>
+        <ion-select-option value="CIUDADELA SUCRE I SECTOR BUENOS AIRES">CIUDADELA SUCRE I SECTOR BUENOS AIRES</ion-select-option>
+        <ion-select-option value="CIUDADELA SUCRE II SECTOR SAN RAFAEL BAJO">CIUDADELA SUCRE II SECTOR SAN RAFAEL BAJO</ion-select-option>
+        <ion-select-option value="CIUDADELA SUCRE II SECTOR SAN RAFAEL PARTE ALTA">CIUDADELA SUCRE II SECTOR SAN RAFAEL PARTE ALTA</ion-select-option>
+        <ion-select-option value="CIUDADELA SUCRE III SECTOR">CIUDADELA SUCRE III SECTOR</ion-select-option>
+        <ion-select-option value="CIUDADELA SUCRE SECTOR LOS PINOS">CIUDADELA SUCRE SECTOR LOS PINOS</ion-select-option>
+        <ion-select-option value="CIUDADELA SUCRE SEPTIMO SECTOR LAS MARGARITAS">CIUDADELA SUCRE SEPTIMO SECTOR LAS MARGARITAS</ion-select-option>
+        <ion-select-option value="CORINTO III EL PARAISO">CORINTO III EL PARAISO</ion-select-option>
+        <ion-select-option value="CORINTO III LOS ROBLES">CORINTO III LOS ROBLES</ion-select-option>
+        <ion-select-option value="EL ARROYO">EL ARROYO</ion-select-option>
+        <ion-select-option value="EL OASIS">EL OASIS</ion-select-option>
+        <ion-select-option value="JULIO RINCON">JULIO RINCON</ion-select-option>
+        <ion-select-option value="LA III ETAPA BARRIO JULIO RINCON">LA III ETAPA BARRIO JULIO RINCON</ion-select-option>
+        <ion-select-option value="LA ISLA">LA ISLA</ion-select-option>
+        <ion-select-option value="LA NUEVA UNION">LA NUEVA UNION</ion-select-option>
+        <ion-select-option value="LOMA LINDA">LOMA LINDA</ion-select-option>
+        <ion-select-option value="MINUTO DE DIOS">MINUTO DE DIOS</ion-select-option>
+        <ion-select-option value="MIRADOR DE CORINTO III">MIRADOR DE CORINTO III</ion-select-option>
+        <ion-select-option value="SANTO DOMINGO">SANTO DOMINGO</ion-select-option>
+        <ion-select-option value="SUBNORMAL ALTOS DE CAZUCA, SECTOR LA CAPILLA">SUBNORMAL ALTOS DE CAZUCA, SECTOR LA CAPILLA</ion-select-option>
+        <ion-select-option value="SUBNORMAL LOS BALCANES">SUBNORMAL LOS BALCANES</ion-select-option>
+        <ion-select-option value="SUBNORMAL LUIS CARLOS GALAN PRIMER SECTOR">SUBNORMAL LUIS CARLOS GALAN PRIMER SECTOR</ion-select-option>
+        <ion-select-option value="SUBNORMAL LUIS CARLOS GALAN SEGUNDO SECTOR">SUBNORMAL LUIS CARLOS GALAN SEGUNDO SECTOR</ion-select-option>
+        <ion-select-option value="SUBNORMAL VILLA MERCEDES II Y III SECTOR ALTOS DE CAZUCA">SUBNORMAL VILLA MERCEDES II Y III SECTOR ALTOS DE CAZUCA</ion-select-option>
+        <ion-select-option value="SUBNORMAL VILLA SANDRA">SUBNORMAL VILLA SANDRA</ion-select-option>
+        <ion-select-option value="TERRANOVA">TERRANOVA</ion-select-option>
+        <ion-select-option value="URBANIZACION CAZUCA">URBANIZACION CAZUCA</ion-select-option>
+        <ion-select-option value="VILLA ESPERANZA EL BARRENO">VILLA ESPERANZA EL BARRENO</ion-select-option>
+        <ion-select-option value="VILLA MERCEDES I SECTOR LA MESETA">VILLA MERCEDES I SECTOR LA MESETA</ion-select-option>
+        <ion-select-option value="VILLA MERCEDES PRIMER SECTOR">VILLA MERCEDES PRIMER SECTOR</ion-select-option>
+        <ion-select-option value="VILLA NUEVA ALTA CIUDADELA SUCRE">VILLA NUEVA ALTA CIUDADELA SUCRE</ion-select-option>
+       <!--COMUNA 5-->
+        <ion-select-option value="AGRUPACION RESIDENCIAL EL BOSQUE URBANIZACIÓN SAN MATEO">AGRUPACION RESIDENCIAL EL BOSQUE URBANIZACIÓN SAN MATEO</ion-select-option>
+        <ion-select-option value="CAPITALINAS">CAPITALINAS</ion-select-option>
+        <ion-select-option value="EL PINAR Y LOS SAUCES">EL PINAR Y LOS SAUCES</ion-select-option>
+        <ion-select-option value="LAS VEGAS DE SAN MATEO">LAS VEGAS DE SAN MATEO</ion-select-option>
+        <ion-select-option value="NUEVO COLON">NUEVO COLON</ion-select-option>
+        <ion-select-option value="S3 CENTRAL RESIDENCIAL SAN MATEO">S3 CENTRAL RESIDENCIAL SAN MATEO</ion-select-option>
+        <ion-select-option value="SAN LUCAS 1ER SECTOR">SAN LUCAS 1ER SECTOR</ion-select-option>
+        <ion-select-option value="SAN MATEO II SECTOR">SAN MATEO II SECTOR</ion-select-option>
+        <ion-select-option value="SAN MATEO SECTOR ARMERO">SAN MATEO SECTOR ARMERO</ion-select-option>
+        <ion-select-option value="SAN MATEO SEGUNDO SECTOR ARMERO">SAN MATEO SEGUNDO SECTOR ARMERO</ion-select-option>
+        <ion-select-option value="SAN MATEO ZONA SUMAPAZ">SAN MATEO ZONA SUMAPAZ</ion-select-option>
+        <ion-select-option value="SIMON BOLIVAR">SIMON BOLIVAR</ion-select-option>
+        <ion-select-option value="URBANIZACION LAS QUINTAS II">URBANIZACION LAS QUINTAS II</ion-select-option>
+        <ion-select-option value="URBANIZACION PRESENCIA DE LOS ANDES">URBANIZACION PRESENCIA DE LOS ANDES</ion-select-option>
+        <ion-select-option value="URBANIZACION SAN MATEO">URBANIZACION SAN MATEO</ion-select-option>
+        <ion-select-option value="URBANIZACION SAN MATEO DE LAS SUPERMANZANAS S3, S4 , S5">URBANIZACION SAN MATEO DE LAS SUPERMANZANAS S3, S4 , S5</ion-select-option>
+        <ion-select-option value="URBANIZACION SANTILLANA">URBANIZACION SANTILLANA</ion-select-option>
+        <ion-select-option value="URBANIZACION SANTILLANA ETAPA III">URBANIZACION SANTILLANA ETAPA III</ion-select-option>
+       <!--COMUNA 6-->
+        <ion-select-option value="ALTICO">ALTICO</ion-select-option>
+        <ion-select-option value="ALTOS DE LA FLORIDA I SECTOR">ALTOS DE LA FLORIDA I SECTOR</ion-select-option>
+        <ion-select-option value="ALTOS DE LA FLORIDA II SECTOR">ALTOS DE LA FLORIDA II SECTOR</ion-select-option>
+        <ion-select-option value="ALTOS DE LA FLORIDA IV SECTOR EL RETIRO">ALTOS DE LA FLORIDA IV SECTOR EL RETIRO</ion-select-option>
+        <ion-select-option value="BALCON REAL">BALCON REAL</ion-select-option>
+        <ion-select-option value="BALCON REAL II">BALCON REAL II</ion-select-option>
+        <ion-select-option value="BOYACA">BOYACA</ion-select-option>
+        <ion-select-option value="CHICO SUR">CHICO SUR</ion-select-option>
+        <ion-select-option value="CIEN FAMILIAS">CIEN FAMILIAS</ion-select-option>
+        <ion-select-option value="CONJUNTO RESIDENCIAL COMFENALCO">CONJUNTO RESIDENCIAL COMFENALCO</ion-select-option>
+        <ion-select-option value="DIVINO NIÑO PRIMER SECTOR">DIVINO NIÑO PRIMER SECTOR</ion-select-option>
+        <ion-select-option value="EL BOSQUE DE CIPI">EL BOSQUE DE CIPI</ion-select-option>
+        <ion-select-option value="EL BOSQUE SUR ORIENTE">EL BOSQUE SUR ORIENTE</ion-select-option>
+        <ion-select-option value="EL CAGUA SEGUNDO SECTOR">EL CAGUA SEGUNDO SECTOR</ion-select-option>
+        <ion-select-option value="EL CARDAL">EL CARDAL</ion-select-option>
+        <ion-select-option value="EL DIVINO NIÑO PARTE ALTA">EL DIVINO NIÑO PARTE ALTA</ion-select-option>
+        <ion-select-option value="EL DORADO">EL DORADO</ion-select-option>
+        <ion-select-option value="EL LIBERTADOR">EL LIBERTADOR</ion-select-option>
+        <ion-select-option value="EL PORVENIR">EL PORVENIR</ion-select-option>
+        <ion-select-option value="EL SEGUNDO SECTOR DEL BARRIO LA FLORIDA">EL SEGUNDO SECTOR DEL BARRIO LA FLORIDA</ion-select-option>
+        <ion-select-option value="EL TRIUNFO">EL TRIUNFO</ion-select-option>
+        <ion-select-option value="II SECTOR DEL BARRIO CAMILO TORRES">II SECTOR DEL BARRIO CAMILO TORRES</ion-select-option>
+        <ion-select-option value="JUAN PABLO II SECTOR II">JUAN PABLO II SECTOR II</ion-select-option>
+        <ion-select-option value="LA ESMERALDA">LA ESMERALDA</ion-select-option>
+        <ion-select-option value="LA ESPERANZA">LA ESPERANZA</ion-select-option>
+        <ion-select-option value="LA FLORIDA">LA FLORIDA</ion-select-option>
+        <ion-select-option value="LA MAGDALENA">LA MAGDALENA</ion-select-option>
+        <ion-select-option value="LA PRADERA">LA PRADERA</ion-select-option>
+        <ion-select-option value="LA PRADERA II SECTOR">LA PRADERA II SECTOR</ion-select-option>
+        <ion-select-option value="LA VEREDA EL PARAISO">LA VEREDA EL PARAISO</ion-select-option>
+        <ion-select-option value="LAS VILLAS">LAS VILLAS</ion-select-option>
+        <ion-select-option value="LLANO GRANDE">LLANO GRANDE</ion-select-option>
+        <ion-select-option value="LOS CRISTALES">LOS CRISTALES</ion-select-option>
+        <ion-select-option value="MARISCAL SUCRE">MARISCAL SUCRE</ion-select-option>
+        <ion-select-option value="PANORAMA">PANORAMA</ion-select-option>
+        <ion-select-option value="RICAURTE">RICAURTE</ion-select-option>
+        <ion-select-option value="RINCON DE SAN CARLOS">RINCON DE SAN CARLOS</ion-select-option>
+        <ion-select-option value="SAN ALBERTO">SAN ALBERTO</ion-select-option>
+        <ion-select-option value="SAN ANTONIO">SAN ANTONIO</ion-select-option>
+        <ion-select-option value="SAN BERNARDINO">SAN BERNARDINO</ion-select-option>
+        <ion-select-option value="SAN HUMBERTO">SAN HUMBERTO</ion-select-option>
+        <ion-select-option value="SAN JOSE">SAN JOSE</ion-select-option>
+        <ion-select-option value="SAN JUAN">SAN JUAN</ion-select-option>
+        <ion-select-option value="SAN MARCOS">SAN MARCOS</ion-select-option>
+        <ion-select-option value="SANTA ROSA">SANTA ROSA</ion-select-option>
+        <ion-select-option value="SUBNORMAL LA CRISTALINA">SUBNORMAL LA CRISTALINA</ion-select-option>
+        <ion-select-option value="UBATE">UBATE</ion-select-option>
+        <ion-select-option value="UBATE II SECTOR">UBATE II SECTOR</ion-select-option>
+        <ion-select-option value="URBANIZACION ANDALUCIA">URBANIZACION ANDALUCIA</ion-select-option>
+        <ion-select-option value="URBANIZACION DOCE DE MARZO">URBANIZACION DOCE DE MARZO</ion-select-option>
+        <ion-select-option value="URBANIZACION EL SOL">URBANIZACION EL SOL</ion-select-option>
+        <ion-select-option value="URBANIZACION ESPAÑA">URBANIZACION ESPAÑA</ion-select-option>
+        <ion-select-option value="URBANIZACION GALICIA III">URBANIZACION GALICIA III</ion-select-option>
+        <ion-select-option value="URBANIZACION JUAN PABLO II SECTOR CUARTA ETAPA">URBANIZACION JUAN PABLO II SECTOR CUARTA ETAPA</ion-select-option>
+        <ion-select-option value="URBANIZACION JUAN PABLO II SECTOR III">URBANIZACION JUAN PABLO II SECTOR III</ion-select-option>
+        <ion-select-option value="URBANIZACION PARQUE DEL SOL">URBANIZACION PARQUE DEL SOL</ion-select-option>
+        <ion-select-option value="URBANIZACION RINCON DE LA FLORIDA">URBANIZACION RINCON DE LA FLORIDA</ion-select-option>
+        <ion-select-option value="URBANIZACION SAN MARTIN">URBANIZACION SAN MARTIN</ion-select-option>
+        <ion-select-option value="URBANIZACION SANTA ELENA SUR">URBANIZACION SANTA ELENA SUR</ion-select-option>
+        <ion-select-option value="URBANIZACION SANTA MARIA I">URBANIZACION SANTA MARIA I</ion-select-option>
+        <ion-select-option value="VEREDA CAGUA (Primer sector)">VEREDA CAGUA (Primer sector)</ion-select-option>
+        <ion-select-option value="VILLA JULIA">VILLA JULIA</ion-select-option>
+        <ion-select-option value="VILLAS DE SANTA ISABEL">VILLAS DE SANTA ISABEL</ion-select-option>
+        <ion-select-option value="VILLAS DEL PROGRESO">VILLAS DEL PROGRESO</ion-select-option>
+        <!--CORREGIMIENTO 1-->
+        <ion-select-option value="ALTO DEL CABRA">ALTO DEL CABRA</ion-select-option>
+        <ion-select-option value="VEREDA CHACUA">VEREDA CHACUA</ion-select-option>
+        <ion-select-option value="VEREDA CHACUA SECTOR LA PRIMAVERA">VEREDA CHACUA SECTOR LA PRIMAVERA</ion-select-option>
+        <ion-select-option value="LA VEREDA FUSUNGA">LA VEREDA FUSUNGA</ion-select-option>
+        <ion-select-option value="VEREDA LA HUNGRIA">VEREDA LA HUNGRIA</ion-select-option>
+        <ion-select-option value="LA VEREDA PANAMA">LA VEREDA PANAMA</ion-select-option>
+        <ion-select-option value="EL ROMERAL">EL ROMERAL</ion-select-option>
+        <ion-select-option value="VEREDA SAN JORGE">VEREDA SAN JORGE</ion-select-option>
+        <ion-select-option value="VEREDA TINZUQUE">VEREDA TINZUQUE</ion-select-option>
+        <ion-select-option value="ASENTAMIENTO ALTOS DE LA FLORIDA III SECTOR">ASENTAMIENTO ALTOS DE LA FLORIDA III SECTOR</ion-select-option>
+        <!--CORREGIMIENTO 2-->
+        <ion-select-option value="ALTO DE LA CRUZ">ALTO DE LA CRUZ</ion-select-option>
+        <ion-select-option value="VEREDA CASCAJAL">VEREDA CASCAJAL</ion-select-option>
+        <ion-select-option value="VEREDA BOSATAMA">VEREDA BOSATAMA</ion-select-option>
+        <ion-select-option value="EL CHARQUITO">EL CHARQUITO</ion-select-option>
+        <ion-select-option value="SAN FRANCISCO">SAN FRANCISCO</ion-select-option>
+      </ion-select>
     </ion-item>
     <ion-item class="items">
-      <ion-label class="label" position="stacked">Contraseña</ion-label>
+      <ion-label class="label" position="floating">Contraseña</ion-label>
       <ion-input name="password" type="password"[(ngModel)]="registro.password" ></ion-input>
     </ion-item>
      <!-- Hace falta confirmar contraseña-->
     <ion-item class="items">
-      <ion-label class="label" position="stacked">Télefono</ion-label>
+      <ion-label class="label" position="floating">Télefono</ion-label>
       <ion-input name="Celular" [(ngModel)]="registro.phone" ></ion-input>
     </ion-item>
     <ion-item class="items">
-      <ion-label class="label" position="stacked">Celular</ion-label>
+      <ion-label class="label" position="floating">Celular</ion-label>
       <ion-input name="movil"[(ngModel)]="registro.movil" ></ion-input>
     </ion-item>
     <!-- El género debe ser un desplegable, opciones: "Masculino-Femenino-Otro"-->
     <ion-item class="items">
-      <ion-label class="label" position="floating">Genero</ion-label>
+      <ion-label class="label" position="floating">Género</ion-label>
       <ion-select [(ngModel)]="registro.gener">
         <ion-select-option value="Masculino">Masculino</ion-select-option>
         <ion-select-option value="Femenino">Femenino</ion-select-option>
@@ -64,22 +313,25 @@
       <ion-label class="label" position="floating">Nivel de estudios</ion-label>
       <ion-select [(ngModel)]="registro.level_school">
         <ion-select-option value="Primaria">Primaria</ion-select-option>
-        <ion-select-option value="Bachiller">Bachiller</ion-select-option>
-        <ion-select-option value="Tecnico">Tecnico</ion-select-option>
+        <ion-select-option value="Bachiller">Bachillerato</ion-select-option>
+        <ion-select-option value="Tecnico">Técnico</ion-select-option>
         <ion-select-option value="Profesional">Profesional</ion-select-option>
+        <!--<ion-select-option value="no aplica">No aplica</ion-select-option>-->
       </ion-select>
     </ion-item>
     <ion-item class="items">
-      <ion-label class="label" position="stacked">Grupo étnico</ion-label>
+      <ion-label class="label" position="floating">Grupo étnico</ion-label>
       <ion-input name="grup_etni" [(ngModel)]="registro.grup_etni" ></ion-input>
+      
     </ion-item>
     <ion-item class="items">
-      <ion-label class="label" position="floating">Grupo vunerable</ion-label>
+      <ion-label class="label" position="floating">Grupo Vulnerable</ion-label>
       <ion-select [(ngModel)]="registro.vunerable_person">
-        <ion-select-option value="Primaria">Lbgti</ion-select-option>
+        <ion-select-option value="Primaria">LGBTIQ+</ion-select-option>
         <ion-select-option value="Bachiller">Victima de conflicto</ion-select-option>
         <ion-select-option value="Tecnico">Migrante</ion-select-option>
         <ion-select-option value="Profesional">Otro</ion-select-option>
+        <!--<ion-select-option value="No aplica">No aplica</ion-select-option>-->
       </ion-select>
     </ion-item>
     <ion-item class="items">
@@ -99,29 +351,14 @@
       </ion-select>
     </ion-item>
     
-  <!--
-  <ion-item class="items" lines="none">
-    <ion-label style="color: black; font-size: 12px; text-align:justify;">Autorizo a mi familiar para consultar y/o registrar información, así como permitir el ingreso y uso de la aplicación.</ion-label>
-    <ion-checkbox mode="md">
-    </ion-checkbox>
-  </ion-item>
-  -->
   <ion-item class="items" lines="none">
     <ion-label style="color: black; font-size: 12px; text-align:justify;">Un familiar te ayudo a inscribirte?</ion-label>
-    <ion-checkbox mode="md" [checked]="isToggled" >
+    <ion-checkbox mode="md" >
     </ion-checkbox>
   </ion-item>
 
-    
-    <!--
     <ion-item class="items" lines="none">
-      <ion-label style="color: black; font-size: 12px; text-align:justify;">Autorizo a mi familiar para consultar y/o registrar información, así como permitir el ingreso y uso de la aplicación.</ion-label>
-      <ion-checkbox mode="md">
-      </ion-checkbox>
-    </ion-item>
-    -->
-    <ion-item class="items" lines="none">
-      <ion-label style="color: black; font-size: 12px; text-align:justify;">Acepto las <a href='https://drive.google.com/file/d/1zWNyWbUF2gu01BXIXvmvWiizhc4y9rmX/view?usp=sharing'>Políticas de privacidad y<br>Tratamiento de datos</a></ion-label>
+      <ion-label style="color: black; font-size: 12px; text-align:justify;">Acepto las <a href='https://drive.google.com/file/d/1yyqZjuk4dBmiEVgFrt_SDzjLN2oX78r1/view'>Políticas de privacidad y<br>Tratamiento de datos</a></ion-label>
       <ion-checkbox mode="md" [checked]="isToggled" (ionChange)="notify()">
       </ion-checkbox>
     </ion-item>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataObservableService } from 'src/app/services/data-observable.service';
 import { RestService } from 'src/app/services/rest.service';
-
+import { AlertController } from '@ionic/angular';
 @Component({
   selector: 'app-reporte-fechas',
   templateUrl: './reporte-fechas.page.html',
@@ -15,7 +15,7 @@ export class ReporteFechasPage implements OnInit {
   userSend:{}={}
   status:'' 
   date =''
-  constructor(private _observableService:DataObservableService, private _httpService:RestService) {
+  constructor(private _observableService:DataObservableService, private _httpService:RestService,public atrCtrl: AlertController) {
   }
 //traer la descripcion y estad
 // hacer un fornularion recativocon fecha
@@ -34,7 +34,28 @@ ionViewWillEnter(){
     this.user = localStorage.getItem('user')
     this.dataFor = JSON.parse(this.user)
     console.log(this.dataFor);
-    
+
+  }
+  async showPromptAlert() {
+    let alert = this.atrCtrl.create({
+      header: '¿Quieres guardar estos datos?',
+      buttons: [
+        {
+          text: 'Cancelar',
+          role: 'cancel',
+          handler: data => {
+            console.log('Cancelado');
+          }
+        },
+        {
+          text: 'Aceptar',
+          handler: data => {
+           this.addDate();
+          }
+        }
+      ]
+    });
+    (await alert).present();
   }
   addDate(){
     console.log("fecha",this.date);

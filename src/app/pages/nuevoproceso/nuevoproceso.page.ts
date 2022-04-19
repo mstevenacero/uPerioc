@@ -23,4 +23,7 @@ export class NuevoprocesoPage implements OnInit {
     this._dataObservable.sendDescription(dataDescription)
     this.router.navigateByUrl('reporte-fechas');
   }
+  routerClick(link: string) {
+    this.router.navigateByUrl(link);
+  }
 }
