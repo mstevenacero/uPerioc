@@ -1,0 +1,15 @@
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref='/misprocesos' style="color:black" text=""> </ion-back-button>
+    <h3>antes</h3>
+ </ion-buttons>
+</ion-toolbar>
+<ion-content>
+<ion-row *ngFor="let item of data ">
+  <h2>{{item.updatedAt.slice(0,-14)}}</h2>
+  <ion-item>
+    <h5>{{item.description}}</h5>
+    <h4>{{item.date_user}}</h4>
+  </ion-item>
+</ion-row>
+</ion-content>

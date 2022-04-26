@@ -90,6 +90,18 @@ const routes: Routes = [
     path: 'proceso-completo',
     loadChildren: () => import('./pages/proceso-completo/proceso-completo.module').then( m => m.ProcesoCompletoPageModule)
   },
+  {
+    path: 'antes',
+    loadChildren: () => import('./pages/antes/antes.module').then( m => m.AntesPageModule)
+  },
+  {
+    path: 'durante',
+    loadChildren: () => import('./pages/durante/durante.module').then( m => m.DurantePageModule)
+  },
+  {
+    path: 'despues',
+    loadChildren: () => import('./pages/despues/despues.module').then( m => m.DespuesPageModule)
+  },
 
 
 

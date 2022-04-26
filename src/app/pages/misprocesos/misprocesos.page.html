@@ -20,19 +20,19 @@
     </div>
 
     <ion-grid id="botones">
-      <ion-card button="true">
+      <ion-card (click)="routerClick('/antes')"  button="true">
         <ion-item id="item" lines="none" style="padding:0px !important;" id="uno"> 
             <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
           <label>Antes de la operación</label>
         </ion-item>
       </ion-card>
-      <ion-card button="true">
+      <ion-card   (click)="routerClick('/durante')" button="true">
         <ion-item  id="item" lines="none" style="padding:0px !important;"  id="dos">
             <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
           <label>Durante la operación</label>
         </ion-item>
       </ion-card>
-      <ion-card button="true">
+      <ion-card  (click)="routerClick('/despues')" button="true">
         <ion-item id="item" lines="none" style="padding:0px !important;" id="uno"> 
             <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
           <label>Después de la operación</label>

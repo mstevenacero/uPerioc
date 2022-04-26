@@ -15,6 +15,9 @@ export class RestService {
   post(endpoint: string, form: any) {
     return this.http.post(`${this.url}${endpoint}`, form);
   }
+  getStatus(endpoint: string, form: any) {
+    return this.http.post(`${this.url}${endpoint}`, form);
+  }
   get(endpoint: string) {
     return this.http.get(`${this.url}${endpoint}`);
   }
