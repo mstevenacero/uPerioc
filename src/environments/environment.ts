@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  BACK_URL: 'http://localhost:3000/api/',
+  BACK_URL: 'http://3.213.124.148/api/',
 };
 
 /*
