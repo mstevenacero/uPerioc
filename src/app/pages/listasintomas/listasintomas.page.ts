@@ -53,10 +53,10 @@ export class ListasintomasPage implements OnInit {
     this._dataObservable.dataObjectSource.subscribe(data => this.dataUser = data
 
     )
-    console.log("llego la data: ", this.dataUser.data['id']);
+    //("llego la data: ", this.dataUser.data['id']);
     this.user = localStorage.getItem('user')
     this.dataFor = JSON.parse(this.user)
-    console.log("data for", this.dataFor['id']);
+    //("data for", this.dataFor['id']);
 
   }
   ngOnInit() {
@@ -74,13 +74,13 @@ export class ListasintomasPage implements OnInit {
 
           this.symptonsData = response;
           const dataMapSymptoms = this.symptonsData?.data.map((item, index) => {
-            console.log("item map", item['data_symptoms_poll'].symptons[0])
+            //("item map", item['data_symptoms_poll'].symptons[0])
             let tmpSymtompsP = item['data_symptoms_poll'].symptons[0]
             this.dataReturn.push(tmpSymtompsP)
           })
           this.dataReturn
-          console.log("lista de sintomas", this.symptonsData?.data[0].id);
-          console.log("sintomas", this.symptonsData?.data);
+          //("lista de sintomas", this.symptonsData?.data[0].id);
+          //("sintomas", this.symptonsData?.data);
 
         }
       }
@@ -96,21 +96,21 @@ export class ListasintomasPage implements OnInit {
 
           this.symptonsData = response;
           const dataMapSymptoms = this.symptonsData?.data.map((item, index) => {
-            console.log("item map", item['data_symptoms_poll'].symptons[0])
+            //("item map", item['data_symptoms_poll'].symptons[0])
             let tmpSymtompsP = item['data_symptoms_poll'].symptons[0]
             this.dataReturn.push(tmpSymtompsP)
           })
           this.dataReturn
-          console.log("lista de sintomas", this.symptonsData?.data[0].id);
-          console.log("sintomas", this.symptonsData?.data);
+          //("lista de sintomas", this.symptonsData?.data[0].id);
+          //("sintomas", this.symptonsData?.data);
 
         }
       }
     );
   }
   symptomsUser(value: any, index) {
-    console.log("valor del boton", value, "get", this.changeInitGet)
-    console.log("index", index);
+    //("valor del boton", value, "get", this.changeInitGet)
+    //("index", index);
 
     let returnSyTmp = {
       simptons: value,
@@ -121,7 +121,7 @@ export class ListasintomasPage implements OnInit {
     let userSyntomsTmpS = {
       data: this.dataUserSymptons
     }
-    console.log(this.area);
+    //(this.area);
 
     this.dataPost = {
       id_user: this.dataFor['id'],
@@ -130,13 +130,13 @@ export class ListasintomasPage implements OnInit {
       data_symptoms: userSyntomsTmpS,
       descripcion: "na"
     }
-    console.log("data Return", this.dataNewReturn);
-    console.log("dataReturnBack", this.dataPost);
+    //("data Return", this.dataNewReturn);
+    //("dataReturnBack", this.dataPost);
     //delete this.dataReturn[index]
 
   }
   addSymptonsUser() {
-    console.log("data antes de enviarse", this.dataPost);
+    //("data antes de enviarse", this.dataPost);
 
     this._httpService.post('symptoms', this.dataPost).subscribe(
       response => {
@@ -144,7 +144,7 @@ export class ListasintomasPage implements OnInit {
 
           console.error('Error: no se encontro usuario');
         } else {
-          console.log("response", response);
+          //("response", response);
 
 
           const treuKeyAlert = response['alertSymptom']

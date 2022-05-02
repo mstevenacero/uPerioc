@@ -102,6 +102,10 @@ const routes: Routes = [
     path: 'despues',
     loadChildren: () => import('./pages/despues/despues.module').then( m => m.DespuesPageModule)
   },
+  {
+    path: 'update',
+    loadChildren: () => import('./pages/update/update.module').then( m => m.UpdatePageModule)
+  },
 
 
 

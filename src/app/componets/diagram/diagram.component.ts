@@ -31,11 +31,11 @@ export class DiagramComponent implements OnInit {
           console.error('Error: de traer los sintomas de usuario');
         } else {
           this._dataUser=response
-          console.log("response de alerta",this._dataUser.data.length);
+          //("response de alerta",this._dataUser.data.length);
            this.numberUser = this._dataUser.data.length
            this.userData = this._dataUser.data
         }
-        console.log('se  agrego el usuario');
+        //('se  agrego el usuario');
       }
     );
 
@@ -48,11 +48,11 @@ export class DiagramComponent implements OnInit {
           console.error('Error: de traer los sintomas de usuario');
         } else {
           this._dataUser=response
-          console.log("response de alerta",this._dataUser.data.length);
+          //("response de alerta",this._dataUser.data.length);
            this.numberSintoms = this._dataUser.data.length
 
         }
-        console.log('se  agrego el usuario');
+        //('se  agrego el usuario');
       }
     );
 

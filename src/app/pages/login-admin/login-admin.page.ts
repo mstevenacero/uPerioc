@@ -18,7 +18,7 @@ export class LoginAdminPage implements OnInit {
   }
 
   singIn(){
-    console.log("login",this.login);
+    //("login",this.login);
     let name = this.login.name
     let pass = this.login.password
     if(name=="superAdmin" && pass=="Ttgb1010@" ){

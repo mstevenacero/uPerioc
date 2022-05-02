@@ -21,13 +21,13 @@ export class AntesPage implements OnInit {
       status: this.status,
       user_id: this.jsonUser['id']
     }
-    console.log("this.getuser",this.getuser);
+    //("this.getuser",this.getuser);
     
     this.getStatus(this.sendUser);
   }
 
   getStatus(form: any) {
-    console.log("form",form);
+    //("form",form);
     
     this._http.getStatus('lineTimes/status/',form).subscribe(response => {
 
@@ -35,7 +35,7 @@ export class AntesPage implements OnInit {
         this.data_form = response
         this.data = this.data_form.data
       } else {
-        console.log("ocurrio un error ");
+        //("ocurrio un error ");
 
       }
 

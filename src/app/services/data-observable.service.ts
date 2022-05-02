@@ -8,9 +8,11 @@ export class DataObservableService {
  private objectSource = new BehaviorSubject<{}>({})
  private symtompsFisi = new BehaviorSubject(false)
  private varialDescription = new BehaviorSubject<{}>({});
+ private  varialAlert = new BehaviorSubject(false);
  dataObjectSource = this.objectSource.asObservable();
  dataSymptoms = this.symtompsFisi.asObservable();
  currentDescription = this.varialDescription.asObservable();
+ currentAlert = this.varialAlert.asObservable();
   constructor() { }
 
   sendData(data:any){
@@ -24,6 +26,10 @@ export class DataObservableService {
 
   sendDescription(data:any){
     this.varialDescription.next(data);
+  }
+
+  sendAlert(data:boolean){
+    this.varialAlert.next(data)
   }
 
 }

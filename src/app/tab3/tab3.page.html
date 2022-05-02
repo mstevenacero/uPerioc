@@ -34,7 +34,7 @@
   <P id ="fechaCreacion">{{item.createdAt.slice(0,-14)}}</P>
 </ion-item>
 <ion-fab horizontal="end" vertical="bottom" slot="fixed">
-  <ion-fab-button style="color: #56CCF2">
+  <ion-fab-button (click)="sendNewAlert()" style="color: #56CCF2">
     <ion-icon name="add"></ion-icon>
   </ion-fab-button>
 </ion-fab>

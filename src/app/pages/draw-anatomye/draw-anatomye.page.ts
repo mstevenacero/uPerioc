@@ -42,7 +42,7 @@ export class DrawAnatomyePage implements OnInit {
 
   }
   nextPage() {
-    console.log("cabeza", this.position);
+    //("cabeza", this.position);
     this.changeInitPost = this.position
     const newInitTmp = this.changeInitPost;
     this._changeInit.changeInit(newInitTmp);

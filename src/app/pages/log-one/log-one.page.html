@@ -11,7 +11,13 @@
       <ion-input name="password" type="password"[(ngModel)]="registro.password"></ion-input>
     </ion-item>
     <div class="password_forgot">
-      <ion-button fill="clear" class="ion-no-padding">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;¿Olvidaste tu contraseña?</ion-button>
+      <ion-button   (click)="routerClick('update')" fill="clear" class="ion-no-padding">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;¿Olvidaste tu contraseña?</ion-button>
+    </div>
+    <div class="password_forgot">
+      <ion-button (click)="routerClick('tutorial')" fill="clear" class="ion-no-padding">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inicia el tutorial</ion-button>
+    </div>
+    <div class="password_forgot">
+      <ion-button (click)="routerClick('mapaconectividad')" fill="clear" class="ion-no-padding">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zonas wifi</ion-button>
     </div>
   </div>
   <ion-grid style="margin-top: 42px;">

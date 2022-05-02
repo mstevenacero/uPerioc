@@ -18,7 +18,7 @@ export class ProcesoCompletoPage implements OnInit {
     this.user = localStorage.getItem('user')
     this.user_form = JSON.parse(this.user);
     this.id_user = this.user_form['id']
-    console.log(this.id_user);
+    //(this.id_user);
     this.getInfoUser(this.id_user);
 
   }
@@ -28,12 +28,12 @@ export class ProcesoCompletoPage implements OnInit {
         if(response){
           this.data_form = response
           this.data = this.data_form.data
-          console.log(this.data);
+          //(this.data);
           
         }else{
          
           
-          console.log("Error al traer l informacion del usuario");
+          //("Error al traer l informacion del usuario");
           
         }
       }

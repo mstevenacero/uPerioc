@@ -15,7 +15,7 @@ export class AlertUsersComponent implements OnInit {
 
   ngOnInit() {
     this.id = localStorage.getItem('id')
-    console.log("tipo",typeof(this.id));
+    //("tipo",typeof(this.id));
    this.getAlertUser(this.id)
 
   }
@@ -28,7 +28,7 @@ export class AlertUsersComponent implements OnInit {
           console.error('Error: no se encontro usuario');
         } else {
           this.usersId = response
-          console.log("response",this.usersId.data);
+          //("response",this.usersId.data);
           
           const mapUser  = this.usersId.data.map(item=>{
 

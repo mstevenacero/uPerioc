@@ -19,7 +19,7 @@ export class NuevoprocesoPage implements OnInit {
          des:description,
          sta:status
     }
-    console.log("data description to send",dataDescription);
+    //("data description to send",dataDescription);
     this._dataObservable.sendDescription(dataDescription)
     this.router.navigateByUrl('reporte-fechas');
   }

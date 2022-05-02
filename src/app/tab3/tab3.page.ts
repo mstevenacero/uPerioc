@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SenTobackService } from 'src/app/services/sen-toback.service';
 import { DataObservableService } from '../services/data-observable.service';
 import { RestService } from '../services/rest.service';
@@ -19,15 +20,17 @@ export class Tab3Page implements OnInit {
   userJson: any
   dataAlerts: any
   userFor: any
+  alertSend:boolean= false
   constructor(
     private _getAlert: SenTobackService,
     private _httpService: RestService,
-    private _dataObservable: DataObservableService
+    private _dataObservable: DataObservableService,
+    private router:Router
   ) {
     this._getAlert.currentAlert.subscribe(item => {
       if (item != '') {
         this.descriptionAlert = item
-        console.log("item ", this.descriptionAlert);
+        //("item ", this.descriptionAlert);
         this.getChange = true;
         this.noAlerts = false;
       }
@@ -40,7 +43,7 @@ export class Tab3Page implements OnInit {
     this._getAlert.currentAlert.subscribe(item => {
       if (item != '') {
         this.descriptionAlert = item
-        console.log("item ", this.descriptionAlert);
+        //("item ", this.descriptionAlert);
         this.getChange = true;
         this.noAlerts = false;
       }
@@ -48,24 +51,24 @@ export class Tab3Page implements OnInit {
     if (this.getChange == true) {
       this.getAlert = this.descriptionAlert
     }
-    console.log("este es el on");
+    //("este es el on");
     this._dataObservable.dataObjectSource.subscribe(data => this.dataUser = data
     )
-    console.log("llego la data alsets: ", this.dataUser);
+    //("llego la data alsets: ", this.dataUser);
     this.dataUser.data = this.dataFor
     this.user = localStorage.getItem('user')
-    console.log('user', this.user);
+    //('user', this.user);
     this.userJson = JSON.parse(this.user)
     this.getAlerts(this.userJson.id)
   }
   ngOnInit() {
-    /*console.log("este es el on");
+    /*//("este es el on");
     this._dataObservable.dataObjectSource.subscribe(data => this.dataUser = data
     )
-    console.log("llego la data alsets: ", this.dataUser);
+    //("llego la data alsets: ", this.dataUser);
     this.dataUser.data = this.dataFor
     this.user = localStorage.getItem('user')
-    console.log('user', this.user);
+    //('user', this.user);
     this.userJson = JSON.parse(this.user)
     this.getAlerts(this.userJson.id)*/
   }
@@ -76,16 +79,25 @@ export class Tab3Page implements OnInit {
         if (!response) {
           console.error('Error: de traer los sintomas de usuario');
         } else {
-          console.log("response de alerta", response);
+          //("response de alerta", response);
           this.dataAlerts = response
-          console.log(this.dataAlerts.data);
+          //(this.dataAlerts.data);
           this.userFor = this.dataAlerts.data
         }
-        console.log('se  agrego el usuario');
+        //('se  agrego el usuario');
       }
     );
 
 
+  }
+
+  sendNewAlert(){
+    this.alertSend = true;
+    this._dataObservable.sendAlert(this.alertSend)
+    this.routerClick('/escribirsintomas')
+  }
+  routerClick(link: string) {
+    this.router.navigateByUrl(link);
   }
 
 }

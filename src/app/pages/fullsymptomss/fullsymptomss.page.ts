@@ -24,7 +24,7 @@ export class FullsymptomssPage implements OnInit {
   ngOnInit() {
     this.user = localStorage.getItem('user')
     this.dataFor = JSON.parse(this.user)
-    console.log( "user",this.dataFor['id']);
+    //( "user",this.dataFor['id']);
     this.id = this.dataFor['id']
     this.getUsers(this.id)
 
@@ -47,7 +47,7 @@ export class FullsymptomssPage implements OnInit {
           console.error('Error: de traer los sintomas de usuario');
         } else {
           this._dataUser=response
-          console.log(this._dataUser.data);
+          //(this._dataUser.data);
           let dataForm = this._dataUser.data
           const data = dataForm.map((item,index)=>{
             //updatedAt
@@ -59,9 +59,9 @@ export class FullsymptomssPage implements OnInit {
           })
 
          /*for (let k = 0; k < this.dataFor2.length; k++) {
-          console.log("diefre", this.dataFor2[k]);
+          //("diefre", this.dataFor2[k]);
           for(let i =0 ;i<this.dataFor2[k].length;i++){
-            console.log("two",this.dataFor2[k][i]['simptons']);
+            //("two",this.dataFor2[k][i]['simptons']);
 
             
           }

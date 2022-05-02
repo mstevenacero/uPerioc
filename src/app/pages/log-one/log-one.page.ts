@@ -28,20 +28,24 @@ export class LogOnePage implements OnInit {
   }
   LoginUp(){
     this.registro
-    console.log("registro",this.registro);
+    //("registro",this.registro);
     this._httpService.post('users/loginup/',this.registro).subscribe(
       response => {
         if (!response) {
           console.error('Error: no se encontro usuario');
         } else {
           this._dataObservable.sendData(response)
-          console.log("data enviada",response);
+          //("data enviada",response);
           this.router.navigateByUrl('tabs');
-          console.log('se encontro usuario');
+          //('se encontro usuario');
 
         }
       }
     );
+  }
+
+  routerClick(link: string) {
+    this.router.navigateByUrl(link);
   }
 
 }

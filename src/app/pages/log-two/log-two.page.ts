@@ -54,7 +54,7 @@ this.document.viewDocument('assets/logos/Documento Anteproyecto.pdf', 'applicati
   }
   addUser(){
     this.registro
-    console.log("registro",this.registro);
+    //("registro",this.registro);
     
     this._httpService.post('users',this.registro).subscribe(
       response => {
@@ -67,7 +67,7 @@ this.document.viewDocument('assets/logos/Documento Anteproyecto.pdf', 'applicati
           if(treuKeyAlert==true){
             this._changeInit.changeAlert(descripcionAlert)
           }
-          console.log('se  agrego el usuario');
+          //('se  agrego el usuario');
 
         }
       }

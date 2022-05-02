@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DataObservableService } from '../services/data-observable.service';
 
 @Component({
@@ -8,13 +9,21 @@ import { DataObservableService } from '../services/data-observable.service';
 })
 export class Tab4Page implements OnInit {
   dataUser:any
-  constructor(private _dataObservable:DataObservableService) { }
+  constructor(private router: Router,private _dataObservable:DataObservableService) { }
 
   ngOnInit(){
     this._dataObservable.dataObjectSource.subscribe(data => this.dataUser = data
       )
-      console.log("llego la data uno: ",this.dataUser);
+
  
    }
 
+   closeSesion(lnik){
+    localStorage.clear();
+    this.routerClick(lnik)
+   }
+
+   routerClick(link: string) {
+    this.router.navigateByUrl(link);
+}
 }

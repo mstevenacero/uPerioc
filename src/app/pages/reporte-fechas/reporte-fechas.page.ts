@@ -28,12 +28,12 @@ ionViewWillEnter(){
     this._observableService.currentDescription.subscribe(data=>{
       this.dataUserDescription= data;
     })
-    console.log("data lllego del user",this.dataUserDescription);
+    //("data lllego del user",this.dataUserDescription);
     this.title = this.dataUserDescription['des']
     this.status = this.dataUserDescription['sta']
     this.user = localStorage.getItem('user')
     this.dataFor = JSON.parse(this.user)
-    console.log(this.dataFor);
+    //(this.dataFor);
 
   }
   async showPromptAlert() {
@@ -44,7 +44,7 @@ ionViewWillEnter(){
           text: 'Cancelar',
           role: 'cancel',
           handler: data => {
-            console.log('Cancelado');
+            //('Cancelado');
           }
         },
         {
@@ -58,7 +58,7 @@ ionViewWillEnter(){
     (await alert).present();
   }
   addDate(){
-    console.log("fecha",this.date);
+    //("fecha",this.date);
     this.userSend={
       status:this.status,
       doctor:'Sin doctor',
@@ -66,13 +66,13 @@ ionViewWillEnter(){
       date_user:this.date,
       description:this.dataUserDescription['des']
     } 
-    console.log("sendToBACKD",this.userSend);
+    //("sendToBACKD",this.userSend);
     this._httpService.post('lineTimes',this.userSend).subscribe(
       response => {
         if (!response) {
           console.error('Error: de crear usuario');
         } else {
-          console.log('se  agrego el usuario');
+          //('se  agrego el usuario');
 
         }
       }

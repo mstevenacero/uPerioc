@@ -24,5 +24,7 @@ export class RestService {
   getOne(endpoint: string,parameters:string) {
     return this.http.get(`${this.url}${endpoint}/${parameters}`);
   }
-
+  update(endpoint: string,parameters:string,form:any) {
+    return this.http.put(`${this.url}${endpoint}/${parameters}`,form);
+  }
 }

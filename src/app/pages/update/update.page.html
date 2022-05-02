@@ -1,0 +1,24 @@
+
+<ion-content>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref='/login/log-one' style="color:black" text=""> </ion-back-button>
+      <h3>Restaurar contraseña</h3>
+   </ion-buttons>
+  </ion-toolbar>
+  <ion-header collapse="condense">
+  </ion-header>
+  <div id ="forms">
+    <ion-item class="items">
+      <ion-label  placeholder="email" class="label" position="stacked">Correo electrónico</ion-label>
+      <ion-input [(ngModel)]="email" ></ion-input>
+    </ion-item>
+    <ion-item class="items">
+      <ion-label class="label" position="stacked">Contraseña</ion-label>
+      <ion-input [(ngModel)]="password" name="password" type="password"></ion-input>
+    </ion-item>
+  </div>
+  <ion-grid style="margin-top: 42px;">
+    <ion-button (click)="updatePass()" id="buttonI">Restaurar </ion-button>
+    </ion-grid>
+</ion-content>

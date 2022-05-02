@@ -27,7 +27,7 @@ import { AlertUsersComponent } from './componets/alert-users/alert-users.compone
     AlertUsersComponent
   ],
   entryComponents: [],
-  imports: [ CommonModule,BrowserModule,HttpClientModule,ReactiveFormsModule,IonicModule.forRoot(), AppRoutingModule,NgChartsModule],
+  imports: [ CommonModule,BrowserModule,HttpClientModule,ReactiveFormsModule,IonicModule.forRoot(), AppRoutingModule,NgChartsModule,FormsModule],
   exports:[EstadistitComponent,AdminComponent,DiagramComponent],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },File, FileTransfer, DocumentViewer ],
   bootstrap: [AppComponent],

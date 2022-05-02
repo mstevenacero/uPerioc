@@ -26,11 +26,11 @@
 <ion-grid id="botones" style ="margin-top: 20px;">
   <ion-row>
     <ion-col>
-        <ion-button id="perfil">
+        <ion-button (click)="closeSesion('/tipousuario')"id="perfil">
           <img src="assets/imagenes/paciente.png"/>
         </ion-button>
         <ion-item  lines="none" style="text-align:center;--background: #f1f5f8;">
-        <ion-label style="font-size: 12px;">Editar perfil</ion-label>
+        <ion-label style="font-size: 12px;">Cerrrar sesión</ion-label>
         </ion-item>
     </ion-col>
     <ion-col>
