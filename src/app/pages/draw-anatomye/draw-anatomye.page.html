@@ -1,12 +1,18 @@
 <ion-toolbar>
   <ion-buttons slot="start">
-    <ion-back-button defaultHref="/reportes" style="color:rgb(97, 40, 40)" text=""></ion-back-button>
+    <ion-back-button defaultHref='/tab1' style="color:black" text=""></ion-back-button>
  </ion-buttons>
 </ion-toolbar>
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+  <ion-header collapse="condense" style="--background-color: white;">
   </ion-header> 
-<ion-content>
+  <div>
+      <ion-item id="inicio"  lines="none" style="--background:white; text-align: center;">
+        <ion-title id="titulo">
+          <ion-label>¿Dónde te duele?</ion-label>
+        </ion-title>
+      </ion-item>
+  </div>
   <ion-grid>
     <h1 class="title" *ngIf="disable">Selecciona dónde te duele</h1>
   <h2 class="title" *ngIf="change">¿Aquí te duele?</h2>

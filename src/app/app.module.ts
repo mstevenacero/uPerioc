@@ -16,7 +16,7 @@ import { AdminComponent } from './componets/admin/admin.component';
 import { DiagramComponent } from './componets/diagram/diagram.component';
 import { PolarComponent } from './componets/polar/polar.component';
 import { AlertUsersComponent } from './componets/alert-users/alert-users.component';
-
+import { PDFGenerator } from '@ionic-native/pdf-generator/ngx';
 
 @NgModule({
   declarations: [AppComponent,
@@ -24,12 +24,14 @@ import { AlertUsersComponent } from './componets/alert-users/alert-users.compone
     AdminComponent,
     DiagramComponent,
     PolarComponent,
-    AlertUsersComponent
+    AlertUsersComponent,
+    
   ],
   entryComponents: [],
   imports: [ CommonModule,BrowserModule,HttpClientModule,ReactiveFormsModule,IonicModule.forRoot(), AppRoutingModule,NgChartsModule,FormsModule],
   exports:[EstadistitComponent,AdminComponent,DiagramComponent],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },File, FileTransfer, DocumentViewer ],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },File, FileTransfer, DocumentViewer,PDFGenerator,
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,10 +1,20 @@
 <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref='/lineatemporal' style="color:black" text=""> </ion-back-button>
-      <h3>Linea del tiempo</h3>
-   </ion-buttons>
-  </ion-toolbar>
-<ion-content>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref='/tab2' style="color:black" text=""></ion-back-button>
+ </ion-buttons>
+</ion-toolbar>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense" style="--background-color: white;">
+  </ion-header>
+
+
+  <div>
+    <ion-item id="inicio"  lines="none" style="--background:white; text-align: center;">
+      <ion-title id="titulo">
+        <ion-label>Línea de tiempo</ion-label>
+      </ion-title>
+    </ion-item>
+</div>
   <ion-row *ngFor="let item of data ">
     <h2>{{item.updatedAt.slice(0,-14)}}</h2>
     <ion-item>
@@ -12,4 +22,7 @@
       <h4>{{item.date_user}}</h4>
     </ion-item>
   </ion-row>
+  <ion-item>
+    <ion-button (click)="getPDF()">Convert to PDF</ion-button>
+  </ion-item>
 </ion-content>

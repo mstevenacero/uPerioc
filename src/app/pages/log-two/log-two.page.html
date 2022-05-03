@@ -4,25 +4,25 @@
   <div id ="forms">
     <ion-item class="items">
       <ion-label class="label" position="floating">Nombre completo</ion-label>
-      <ion-input [(ngModel)]="registro.name"></ion-input>
+      <ion-input [(ngModel)]="registro.name" required="true"></ion-input>
     </ion-item>
     <ion-item class="items">
       <ion-label class="label"  position="floating">Número de documento</ion-label>
-      <ion-input [(ngModel)]="registro.num_document"></ion-input>
+      <ion-input [(ngModel)]="registro.num_document"required="true"></ion-input>
     </ion-item>
     <ion-item class="items">
       <ion-label placeholder="email" class="label" position="floating">Correo electrónico</ion-label>
-      <ion-input [(ngModel)]="registro.email"></ion-input>
+      <ion-input [(ngModel)]="registro.email"required="true"></ion-input>
     </ion-item>
 
      <!--¿Éstos son las únicas opciones?-->
     <ion-item class="items">
       <ion-label class="label" position="floating">EPS</ion-label>
-      <ion-select [(ngModel)]="registro.eps">
+      <ion-select [(ngModel)]="registro.eps" type="md" >
         <!--aQUI PUEDE AGREGAR LAS EPS QUE FALTAN--> 
              <!--EJEMPLO--> 
          <!-- <ion-select-option value="Nueva Eps">Nueva Eps</ion-select-option>--> 
-        <ion-select-option value="Nueva Eps">Nueva Eps</ion-select-option>
+        <ion-select-option value="Nueva Eps">Nueva EPS</ion-select-option>
         <ion-select-option value="Salub Total">Salud Total</ion-select-option>
         <ion-select-option value="Cruz blanca">Cruz blanca</ion-select-option>
       </ion-select>
@@ -30,7 +30,7 @@
 
     <ion-item class="items">
       <ion-label class="label" position="floating">Lugar de residencia</ion-label>
-      <ion-select [(ngModel)]="registro.residencia">
+      <ion-select [(ngModel)]="registro.residencia" type="md" interface ="action-sheet" cancelText="Cancelar">
         <!--COMUNA 1-->
         <ion-select-option value="CASA BONITA">CASA BONITA</ion-select-option>
         <ion-select-option value="CIUDAD DE QUITO">CIUDAD DE QUITO</ion-select-option>
@@ -283,16 +283,16 @@
     </ion-item>
     <ion-item class="items">
       <ion-label class="label" position="floating">Contraseña</ion-label>
-      <ion-input name="password" type="password"[(ngModel)]="registro.password" ></ion-input>
+      <ion-input name="password"required="true" type="password"[(ngModel)]="registro.password" minlength="8"></ion-input>
     </ion-item>
      <!-- Hace falta confirmar contraseña-->
     <ion-item class="items">
-      <ion-label class="label" position="floating">Télefono</ion-label>
-      <ion-input name="Celular" [(ngModel)]="registro.phone" ></ion-input>
+      <ion-label class="label" position="floating">Teléfono</ion-label>
+      <ion-input name="Celular"required="true" [(ngModel)]="registro.phone" ></ion-input>
     </ion-item>
     <ion-item class="items">
       <ion-label class="label" position="floating">Celular</ion-label>
-      <ion-input name="movil"[(ngModel)]="registro.movil" ></ion-input>
+      <ion-input name="movil"[(ngModel)]="registro.movil" required="true"></ion-input>
     </ion-item>
     <!-- El género debe ser un desplegable, opciones: "Masculino-Femenino-Otro"-->
     <ion-item class="items">
@@ -321,14 +321,14 @@
     </ion-item>
     <ion-item class="items">
       <ion-label class="label" position="floating">Grupo étnico</ion-label>
-      <ion-input name="grup_etni" [(ngModel)]="registro.grup_etni" ></ion-input>
+      <ion-input name="grup_etni" [(ngModel)]="registro.grup_etni" required="true"></ion-input>
       
     </ion-item>
     <ion-item class="items">
       <ion-label class="label" position="floating">Grupo Vulnerable</ion-label>
       <ion-select [(ngModel)]="registro.vunerable_person">
         <ion-select-option value="Primaria">LGBTIQ+</ion-select-option>
-        <ion-select-option value="Bachiller">Victima de conflicto</ion-select-option>
+        <ion-select-option value="Bachiller">Víctima de conflicto</ion-select-option>
         <ion-select-option value="Tecnico">Migrante</ion-select-option>
         <ion-select-option value="Profesional">Otro</ion-select-option>
         <!--<ion-select-option value="No aplica">No aplica</ion-select-option>-->
@@ -344,21 +344,15 @@
     <!-- Hace falta Antecedentes, checkbox múltiple-->
     <!--  Cambiar por checkbox-->
     <ion-item class="items">
-      <ion-label class="label" position="floating">¿Vincular familiar?</ion-label>
+      <ion-label class="label" position="floating">¿Un familiar te ayudó a inscribirte?</ion-label>
       <ion-select [(ngModel)]="registro.family_conection">
         <ion-select-option value="true">Si</ion-select-option>
         <ion-select-option value="false">No</ion-select-option>
       </ion-select>
     </ion-item>
     
-  <ion-item class="items" lines="none">
-    <ion-label style="color: black; font-size: 12px; text-align:justify;">Un familiar te ayudo a inscribirte?</ion-label>
-    <ion-checkbox mode="md" >
-    </ion-checkbox>
-  </ion-item>
-
     <ion-item class="items" lines="none">
-      <ion-label style="color: black; font-size: 12px; text-align:justify;">Acepto las <a href='https://drive.google.com/file/d/1yyqZjuk4dBmiEVgFrt_SDzjLN2oX78r1/view'>Políticas de privacidad y<br>Tratamiento de datos</a></ion-label>
+      <ion-label style="color: black; font-size: 13px; text-align:justify;">Acepto las <a href='https://drive.google.com/file/d/1yyqZjuk4dBmiEVgFrt_SDzjLN2oX78r1/view'>Políticas de privacidad<br> y Tratamiento de datos</a></ion-label>
       <ion-checkbox mode="md" [checked]="isToggled" (ionChange)="notify()">
       </ion-checkbox>
     </ion-item>

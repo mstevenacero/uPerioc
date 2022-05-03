@@ -1,17 +1,26 @@
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref='/tab2' style="color:black" text=""></ion-back-button>
+ </ion-buttons>
+</ion-toolbar>
+<ion-content [fullscreen]="true" *ngIf="dataReturn !== ''">
+  <ion-header collapse="condense" style="--background-color: white;">
+  </ion-header>
 
-<ion-content>
-    <ion-toolbar>
-        <ion-buttons slot="start">
-          <ion-back-button defaultHref='/nuevoproceso' style="color:black" text=""></ion-back-button>
-       </ion-buttons>
-      </ion-toolbar>
-      <h2 id ="titulo2">Reporte su fecha de proceso</h2>
+
+  <div>
+    <ion-item id="inicio"  lines="none" style="--background:white; text-align: center;">
+      <ion-title id="titulo">
+        <ion-label>Reportar fecha del proceso</ion-label>
+      </ion-title>
+    </ion-item>
+</div>
     <ion-grid>
         <h1 id="title1" >{{title}}</h1>
         <ion-row>
           
                 <ion-item class="items">
-                    <ion-label class="label" position="floating">Fecha </ion-label>
+                    <ion-label class="label" position="floating">Fecha del proceso </ion-label>
                     <ion-datetime  [(ngModel)]="date" displayFormat="DD-MMM-YYYY"></ion-datetime>
                   </ion-item>
           

@@ -8,7 +8,7 @@ import { Platform } from '@ionic/angular';
 import { Register } from 'src/app/modules/register';
 import { SenTobackService } from 'src/app/services/sen-toback.service';
 import {RestService} from '../../services/rest.service'
-
+import { AlertController } from '@ionic/angular';
 @Component({
   selector: 'app-log-two',
   templateUrl: './log-two.page.html',
@@ -37,7 +37,7 @@ export class LogTwoPage implements OnInit {
   public isToggled: boolean = false;
  
   constructor( private _httpService:RestService,private router:Router, private document: DocumentViewer,
-    private file: File, private transfer: FileTransfer, private platform: Platform, private _changeInit:SenTobackService) { }
+    private file: File, private transfer: FileTransfer, private platform: Platform, private _changeInit:SenTobackService, public atrCtrl: AlertController) { }
 
     notify() {
       this.isToggled = !this.isToggled;
@@ -51,6 +51,28 @@ this.document.viewDocument('assets/logos/Documento Anteproyecto.pdf', 'applicati
 }
 
   ngOnInit():void {
+  }
+  async showPromptAlert() {
+    let alert = this.atrCtrl.create({
+      header: '¿Quieres guardar estos datos?',
+      buttons: [
+        {
+          text: 'Cancelar',
+          role: 'cancel',
+          handler: data => {
+            //('Cancelado');
+          }
+        },
+        {
+          text: 'Aceptar',
+          handler: data => {
+           this.addUser();
+           this.routerClick('log-one');
+          }
+        }
+      ]
+    });
+    (await alert).present();
   }
   addUser(){
     this.registro
@@ -73,5 +95,7 @@ this.document.viewDocument('assets/logos/Documento Anteproyecto.pdf', 'applicati
       }
     );
   }
-  
+  routerClick(link: string) {
+    this.router.navigateByUrl(link);
+  }
 }

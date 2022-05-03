@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataObservableService } from 'src/app/services/data-observable.service';
 import { RestService } from 'src/app/services/rest.service';
+import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 @Component({
   selector: 'app-reporte-fechas',
@@ -15,7 +16,7 @@ export class ReporteFechasPage implements OnInit {
   userSend:{}={}
   status:'' 
   date =''
-  constructor(private _observableService:DataObservableService, private _httpService:RestService,public atrCtrl: AlertController) {
+  constructor(private _observableService:DataObservableService, private _httpService:RestService,public atrCtrl: AlertController, private router:Router) {
   }
 //traer la descripcion y estad
 // hacer un fornularion recativocon fecha
@@ -51,6 +52,7 @@ ionViewWillEnter(){
           text: 'Aceptar',
           handler: data => {
            this.addDate();
+           this.routerClick('nuevoproceso');
           }
         }
       ]
@@ -80,9 +82,7 @@ ionViewWillEnter(){
     
 
   }
-
-
-
-
-
+  routerClick(link: string) {
+    this.router.navigateByUrl(link);
+  }
 }

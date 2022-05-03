@@ -1,13 +1,20 @@
-
-<ion-content>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref='/login/log-one' style="color:black" text=""> </ion-back-button>
-      <h3>Restaurar contraseña</h3>
-   </ion-buttons>
-  </ion-toolbar>
-  <ion-header collapse="condense">
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref='/tab2' style="color:black" text=""></ion-back-button>
+ </ion-buttons>
+</ion-toolbar>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense" style="--background-color: white;">
   </ion-header>
+
+
+  <div>
+    <ion-item id="inicio"  lines="none" style="--background:white; text-align: center;">
+      <ion-title id="titulo">
+        <ion-label>Restaurar contraseña</ion-label>
+      </ion-title>
+    </ion-item>
+</div>
   <div id ="forms">
     <ion-item class="items">
       <ion-label  placeholder="email" class="label" position="stacked">Correo electrónico</ion-label>

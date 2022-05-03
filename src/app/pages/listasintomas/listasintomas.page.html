@@ -1,16 +1,21 @@
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref='/tab2' style="color:black" text=""></ion-back-button>
+ </ion-buttons>
+</ion-toolbar>
 <ion-content [fullscreen]="true" *ngIf="dataReturn !== ''">
-  <ion-header collapse="condense">
+  <ion-header collapse="condense" style="--background-color: white;">
   </ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref='/tab2' style="color:black" text=""></ion-back-button>
-   </ion-buttons>
-  </ion-toolbar>
-  <ion-grid  id="inicio" style="width: 100%; height:20vh">
-    <ion-item id= "titulo" lines="none" style="--background:white; text-align: center;">
-    <ion-label>Lista de síntomas</ion-label>
+
+
+  <div>
+    <ion-item id="inicio"  lines="none" style="--background:white; text-align: center;">
+      <ion-title id="titulo">
+        <ion-label>Lista de síntomas</ion-label>
+      </ion-title>
     </ion-item>
-  </ion-grid>
+</div>
+
     <ion-grid id="sintomas">
       <ion-card *ngFor="let item of dataReturn;index as i">
         <div *ngIf="item.nombre !=''" (click)="symptomsUser(item.nombre,i)">

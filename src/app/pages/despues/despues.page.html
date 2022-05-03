@@ -1,10 +1,18 @@
 <ion-toolbar>
   <ion-buttons slot="start">
-    <ion-back-button defaultHref='/misprocesos' style="color:black" text=""> </ion-back-button>
-    <h3>Despues</h3>
+    <ion-back-button defaultHref='/tab1' style="color:black" text=""></ion-back-button>
  </ion-buttons>
 </ion-toolbar>
-<ion-content>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense" style="--background-color: white;">
+  </ion-header> 
+  <div>
+      <ion-item id="inicio"  lines="none" style="--background:white; text-align: center;">
+        <ion-title id="titulo">
+          <ion-label>Después de la operación</ion-label>
+        </ion-title>
+      </ion-item>
+  </div>
 <ion-row *ngFor="let item of data ">
   <h2>{{item.updatedAt.slice(0,-14)}}</h2>
   <ion-item>

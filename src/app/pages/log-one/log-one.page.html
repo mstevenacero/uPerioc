@@ -3,11 +3,11 @@
   </ion-header>
   <div id ="forms">
     <ion-item class="items">
-      <ion-label  placeholder="email" class="label" position="stacked">Correo electrónico</ion-label>
+      <ion-label  placeholder="email" class="label" position="floating">Correo electrónico</ion-label>
       <ion-input  [(ngModel)]="registro.email"></ion-input>
     </ion-item>
     <ion-item class="items">
-      <ion-label class="label" position="stacked">Contraseña</ion-label>
+      <ion-label class="label" position="floating" style="margin-top: -4%;">Contraseña</ion-label>
       <ion-input name="password" type="password"[(ngModel)]="registro.password"></ion-input>
     </ion-item>
     <div class="password_forgot">
@@ -20,8 +20,8 @@
       <ion-button (click)="routerClick('mapaconectividad')" fill="clear" class="ion-no-padding">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zonas wifi</ion-button>
     </div>
   </div>
-  <ion-grid style="margin-top: 42px;">
-  <ion-button (click)=" LoginUp()" id="buttonI">Iniciar Sesión</ion-button>
+  <ion-grid style="margin-top: 22px;">
+  <ion-button (click)=" LoginUp()" id="buttonI" style ="margin-top: -70px;">Iniciar Sesión</ion-button>
   </ion-grid>
 
 </ion-content>

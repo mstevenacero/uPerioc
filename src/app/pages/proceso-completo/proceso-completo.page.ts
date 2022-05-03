@@ -1,18 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { RestService } from 'src/app/services/rest.service';
-
+import { PDFGenerator } from '@ionic-native/pdf-generator/ngx';
+import { resolve } from 'url';
 @Component({
   selector: 'app-proceso-completo',
   templateUrl: './proceso-completo.page.html',
   styleUrls: ['./proceso-completo.page.scss'],
 })
 export class ProcesoCompletoPage implements OnInit {
+  descargarData: any;
   user:any
   user_form:any
   id_user:''
   data_form:any
   data:any
-  constructor( private _restHttp:RestService) { }
+  constructor( private _restHttp:RestService, private pdfGenerator: PDFGenerator) { }
 
   ngOnInit() {
     this.user = localStorage.getItem('user')
@@ -33,12 +35,27 @@ export class ProcesoCompletoPage implements OnInit {
         }else{
          
           
-          //("Error al traer l informacion del usuario");
+          //("Error al traer la informacion del usuario");
           
         }
       }
     )
-     
   }
-
+  getPDF() {
+ 
+    this.descargarData = this.data;
+    let options = {
+      documentSize: 'A4',
+      type: 'share'
+    }
+ 
+    this.pdfGenerator.fromData(this.descargarData, options).
+      then(resolve => {
+        console.log(resolve);
+ 
+      }
+      ).catch((err) => {
+        console.error(err);
+      });
+  }
 }
