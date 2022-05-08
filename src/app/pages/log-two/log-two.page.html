@@ -8,11 +8,11 @@
     </ion-item>
     <ion-item class="items">
       <ion-label class="label"  position="floating">Número de documento</ion-label>
-      <ion-input [(ngModel)]="registro.num_document"required="true"></ion-input>
+      <ion-input [(ngModel)]="registro.num_document"required="true" type="cc-number"></ion-input>
     </ion-item>
     <ion-item class="items">
       <ion-label placeholder="email" class="label" position="floating">Correo electrónico</ion-label>
-      <ion-input [(ngModel)]="registro.email"required="true"></ion-input>
+      <ion-input [(ngModel)]="registro.email"required="true" type="email"></ion-input>
     </ion-item>
 
      <!--¿Éstos son las únicas opciones?-->
@@ -24,7 +24,13 @@
          <!-- <ion-select-option value="Nueva Eps">Nueva Eps</ion-select-option>--> 
         <ion-select-option value="Nueva Eps">Nueva EPS</ion-select-option>
         <ion-select-option value="Salub Total">Salud Total</ion-select-option>
-        <ion-select-option value="Cruz blanca">Cruz blanca</ion-select-option>
+        <ion-select-option value="Coomeva">Coomeva</ion-select-option>
+        <ion-select-option value="Medimás">Medimás</ion-select-option>
+        <ion-select-option value="EPS Sura">EPS Sura</ion-select-option>
+        <ion-select-option value="Famisanar">Famisanar</ion-select-option>
+        <ion-select-option value="EPS Sanitas">EPS Sanitas</ion-select-option>
+        <ion-select-option value="No cuento con EPS">No cuento con EPS</ion-select-option>
+        <ion-select-option value="Otro">Otro</ion-select-option>
       </ion-select>
     </ion-item>
 
@@ -288,11 +294,11 @@
      <!-- Hace falta confirmar contraseña-->
     <ion-item class="items">
       <ion-label class="label" position="floating">Teléfono</ion-label>
-      <ion-input name="Celular"required="true" [(ngModel)]="registro.phone" ></ion-input>
+      <ion-input name="Celular"required="true" [(ngModel)]="registro.phone" type="tel" ></ion-input>
     </ion-item>
     <ion-item class="items">
       <ion-label class="label" position="floating">Celular</ion-label>
-      <ion-input name="movil"[(ngModel)]="registro.movil" required="true"></ion-input>
+      <ion-input name="movil"[(ngModel)]="registro.movil" required="true" type="tel"></ion-input>
     </ion-item>
     <!-- El género debe ser un desplegable, opciones: "Masculino-Femenino-Otro"-->
     <ion-item class="items">
@@ -316,6 +322,7 @@
         <ion-select-option value="Bachiller">Bachillerato</ion-select-option>
         <ion-select-option value="Tecnico">Técnico</ion-select-option>
         <ion-select-option value="Profesional">Profesional</ion-select-option>
+        <ion-select-option value="Ninguno">Ninguna de las anteriores</ion-select-option>
         <!--<ion-select-option value="no aplica">No aplica</ion-select-option>-->
       </ion-select>
     </ion-item>
@@ -331,7 +338,7 @@
         <ion-select-option value="Bachiller">Víctima de conflicto</ion-select-option>
         <ion-select-option value="Tecnico">Migrante</ion-select-option>
         <ion-select-option value="Profesional">Otro</ion-select-option>
-        <!--<ion-select-option value="No aplica">No aplica</ion-select-option>-->
+        <ion-select-option value="No aplica">No aplica</ion-select-option>
       </ion-select>
     </ion-item>
     <ion-item class="items">
